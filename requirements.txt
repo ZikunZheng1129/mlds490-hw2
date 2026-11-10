@@ -1,0 +1,12 @@
+torch==2.14.1
+gymnasium[classic-control,atari]==1.4.0
+ale-py==0.12.1
+numpy>=2.2.6,<3
+matplotlib>=3.10.9,<4
+reportlab==5.1.0
+pypdf>=6.0
+pytest>=9.1,<10
+pytest-cov==7.1.0
+filelock>=4.2.1
+Pillow>=13.0.0
+setuptools>=84.1.0

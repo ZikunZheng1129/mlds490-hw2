@@ -1,0 +1,20 @@
+{
+  "recorded_utc": "2026-11-10T19:42:33.222499+00:00",
+  "tests_passed": 52,
+  "coverage_percent": 89.64646464646465,
+  "coverage_by_module": {
+    "build_report.py": 92.45283018867924,
+    "dqn.py": 97.5,
+    "train.py": 79.71014492753623,
+    "validate.py": 87.5
+  },
+  "test_command": "python -m pytest -q --cov=dqn --cov=train --cov=validate --cov=build_report --cov-report=term-missing",
+  "dependency_audit_known_vulnerabilities": 0,
+  "audit_command": "python -m pip_audit",
+  "source_sha256": {
+    "dqn.py": "3df46cdfcc9b05683feae918bc654a9fad646b3f153255e30e9c142c30497a09",
+    "train.py": "494bae1647d04a0df6b269ff5905ec1d244e0cbf7afb7b49f81860daa7f94f58",
+    "validate.py": "4aad1a0311334d8a41cc32689f8671e2ddfe1003ed7a168a003c6f01587c11c9",
+    "build_report.py": "99d71c0fe134bcfe6e8f4cf85aa2bfb8a40e859ff8f26ef551fdc33e2a647245"
+  }
+}
