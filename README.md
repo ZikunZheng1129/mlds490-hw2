@@ -1,12 +1,7 @@
-# MLDS 490 — Assignment 2: Deep Q-Network
+# MLDS 490 — Assignment 2
 
-Zikun Zheng · GitHub: **ZikunZheng1129**
 
 Public repository: https://github.com/ZikunZheng1129/mlds490-hw2
-
-This project implements standard DQN for **CartPole-v1** and
-**ALE/MsPacman-v5**. The report is generated from saved experiment records;
-generating it never trains a network or invents missing results.
 
 ## Results
 
@@ -158,12 +153,3 @@ python build_report.py --repo-url https://github.com/ZikunZheng1129/mlds490-hw2
 The report includes the additional-three-months discussion, limitations, all
 required figures, the public repository link, and the instructions above.
 
-## References
-
-- Course lecture: *Week 6 DQN*; lab: *MLDS Lab Week 6*.
-- [PyTorch DQN tutorial](https://docs.pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)
-- [ALE environments and v5 conventions](https://ale.farama.org/environments/)
-- [Gymnasium: handling time limits](https://gymnasium.farama.org/tutorials/gymnasium_basics/handling_time_limits/)
-
-The implementation is written for this assignment; it does not load a pretrained
-game agent or use a third-party RL training framework.
