@@ -172,8 +172,11 @@ def plot_run(run):
     _save_figure(fig, paths["rewards"])
     scores = _numbers(run.evaluation, "reward")
     fig, ax = plt.subplots(figsize=(7.2, 2.9))
-    ax.hist(scores, bins=25 if np.ptp(scores) > 0 else [scores[0] - 0.5, scores[0] + 0.5],
-            color="#155E75", alpha=0.85, edgecolor="white")
+    bins = (np.arange(-5, 506, 10) if run.task == "cartpole" else
+            25 if np.ptp(scores) > 0 else [scores[0] - 0.5, scores[0] + 0.5])
+    ax.hist(scores, bins=bins, color="#155E75", alpha=0.85, edgecolor="white")
+    if run.task == "cartpole":
+        ax.set_xlim(-5, 505)
     ax.axvline(scores.mean(), color="#C2410C", linestyle="--", label=f"Mean = {scores.mean():.2f}")
     ax.set(xlabel="Episode reward (raw points)", ylabel="Number of episodes",
            title=f"{task_title}: 500 frozen-policy evaluation episodes")
@@ -299,7 +302,7 @@ def training_page(run, paths):
     rewards = _numbers(run.training, "reward")
     window = min(100, len(rewards))
     first, last = rewards[:window].mean(), rewards[-window:].mean()
-    return [heading(f"{name}: training behavior"), figure(paths["max_q"], 2.65),
+    story = [heading(f"{name}: training behavior"), figure(paths["max_q"], 2.65),
             p("<b>Maximum Q.</b> Each point is the maximum over all visited states and all action "
               "outputs in that training episode. The online network changes during the episode. "
               "Q values are predictions, not measured game scores; a larger Q alone does not prove learning.", True),
@@ -308,7 +311,32 @@ def training_page(run, paths):
               f"<b>{last:.2f}</b> raw reward, respectively (difference {last-first:+.2f}). "
               "The 100-episode moving average begins only when 100 complete episodes exist. "
               "Exploration changes over training, so the fixed-policy held-out comparisons on the next "
-              "page provide a separate check of actual learned behavior.")]
+              "page provide a separate check of actual learned behavior."),
+            p(f"Frozen evaluation uses the development-selected checkpoint from episode "
+              f"<b>{run.metrics['selected_checkpoint']['episode']}</b>. The training curve includes "
+              "exploratory actions and subsequent parameter updates; its final moving average therefore "
+              "need not match the selected checkpoint's greedy evaluation score.")]
+    if run.task == "cartpole":
+        peak = _numbers(run.training, "max_q").max()
+        bound = 1 / (1 - run.config["gamma"])
+        interpretation = ("The excess indicates Q-value overestimation or function-approximation error; "
+                          "Q growth is not a correctness certificate." if peak > bound else
+                          "Remaining below this bound does not by itself establish accurate Q estimates.")
+        story.append(p(f"The largest predicted Q is <b>{peak:.2f}</b>. With reward 1 per step and "
+                       f"gamma={run.config['gamma']}, discounted return cannot exceed <b>{bound:.2f}</b>. "
+                       + interpretation))
+    else:
+        recent = _numbers(run.development[-5:], "mean")
+        changes = np.diff(recent)
+        interpretation = (
+            "Late development scores rise and fall; the run does not demonstrate stable or monotonic convergence."
+            if np.any(changes > 0) and np.any(changes < 0) else
+            "These development checks alone do not establish stable convergence.")
+        story.append(p(f"The last {len(recent)} development means range from {recent.min():.1f} "
+                       f"to {recent.max():.1f} points, ending at {recent[-1]:.1f}. "
+                       + interpretation + " Development scores select a checkpoint; the independent "
+                       "500-episode result on the next page is the final performance estimate."))
+    return story
 
 
 def evaluation_page(run, paths):
@@ -402,7 +430,8 @@ def reproducibility(cart, pac):
                "source .venv/bin/activate\n"
                "python -m pip install --upgrade pip\n"
                "python -m pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cu126\n"
-               "python -m pip install -r requirements.txt\n" +
+               "python -m pip install -r requirements.txt\n"
+               "export CUDA_VISIBLE_DEVICES=2\n" +
                training_command(cart) + training_command(pac) +
                f"python validate.py --task cartpole --run results/rerun/cartpole --episodes {cart.validation['sampling']['episodes_per_condition']} \\\n"
                f"  --grid-size {cart.validation['perturbation']['grid_size']} --grid-repeats {cart.validation['perturbation']['repeats_per_cell']} --device cuda:0\n"

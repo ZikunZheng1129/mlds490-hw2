@@ -1,0 +1,318 @@
+cartpole episode=1 steps=20 reward=20 last100=20.0 eps=0.999 steps/s=20.0
+cartpole episode=10 steps=236 reward=10 last100=23.6 eps=0.992 steps/s=236.0
+cartpole episode=20 steps=484 reward=15 last100=24.2 eps=0.984 steps/s=484.0
+cartpole episode=30 steps=754 reward=10 last100=25.1 eps=0.975 steps/s=754.0
+cartpole episode=40 steps=987 reward=15 last100=24.7 eps=0.968 steps/s=987.0
+cartpole episode=50 steps=1214 reward=20 last100=24.3 eps=0.960 steps/s=555.8
+Development at episode 50: mean=9.40, best=9.40
+cartpole episode=60 steps=1445 reward=10 last100=24.1 eps=0.953 steps/s=415.7
+cartpole episode=70 steps=1685 reward=20 last100=24.1 eps=0.945 steps/s=360.4
+cartpole episode=80 steps=1879 reward=15 last100=23.5 eps=0.939 steps/s=328.7
+cartpole episode=90 steps=2318 reward=19 last100=25.8 eps=0.924 steps/s=292.6
+cartpole episode=100 steps=2598 reward=17 last100=26.0 eps=0.915 steps/s=278.0
+Development at episode 100: mean=290.65, best=290.65
+cartpole episode=110 steps=2845 reward=22 last100=26.1 eps=0.907 steps/s=227.1
+cartpole episode=120 steps=3106 reward=11 last100=26.2 eps=0.899 steps/s=223.6
+cartpole episode=130 steps=3293 reward=30 last100=25.4 eps=0.892 steps/s=220.9
+cartpole episode=140 steps=3549 reward=22 last100=25.6 eps=0.884 steps/s=218.7
+cartpole episode=150 steps=3853 reward=68 last100=26.4 eps=0.874 steps/s=216.2
+Development at episode 150: mean=212.20, best=290.65
+cartpole episode=160 steps=4199 reward=30 last100=27.5 eps=0.863 steps/s=203.3
+cartpole episode=170 steps=4429 reward=60 last100=27.4 eps=0.855 steps/s=203.9
+cartpole episode=180 steps=4710 reward=11 last100=28.3 eps=0.846 steps/s=203.0
+cartpole episode=190 steps=4961 reward=27 last100=26.4 eps=0.838 steps/s=202.4
+cartpole episode=200 steps=5253 reward=47 last100=26.6 eps=0.828 steps/s=201.8
+Development at episode 200: mean=183.20, best=290.65
+cartpole episode=210 steps=5545 reward=40 last100=27.0 eps=0.819 steps/s=192.2
+cartpole episode=220 steps=5829 reward=38 last100=27.2 eps=0.810 steps/s=192.6
+cartpole episode=230 steps=6031 reward=12 last100=27.4 eps=0.803 steps/s=193.0
+cartpole episode=240 steps=6280 reward=13 last100=27.3 eps=0.795 steps/s=192.9
+cartpole episode=250 steps=6480 reward=11 last100=26.3 eps=0.788 steps/s=192.5
+Development at episode 250: mean=109.10, best=290.65
+cartpole episode=260 steps=6710 reward=12 last100=25.1 eps=0.781 steps/s=188.1
+cartpole episode=270 steps=6970 reward=22 last100=25.4 eps=0.772 steps/s=188.1
+cartpole episode=280 steps=7173 reward=19 last100=24.6 eps=0.766 steps/s=188.0
+cartpole episode=290 steps=7398 reward=30 last100=24.4 eps=0.758 steps/s=188.0
+cartpole episode=300 steps=7571 reward=18 last100=23.2 eps=0.753 steps/s=187.7
+Development at episode 300: mean=55.10, best=290.65
+cartpole episode=310 steps=7867 reward=20 last100=23.2 eps=0.743 steps/s=185.5
+cartpole episode=320 steps=8094 reward=10 last100=22.6 eps=0.736 steps/s=184.8
+cartpole episode=330 steps=8365 reward=76 last100=23.3 eps=0.727 steps/s=184.4
+cartpole episode=340 steps=8623 reward=22 last100=23.4 eps=0.718 steps/s=184.2
+cartpole episode=350 steps=8876 reward=21 last100=24.0 eps=0.710 steps/s=183.7
+Development at episode 350: mean=85.20, best=290.65
+cartpole episode=360 steps=9060 reward=24 last100=23.5 eps=0.704 steps/s=180.6
+cartpole episode=370 steps=9266 reward=23 last100=23.0 eps=0.697 steps/s=180.1
+cartpole episode=380 steps=9572 reward=28 last100=24.0 eps=0.687 steps/s=179.8
+cartpole episode=390 steps=9906 reward=85 last100=25.1 eps=0.676 steps/s=179.4
+cartpole episode=400 steps=10130 reward=25 last100=25.6 eps=0.669 steps/s=179.0
+Development at episode 400: mean=110.15, best=290.65
+cartpole episode=410 steps=10384 reward=48 last100=25.2 eps=0.661 steps/s=176.2
+cartpole episode=420 steps=10602 reward=19 last100=25.1 eps=0.654 steps/s=176.0
+cartpole episode=430 steps=10831 reward=40 last100=24.7 eps=0.646 steps/s=175.6
+cartpole episode=440 steps=11149 reward=16 last100=25.3 eps=0.636 steps/s=175.4
+cartpole episode=450 steps=11347 reward=32 last100=24.7 eps=0.629 steps/s=174.9
+Development at episode 450: mean=121.75, best=290.65
+cartpole episode=460 steps=11513 reward=19 last100=24.5 eps=0.624 steps/s=171.8
+cartpole episode=470 steps=11692 reward=27 last100=24.3 eps=0.618 steps/s=171.5
+cartpole episode=480 steps=11954 reward=16 last100=23.8 eps=0.610 steps/s=171.8
+cartpole episode=490 steps=12245 reward=10 last100=23.4 eps=0.600 steps/s=173.0
+cartpole episode=500 steps=12459 reward=21 last100=23.3 eps=0.593 steps/s=173.5
+Development at episode 500: mean=98.50, best=290.65
+cartpole episode=510 steps=12668 reward=11 last100=22.8 eps=0.586 steps/s=171.8
+cartpole episode=520 steps=12897 reward=17 last100=22.9 eps=0.579 steps/s=171.6
+cartpole episode=530 steps=13094 reward=15 last100=22.6 eps=0.572 steps/s=171.3
+cartpole episode=540 steps=13288 reward=19 last100=21.4 eps=0.566 steps/s=171.0
+cartpole episode=550 steps=13492 reward=27 last100=21.4 eps=0.559 steps/s=170.8
+Development at episode 550: mean=90.00, best=290.65
+cartpole episode=560 steps=13880 reward=32 last100=23.7 eps=0.547 steps/s=169.6
+cartpole episode=570 steps=14218 reward=50 last100=25.3 eps=0.536 steps/s=169.9
+cartpole episode=580 steps=14556 reward=84 last100=26.0 eps=0.525 steps/s=170.3
+cartpole episode=590 steps=14814 reward=36 last100=25.7 eps=0.516 steps/s=171.0
+cartpole episode=600 steps=15076 reward=39 last100=26.2 eps=0.508 steps/s=171.5
+Development at episode 600: mean=81.35, best=290.65
+cartpole episode=610 steps=15437 reward=34 last100=27.7 eps=0.496 steps/s=171.5
+cartpole episode=620 steps=16053 reward=33 last100=31.6 eps=0.476 steps/s=173.7
+cartpole episode=630 steps=16439 reward=65 last100=33.5 eps=0.463 steps/s=175.0
+cartpole episode=640 steps=16865 reward=33 last100=35.8 eps=0.449 steps/s=176.1
+cartpole episode=650 steps=17042 reward=10 last100=35.5 eps=0.443 steps/s=175.8
+Development at episode 650: mean=83.20, best=290.65
+cartpole episode=660 steps=17231 reward=14 last100=33.5 eps=0.437 steps/s=174.4
+cartpole episode=670 steps=17652 reward=27 last100=34.3 eps=0.423 steps/s=174.4
+cartpole episode=680 steps=17964 reward=41 last100=34.1 eps=0.413 steps/s=174.5
+cartpole episode=690 steps=18320 reward=41 last100=35.1 eps=0.402 steps/s=174.8
+cartpole episode=700 steps=18665 reward=14 last100=35.9 eps=0.390 steps/s=175.8
+Development at episode 700: mean=92.15, best=290.65
+cartpole episode=710 steps=19010 reward=30 last100=35.7 eps=0.379 steps/s=175.5
+cartpole episode=720 steps=19277 reward=30 last100=32.2 eps=0.370 steps/s=176.1
+cartpole episode=730 steps=19660 reward=31 last100=32.2 eps=0.358 steps/s=177.0
+cartpole episode=740 steps=20067 reward=60 last100=32.0 eps=0.345 steps/s=178.1
+cartpole episode=750 steps=20308 reward=20 last100=32.7 eps=0.337 steps/s=178.2
+Development at episode 750: mean=91.85, best=290.65
+cartpole episode=760 steps=20678 reward=49 last100=34.5 eps=0.325 steps/s=177.1
+cartpole episode=770 steps=21163 reward=23 last100=35.1 eps=0.309 steps/s=177.2
+cartpole episode=780 steps=21749 reward=68 last100=37.9 eps=0.290 steps/s=177.6
+cartpole episode=790 steps=22466 reward=55 last100=41.5 eps=0.266 steps/s=178.1
+cartpole episode=800 steps=23038 reward=93 last100=43.7 eps=0.247 steps/s=178.3
+Development at episode 800: mean=91.60, best=290.65
+cartpole episode=810 steps=23436 reward=32 last100=44.3 eps=0.234 steps/s=177.4
+cartpole episode=820 steps=23817 reward=14 last100=45.4 eps=0.222 steps/s=177.6
+cartpole episode=830 steps=24338 reward=63 last100=46.8 eps=0.205 steps/s=178.1
+cartpole episode=840 steps=25029 reward=93 last100=49.6 eps=0.182 steps/s=178.5
+cartpole episode=850 steps=25742 reward=48 last100=54.3 eps=0.159 steps/s=179.1
+Development at episode 850: mean=93.80, best=290.65
+cartpole episode=860 steps=26674 reward=93 last100=60.0 eps=0.129 steps/s=178.9
+cartpole episode=870 steps=27484 reward=91 last100=63.2 eps=0.102 steps/s=179.4
+cartpole episode=880 steps=28337 reward=95 last100=65.9 eps=0.074 steps/s=180.2
+cartpole episode=890 steps=29300 reward=97 last100=68.3 eps=0.043 steps/s=180.9
+cartpole episode=900 steps=30258 reward=95 last100=72.2 eps=0.020 steps/s=181.7
+Development at episode 900: mean=96.90, best=290.65
+cartpole episode=910 steps=31173 reward=93 last100=77.4 eps=0.020 steps/s=181.9
+cartpole episode=920 steps=32256 reward=96 last100=84.4 eps=0.020 steps/s=182.8
+cartpole episode=930 steps=33201 reward=92 last100=88.6 eps=0.020 steps/s=183.4
+cartpole episode=940 steps=34042 reward=109 last100=90.1 eps=0.020 steps/s=184.0
+cartpole episode=950 steps=35213 reward=266 last100=94.7 eps=0.020 steps/s=184.7
+Development at episode 950: mean=126.50, best=290.65
+cartpole episode=960 steps=36714 reward=232 last100=100.4 eps=0.020 steps/s=184.7
+cartpole episode=970 steps=38246 reward=97 last100=107.6 eps=0.020 steps/s=185.3
+cartpole episode=980 steps=39921 reward=105 last100=115.8 eps=0.020 steps/s=185.9
+cartpole episode=990 steps=41309 reward=184 last100=120.1 eps=0.020 steps/s=186.4
+cartpole episode=1000 steps=42141 reward=85 last100=118.8 eps=0.020 steps/s=186.6
+Development at episode 1000: mean=69.15, best=290.65
+cartpole episode=1010 steps=43078 reward=97 last100=119.0 eps=0.020 steps/s=186.3
+cartpole episode=1020 steps=44508 reward=422 last100=122.5 eps=0.020 steps/s=186.6
+cartpole episode=1030 steps=46766 reward=242 last100=135.7 eps=0.020 steps/s=187.1
+cartpole episode=1040 steps=49820 reward=229 last100=157.8 eps=0.020 steps/s=187.9
+cartpole episode=1050 steps=51996 reward=105 last100=167.8 eps=0.020 steps/s=188.7
+Development at episode 1050: mean=431.25, best=431.25
+cartpole episode=1060 steps=54664 reward=92 last100=179.5 eps=0.020 steps/s=187.0
+cartpole episode=1070 steps=56352 reward=323 last100=181.1 eps=0.020 steps/s=187.4
+cartpole episode=1080 steps=58905 reward=109 last100=189.8 eps=0.020 steps/s=188.1
+cartpole episode=1090 steps=60108 reward=139 last100=188.0 eps=0.020 steps/s=188.3
+cartpole episode=1100 steps=62315 reward=231 last100=201.7 eps=0.020 steps/s=188.9
+Development at episode 1100: mean=431.10, best=431.25
+cartpole episode=1110 steps=65678 reward=347 last100=226.0 eps=0.020 steps/s=188.2
+cartpole episode=1120 steps=68385 reward=336 last100=238.8 eps=0.020 steps/s=189.0
+cartpole episode=1130 steps=71565 reward=361 last100=248.0 eps=0.020 steps/s=190.0
+cartpole episode=1140 steps=75104 reward=210 last100=252.8 eps=0.020 steps/s=191.0
+cartpole episode=1150 steps=79032 reward=145 last100=270.4 eps=0.020 steps/s=191.7
+Development at episode 1150: mean=24.75, best=431.25
+cartpole episode=1160 steps=81157 reward=206 last100=264.9 eps=0.020 steps/s=191.8
+cartpole episode=1170 steps=82908 reward=213 last100=265.6 eps=0.020 steps/s=192.2
+cartpole episode=1180 steps=84839 reward=178 last100=259.3 eps=0.020 steps/s=192.4
+cartpole episode=1190 steps=86606 reward=105 last100=265.0 eps=0.020 steps/s=192.6
+cartpole episode=1200 steps=87904 reward=233 last100=255.9 eps=0.020 steps/s=192.7
+Development at episode 1200: mean=54.45, best=431.25
+cartpole episode=1210 steps=89624 reward=155 last100=239.5 eps=0.020 steps/s=192.8
+cartpole episode=1220 steps=91283 reward=87 last100=229.0 eps=0.020 steps/s=193.1
+cartpole episode=1230 steps=92829 reward=86 last100=212.6 eps=0.020 steps/s=193.2
+cartpole episode=1240 steps=94596 reward=272 last100=194.9 eps=0.020 steps/s=193.4
+cartpole episode=1250 steps=95951 reward=237 last100=169.2 eps=0.020 steps/s=193.5
+Development at episode 1250: mean=25.15, best=431.25
+cartpole episode=1260 steps=98490 reward=337 last100=173.3 eps=0.020 steps/s=193.9
+cartpole episode=1270 steps=101279 reward=307 last100=183.7 eps=0.020 steps/s=194.1
+cartpole episode=1280 steps=101956 reward=28 last100=171.2 eps=0.020 steps/s=194.0
+cartpole episode=1290 steps=103761 reward=131 last100=171.6 eps=0.020 steps/s=194.1
+cartpole episode=1300 steps=105811 reward=500 last100=179.1 eps=0.020 steps/s=194.3
+Development at episode 1300: mean=500.00, best=500.00
+cartpole episode=1310 steps=109830 reward=232 last100=202.1 eps=0.020 steps/s=193.1
+cartpole episode=1320 steps=112239 reward=110 last100=209.6 eps=0.020 steps/s=192.3
+cartpole episode=1330 steps=114431 reward=308 last100=216.0 eps=0.020 steps/s=191.7
+cartpole episode=1340 steps=116585 reward=121 last100=219.9 eps=0.020 steps/s=190.8
+cartpole episode=1350 steps=118243 reward=286 last100=222.9 eps=0.020 steps/s=190.2
+Development at episode 1350: mean=145.85, best=500.00
+cartpole episode=1360 steps=122118 reward=329 last100=236.3 eps=0.020 steps/s=190.0
+cartpole episode=1370 steps=123979 reward=111 last100=227.0 eps=0.020 steps/s=190.3
+cartpole episode=1380 steps=126273 reward=310 last100=243.2 eps=0.020 steps/s=190.4
+cartpole episode=1390 steps=127635 reward=10 last100=238.7 eps=0.020 steps/s=190.6
+cartpole episode=1400 steps=130599 reward=243 last100=247.9 eps=0.020 steps/s=191.1
+Development at episode 1400: mean=154.00, best=500.00
+cartpole episode=1410 steps=133762 reward=500 last100=239.3 eps=0.020 steps/s=191.4
+cartpole episode=1420 steps=138373 reward=404 last100=261.3 eps=0.020 steps/s=192.1
+cartpole episode=1430 steps=139997 reward=112 last100=255.7 eps=0.020 steps/s=192.2
+cartpole episode=1440 steps=141415 reward=102 last100=248.3 eps=0.020 steps/s=192.3
+cartpole episode=1450 steps=144311 reward=370 last100=260.7 eps=0.020 steps/s=192.6
+Development at episode 1450: mean=162.10, best=500.00
+cartpole episode=1460 steps=147749 reward=176 last100=256.3 eps=0.020 steps/s=192.6
+cartpole episode=1470 steps=149142 reward=201 last100=251.6 eps=0.020 steps/s=192.7
+cartpole episode=1480 steps=150732 reward=140 last100=244.6 eps=0.020 steps/s=192.9
+cartpole episode=1490 steps=154024 reward=500 last100=263.9 eps=0.020 steps/s=193.1
+cartpole episode=1500 steps=155667 reward=404 last100=250.7 eps=0.020 steps/s=193.0
+Development at episode 1500: mean=500.00, best=500.00
+{
+  "training_episodes": 1500,
+  "environment_steps": 155667,
+  "optimizer_steps": 154668,
+  "selected_checkpoint": {
+    "episode": 1300,
+    "steps": 105811,
+    "optimizer_steps": 104812,
+    "development_mean": 500.0,
+    "development_seed": 40000
+  },
+  "evaluation": {
+    "n": 500,
+    "mean": 500.0,
+    "std": 0.0,
+    "median": 500.0,
+    "min": 500.0,
+    "max": 500.0,
+    "mean_length": 500.0,
+    "terminated_episodes": 0,
+    "truncated_episodes": 500
+  },
+  "wall_seconds": 901.0719610461965,
+  "success_rate": 1.0
+}
+{
+  "task": "cartpole",
+  "sampling": {
+    "episodes_per_condition": 50,
+    "first_seed": 80000,
+    "final_epsilon": 0.0,
+    "initial_epsilon": 0.0,
+    "random_epsilon": 1.0,
+    "checkpoint": "policy.pt",
+    "initial_checkpoint": "initial.pt",
+    "note": "Held-out seed comparison; separate from the required 500-episode evaluation."
+  },
+  "final_policy": {
+    "episodes": 50,
+    "mean_reward": 500.0,
+    "std_reward": 0.0,
+    "min_reward": 500.0,
+    "max_reward": 500.0,
+    "mean_length": 500.0,
+    "length_500_fraction": 1.0,
+    "terminated_count": 0,
+    "truncated_count": 50,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "initial_policy": {
+    "episodes": 50,
+    "mean_reward": 9.34,
+    "std_reward": 0.6580738746446297,
+    "min_reward": 8.0,
+    "max_reward": 10.0,
+    "mean_length": 9.34,
+    "length_500_fraction": 0.0,
+    "terminated_count": 50,
+    "truncated_count": 0,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "random_policy": {
+    "episodes": 50,
+    "mean_reward": 22.46,
+    "std_reward": 12.289384833743174,
+    "min_reward": 9.0,
+    "max_reward": 69.0,
+    "mean_length": 22.46,
+    "length_500_fraction": 0.0,
+    "terminated_count": 50,
+    "truncated_count": 0,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "comparison": {
+    "final_vs_random": {
+      "n_pairs": 50,
+      "reference_mean": 22.46,
+      "candidate_mean": 500.0,
+      "mean_difference": 477.54,
+      "ci95_low": 473.82,
+      "ci95_high": 480.6805,
+      "positive_difference_supported": true,
+      "bootstrap_samples": 2000,
+      "bootstrap_seed": 191,
+      "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
+    },
+    "final_vs_initial": {
+      "n_pairs": 50,
+      "reference_mean": 9.34,
+      "candidate_mean": 500.0,
+      "mean_difference": 490.66,
+      "ci95_low": 490.48,
+      "ci95_high": 490.84,
+      "positive_difference_supported": true,
+      "bootstrap_samples": 2000,
+      "bootstrap_seed": 191,
+      "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
+    },
+    "expectation": "A learned frozen policy should outperform untrained and random policies under fixed exploration settings."
+  },
+  "perturbation": {
+    "experiment": "Initial pole angle and angular velocity stress test.",
+    "expectation": "Recovery may deteriorate near the stability boundary; no monotonicity is assumed.",
+    "grid_size": 7,
+    "repeats_per_cell": 5,
+    "grid_evaluations": 245,
+    "overall_success_fraction": 0.8775510204081632,
+    "mean_length": 439.0734693877551,
+    "jitter": "Uniform independent perturbations: x +/-0.01, xdot +/-0.02, angle +/-0.002, angular velocity +/-0.01.",
+    "interpretation": "This deliberately changes the reset distribution; it is not the standard 500-episode evaluation.",
+    "nonstandard_plot_data": "validation_grid.csv"
+  },
+  "target_audit": {
+    "transitions_checked": 10,
+    "all_checked_targets_match": true,
+    "terminal_status": "not_observed",
+    "truncation_status": "not_observed",
+    "nonterminal_status": "passed",
+    "expected_rule": "Reward only at true termination; bootstrap across time truncation.",
+    "scope": "Checks only recorded transitions, not every replay-buffer update."
+  },
+  "boundaries": {
+    "observed_terminated": 0,
+    "observed_truncated": 50,
+    "all_episodes_report_an_end": true,
+    "time_limit_rule": "Time truncation ends rollout, but does not zero the Bellman bootstrap.",
+    "life_loss_note": "Not applicable."
+  },
+  "limitations": [
+    "One selected training seed cannot establish robustness across training seeds.",
+    "Confidence intervals quantify seed variation within this evaluation protocol only.",
+    "Perturbation performance is not a replacement for standard-environment evaluation."
+  ]
+}

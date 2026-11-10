@@ -8,10 +8,26 @@ This project implements standard DQN for **CartPole-v1** and
 **ALE/MsPacman-v5**. The report is generated from saved experiment records;
 generating it never trains a network or invents missing results.
 
+## Results
+
+See [the PDF report](hw2_report.pdf) for all figures, validation results and discussion.
+The selected frozen policies were each evaluated on 500 independent episodes.
+
+| Environment | Training episodes | Mean evaluation reward | Sample standard deviation |
+|---|---:|---:|---:|
+| CartPole-v1 | 1,500 | 500.00 | 0.00 |
+| ALE/MsPacman-v5 | 2,000 | 1,420.52 | 511.69 |
+
+CartPole survived all 500 evaluation episodes for 500 steps. MsPacman's first
+and final 100 training episodes averaged 257.0 and 1,377.7 raw points. Its late
+development scores fluctuated, so this demonstrates improvement without claiming
+stable convergence. Final evaluation data were not used to select checkpoints.
+
 ## Files
 
 | File | Purpose |
 |---|---|
+| `hw2_report.pdf` | Final English report with measured results and all eight figures |
 | `dqn.py` | Environments, MLP/CNN, uniform replay, target network, Huber update |
 | `train.py` | Training, development-set checkpoint selection, frozen evaluation |
 | `validate.py` | Matched-seed comparisons and task-specific robustness experiments |
@@ -135,7 +151,7 @@ Software tests are a separate correctness layer, not a substitute for these RL
 experiments:
 
 ```bash
-python -m pytest -q --cov=dqn --cov=train --cov=validate --cov-report=term-missing
+python -m pytest -q --cov=dqn --cov=train --cov=validate --cov=build_report --cov-report=term-missing
 python build_report.py --repo-url https://github.com/ZikunZheng1129/mlds490-hw2
 ```
 
@@ -147,7 +163,7 @@ required figures, the public repository link, and the instructions above.
 - Course lecture: *Week 6 DQN*; lab: *MLDS Lab Week 6*.
 - [PyTorch DQN tutorial](https://docs.pytorch.org/tutorials/intermediate/reinforcement_q_learning.html)
 - [ALE environments and v5 conventions](https://ale.farama.org/environments/)
-- [Gymnasium: handling time limits](https://gymnasium.farama.org/main/tutorials/handling_time_limits/)
+- [Gymnasium: handling time limits](https://gymnasium.farama.org/tutorials/gymnasium_basics/handling_time_limits/)
 
 The implementation is written for this assignment; it does not load a pretrained
 game agent or use a third-party RL training framework.

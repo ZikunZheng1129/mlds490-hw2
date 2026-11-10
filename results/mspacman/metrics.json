@@ -1,0 +1,24 @@
+{
+  "training_episodes": 2000,
+  "environment_steps": 1303878,
+  "optimizer_steps": 323470,
+  "selected_checkpoint": {
+    "episode": 1500,
+    "steps": 943908,
+    "optimizer_steps": 233478,
+    "development_mean": 1835.0,
+    "development_seed": 40000
+  },
+  "evaluation": {
+    "n": 500,
+    "mean": 1420.52,
+    "std": 511.6942364177716,
+    "median": 1275.0,
+    "min": 610.0,
+    "max": 3370.0,
+    "mean_length": 717.764,
+    "terminated_episodes": 500,
+    "truncated_episodes": 0
+  },
+  "wall_seconds": 5159.850245822221
+}

@@ -1,0 +1,112 @@
+{
+  "task": "cartpole",
+  "sampling": {
+    "episodes_per_condition": 50,
+    "first_seed": 80000,
+    "final_epsilon": 0.0,
+    "initial_epsilon": 0.0,
+    "random_epsilon": 1.0,
+    "checkpoint": "policy.pt",
+    "initial_checkpoint": "initial.pt",
+    "note": "Held-out seed comparison; separate from the required 500-episode evaluation."
+  },
+  "final_policy": {
+    "episodes": 50,
+    "mean_reward": 500.0,
+    "std_reward": 0.0,
+    "min_reward": 500.0,
+    "max_reward": 500.0,
+    "mean_length": 500.0,
+    "length_500_fraction": 1.0,
+    "terminated_count": 0,
+    "truncated_count": 50,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "initial_policy": {
+    "episodes": 50,
+    "mean_reward": 9.34,
+    "std_reward": 0.6580738746446297,
+    "min_reward": 8.0,
+    "max_reward": 10.0,
+    "mean_length": 9.34,
+    "length_500_fraction": 0.0,
+    "terminated_count": 50,
+    "truncated_count": 0,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "random_policy": {
+    "episodes": 50,
+    "mean_reward": 22.46,
+    "std_reward": 12.289384833743174,
+    "min_reward": 9.0,
+    "max_reward": 69.0,
+    "mean_length": 22.46,
+    "length_500_fraction": 0.0,
+    "terminated_count": 50,
+    "truncated_count": 0,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "comparison": {
+    "final_vs_random": {
+      "n_pairs": 50,
+      "reference_mean": 22.46,
+      "candidate_mean": 500.0,
+      "mean_difference": 477.54,
+      "ci95_low": 473.82,
+      "ci95_high": 480.6805,
+      "positive_difference_supported": true,
+      "bootstrap_samples": 2000,
+      "bootstrap_seed": 191,
+      "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
+    },
+    "final_vs_initial": {
+      "n_pairs": 50,
+      "reference_mean": 9.34,
+      "candidate_mean": 500.0,
+      "mean_difference": 490.66,
+      "ci95_low": 490.48,
+      "ci95_high": 490.84,
+      "positive_difference_supported": true,
+      "bootstrap_samples": 2000,
+      "bootstrap_seed": 191,
+      "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
+    },
+    "expectation": "A learned frozen policy should outperform untrained and random policies under fixed exploration settings."
+  },
+  "perturbation": {
+    "experiment": "Initial pole angle and angular velocity stress test.",
+    "expectation": "Recovery may deteriorate near the stability boundary; no monotonicity is assumed.",
+    "grid_size": 7,
+    "repeats_per_cell": 5,
+    "grid_evaluations": 245,
+    "overall_success_fraction": 0.8775510204081632,
+    "mean_length": 439.0734693877551,
+    "jitter": "Uniform independent perturbations: x +/-0.01, xdot +/-0.02, angle +/-0.002, angular velocity +/-0.01.",
+    "interpretation": "This deliberately changes the reset distribution; it is not the standard 500-episode evaluation.",
+    "nonstandard_plot_data": "validation_grid.csv"
+  },
+  "target_audit": {
+    "transitions_checked": 10,
+    "all_checked_targets_match": true,
+    "terminal_status": "not_observed",
+    "truncation_status": "not_observed",
+    "nonterminal_status": "passed",
+    "expected_rule": "Reward only at true termination; bootstrap across time truncation.",
+    "scope": "Checks only recorded transitions, not every replay-buffer update."
+  },
+  "boundaries": {
+    "observed_terminated": 0,
+    "observed_truncated": 50,
+    "all_episodes_report_an_end": true,
+    "time_limit_rule": "Time truncation ends rollout, but does not zero the Bellman bootstrap.",
+    "life_loss_note": "Not applicable."
+  },
+  "limitations": [
+    "One selected training seed cannot establish robustness across training seeds.",
+    "Confidence intervals quantify seed variation within this evaluation protocol only.",
+    "Perturbation performance is not a replacement for standard-environment evaluation."
+  ]
+}

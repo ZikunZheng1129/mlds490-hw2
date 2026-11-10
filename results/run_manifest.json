@@ -1,0 +1,14 @@
+[
+  {
+    "task": "cartpole",
+    "pid": 4013268,
+    "gpu": 2,
+    "command": ".venv312/bin/python -u train.py --task cartpole --episodes 1500 --seed 7 --device cuda --eval-every 50 --eval-episodes 20 --final-episodes 500 --output results/cartpole && .venv312/bin/python -u validate.py --task cartpole --run results/cartpole --episodes 50 --device cuda && touch results/cartpole/COMPLETE"
+  },
+  {
+    "task": "mspacman",
+    "pid": 4013270,
+    "gpu": 2,
+    "command": ".venv312/bin/python -u train.py --task mspacman --episodes 2000 --seed 7 --device cuda --eval-every 100 --eval-episodes 10 --final-episodes 500 --output results/mspacman && .venv312/bin/python -u validate.py --task mspacman --run results/mspacman --episodes 50 --device cuda && touch results/mspacman/COMPLETE"
+  }
+]
