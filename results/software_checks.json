@@ -1,9 +1,9 @@
 {
-  "recorded_utc": "2026-11-10T21:01:39.405333+00:00",
+  "recorded_utc": "2026-11-10T21:24:36.707521+00:00",
   "tests_passed": 52,
-  "coverage_percent": 89.8136645962733,
+  "coverage_percent": 89.55414012738854,
   "coverage_by_module": {
-    "build_report.py": 92.80575539568345,
+    "build_report.py": 92.24806201550388,
     "dqn.py": 97.5,
     "train.py": 79.71014492753623,
     "validate.py": 87.5
@@ -19,6 +19,6 @@
     "dqn.py": "3df46cdfcc9b05683feae918bc654a9fad646b3f153255e30e9c142c30497a09",
     "train.py": "494bae1647d04a0df6b269ff5905ec1d244e0cbf7afb7b49f81860daa7f94f58",
     "validate.py": "4aad1a0311334d8a41cc32689f8671e2ddfe1003ed7a168a003c6f01587c11c9",
-    "build_report.py": "2d3047635a846955c88bfaf380a8c1577d770290c13a9443752bb1f6290d0bf1"
+    "build_report.py": "22433254bb873238edbac97a324e4c64496f79c8671a86fc1dfa75da786e31ac"
   }
 }

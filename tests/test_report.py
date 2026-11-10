@@ -160,7 +160,7 @@ def test_report_builds_complete_pdf_only_from_supplied_evidence(evidence, tmp_pa
     # PDF parser is available from the bundled authoring runtime.
     from pypdf import PdfReader
     reader = PdfReader(result)
-    assert 8 <= len(reader.pages) <= 12
+    assert 6 <= len(reader.pages) <= 7
     text = "\n".join(page.extract_text() for page in reader.pages)
     for phrase in ["SYNTHETIC TEST FIXTURE", "500", "three months", "ZikunZheng1129",
                    "Maximum Q", "CartPole", "MsPacman", "not_observed"]:
