@@ -393,11 +393,16 @@ def reproducibility(cart, pac):
         rows.append([key, cart.config["runtime"].get(key, "not recorded"), pac.config["runtime"].get(key, "not recorded")])
     story = [heading("Reproducibility, validation and boundary handling"),
              table(rows, [145, 179, 180]), Spacer(1, 10),
-             p("Run from the repository root with Python 3.12. Install requirements.txt in an isolated "
-               "environment. On deepdish, set CUDA_VISIBLE_DEVICES to one available GPU only, then use "
+             p("Run from the repository root with Python 3.12. The commands install the CUDA 12.6 "
+               "PyTorch build used on deepdish before the remaining dependencies. On deepdish, set "
+               "CUDA_VISIBLE_DEVICES to one available GPU only, then use "
                "--device cuda:0. The recorded visible-device setting above identifies the actual run. "
                "The saved config.json also includes source hashes, library versions and all hyperparameters."),
-             Preformatted("python -m pip install -r requirements.txt\n" +
+             Preformatted("python3.12 -m venv .venv\n"
+               "source .venv/bin/activate\n"
+               "python -m pip install --upgrade pip\n"
+               "python -m pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cu126\n"
+               "python -m pip install -r requirements.txt\n" +
                training_command(cart) + training_command(pac) +
                f"python validate.py --task cartpole --run results/rerun/cartpole --episodes {cart.validation['sampling']['episodes_per_condition']} \\\n"
                f"  --grid-size {cart.validation['perturbation']['grid_size']} --grid-repeats {cart.validation['perturbation']['repeats_per_cell']} --device cuda:0\n"

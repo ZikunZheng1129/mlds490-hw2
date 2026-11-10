@@ -141,6 +141,9 @@ def test_reproduction_uses_new_run_for_training_validation_and_report(evidence):
     runs = [report.load_run(evidence, task) for task in ("cartpole", "mspacman")]
     commands = "\n".join("\n".join(item.lines) for item in report.reproducibility(*runs)
                           if isinstance(item, Preformatted))
+    assert "python3.12 -m venv .venv" in commands
+    assert "source .venv/bin/activate" in commands
+    assert "torch==2.14.1 --index-url https://download.pytorch.org/whl/cu126" in commands
     for task in ("cartpole", "mspacman"):
         assert f"--output results/rerun/{task}" in commands
         assert f"--run results/rerun/{task}" in commands
