@@ -1,0 +1,12 @@
+{"phase": "waiting_development_6000", "watcher_pid": 3428159, "main_pid": 4050763, "updated_at_utc": "2026-11-11T02:38:49.684164+00:00"}
+{"phase": "freeze_selection", "watcher_pid": 3428159, "main_pid": 4050763, "updated_at_utc": "2026-11-11T02:55:00.084930+00:00", "log": "results/upgrade_comparison/selection_decision.log"}
+{"phase": "freeze_selection_complete", "watcher_pid": 3428159, "main_pid": 4050763, "updated_at_utc": "2026-11-11T02:55:07.229027+00:00", "exit_code": 0}
+{"phase": "selection_frozen", "watcher_pid": 3428159, "main_pid": 4050763, "updated_at_utc": "2026-11-11T02:55:07.235647+00:00", "selection": {"baseline_development_mean": 1542.0, "candidate_development_mean": 2736.5, "candidate_selected": true, "candidate_selected_episode": 5600}, "frozen_at_utc": "2026-11-11T02:55:06.473434+00:00", "candidate_checkpoint_sha256": "b7c22c0e6469c8ee83e45f5291e5b327c6ff6c819ef84a3e511014b5a2365d9c"}
+{"phase": "waiting_final_500", "watcher_pid": 3428159, "main_pid": 4050763, "updated_at_utc": "2026-11-11T02:55:07.240892+00:00"}
+{"phase": "paired_comparison", "watcher_pid": 3428159, "main_pid": 4050763, "updated_at_utc": "2026-11-11T03:08:27.284757+00:00", "log": "results/upgrade_comparison/comparison.log"}
+{"phase": "paired_comparison_complete", "watcher_pid": 3428159, "main_pid": 4050763, "updated_at_utc": "2026-11-11T03:26:25.427841+00:00", "exit_code": 0}
+{"phase": "validation", "watcher_pid": 3428159, "main_pid": 4050763, "updated_at_utc": "2026-11-11T03:26:25.449027+00:00", "log": "results/mspacman_extended/validation.log"}
+{"phase": "validation_complete", "watcher_pid": 3428159, "main_pid": 4050763, "updated_at_utc": "2026-11-11T03:30:34.553678+00:00", "exit_code": 0}
+{"phase": "scientific_validation", "watcher_pid": 3428159, "main_pid": 4050763, "updated_at_utc": "2026-11-11T03:30:34.567960+00:00", "log": "results/mspacman_extended/scientific_validation.log"}
+{"phase": "scientific_validation_complete", "watcher_pid": 3428159, "main_pid": 4050763, "updated_at_utc": "2026-11-11T03:34:36.897224+00:00", "exit_code": 0}
+{"phase": "complete", "watcher_pid": 3428159, "main_pid": 4050763, "updated_at_utc": "2026-11-11T03:34:36.945792+00:00", "complete_file": "results/mspacman_extended/COMPLETE"}

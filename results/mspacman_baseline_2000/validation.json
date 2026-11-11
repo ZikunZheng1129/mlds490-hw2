@@ -1,0 +1,131 @@
+{
+  "task": "mspacman",
+  "sampling": {
+    "episodes_per_condition": 50,
+    "first_seed": 80000,
+    "final_epsilon": 0.0,
+    "initial_epsilon": 0.0,
+    "random_epsilon": 1.0,
+    "checkpoint": "policy.pt",
+    "initial_checkpoint": "initial.pt",
+    "note": "Held-out seed comparison; separate from the required 500-episode evaluation."
+  },
+  "final_policy": {
+    "episodes": 50,
+    "mean_reward": 1234.0,
+    "std_reward": 382.4518110234308,
+    "min_reward": 780.0,
+    "max_reward": 2150.0,
+    "mean_length": 687.32,
+    "length_500_fraction": 0.0,
+    "terminated_count": 50,
+    "truncated_count": 0,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "initial_policy": {
+    "episodes": 50,
+    "mean_reward": 60.0,
+    "std_reward": 0.0,
+    "min_reward": 60.0,
+    "max_reward": 60.0,
+    "mean_length": 483.0,
+    "length_500_fraction": 0.0,
+    "terminated_count": 50,
+    "truncated_count": 0,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "random_policy": {
+    "episodes": 50,
+    "mean_reward": 279.8,
+    "std_reward": 147.93117539268465,
+    "min_reward": 90.0,
+    "max_reward": 1080.0,
+    "mean_length": 516.76,
+    "length_500_fraction": 0.0,
+    "terminated_count": 50,
+    "truncated_count": 0,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "comparison": {
+    "final_vs_random": {
+      "n_pairs": 50,
+      "reference_mean": 279.8,
+      "candidate_mean": 1234.0,
+      "mean_difference": 954.2,
+      "ci95_low": 841.0,
+      "ci95_high": 1084.6299999999997,
+      "positive_difference_supported": true,
+      "bootstrap_samples": 2000,
+      "bootstrap_seed": 191,
+      "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
+    },
+    "final_vs_initial": {
+      "n_pairs": 50,
+      "reference_mean": 60.0,
+      "candidate_mean": 1234.0,
+      "mean_difference": 1174.0,
+      "ci95_low": 1073.7649999999999,
+      "ci95_high": 1287.8049999999998,
+      "positive_difference_supported": true,
+      "bootstrap_samples": 2000,
+      "bootstrap_seed": 191,
+      "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
+    },
+    "expectation": "A learned frozen policy should outperform untrained and random policies under fixed exploration settings."
+  },
+  "perturbation": {
+    "experiment": "Normal observations versus all-zero image input with matched reset seeds.",
+    "expectation": "A visually informed policy may outperform its blackout version; the measured difference decides.",
+    "blackout_policy": {
+      "episodes": 50,
+      "mean_reward": 60.0,
+      "std_reward": 0.0,
+      "min_reward": 60.0,
+      "max_reward": 60.0,
+      "mean_length": 483.0,
+      "length_500_fraction": 0.0,
+      "terminated_count": 50,
+      "truncated_count": 0,
+      "unterminated_count": 0,
+      "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+    },
+    "normal_minus_blackout": {
+      "n_pairs": 50,
+      "reference_mean": 60.0,
+      "candidate_mean": 1234.0,
+      "mean_difference": 1174.0,
+      "ci95_low": 1073.7649999999999,
+      "ci95_high": 1287.8049999999998,
+      "positive_difference_supported": true,
+      "bootstrap_samples": 2000,
+      "bootstrap_seed": 191,
+      "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
+    },
+    "interpretation": "Only network inputs change; environment dynamics and raw game scoring stay unchanged. Paired seeds do not force identical trajectories after actions diverge.",
+    "nonstandard_plot_data": "validation_final.csv and validation_blackout.csv"
+  },
+  "target_audit": {
+    "transitions_checked": 10,
+    "all_checked_targets_match": true,
+    "terminal_status": "not_observed",
+    "truncation_status": "not_observed",
+    "nonterminal_status": "passed",
+    "expected_rule": "Reward only at true termination; bootstrap across time truncation.",
+    "scope": "Checks only recorded transitions, not every replay-buffer update."
+  },
+  "boundaries": {
+    "observed_terminated": 50,
+    "observed_truncated": 0,
+    "all_episodes_report_an_end": true,
+    "time_limit_rule": "Time truncation ends rollout, but does not zero the Bellman bootstrap.",
+    "life_loss_note": "Validation does not impose life-loss endings; scores are full-environment episode rewards."
+  },
+  "limitations": [
+    "One selected training seed cannot establish robustness across training seeds.",
+    "Confidence intervals quantify seed variation within this evaluation protocol only.",
+    "Perturbation performance is not a replacement for standard-environment evaluation."
+  ]
+}

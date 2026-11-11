@@ -98,3 +98,69 @@ def test_evaluation_cli_preserves_saved_results(tmp_path):
     assert result.returncode != 0
     assert "fresh output directory" in result.stderr
     assert (tmp_path / "metrics.json").read_text() == original
+
+
+def test_training_uses_explicit_disjoint_development_and_final_seeds(tmp_path):
+    import csv
+    train = importlib.import_module("train")
+    from dqn import defaults
+    config = replace(defaults("cartpole", seed=17), learning_starts=4,
+                     batch_size=4, buffer_size=64, target_interval=2)
+    output = tmp_path / "separated"
+    result = train.run_training(config, 1, output, eval_every=1, eval_episodes=2,
+                                final_episodes=3, development_seed=70000,
+                                evaluation_seed=200007)
+    saved = json.loads((output / "config.json").read_text())
+    scores = list(csv.DictReader((output / "evaluation.csv").open()))
+    assert saved["development_seed"] == 70000 and saved["evaluation_seed"] == 200007
+    assert [int(row["seed"]) for row in scores] == [200007, 200008, 200009]
+    assert result["selected_checkpoint"]["development_seed"] == 70000
+    with pytest.raises(ValueError, match="overlap"):
+        train.run_training(config, 1, tmp_path / "overlap", eval_episodes=2,
+                           final_episodes=3, development_seed=70000,
+                           evaluation_seed=70001)
+
+
+def test_cli_passes_profile_and_reserved_evaluation_seeds(monkeypatch, tmp_path):
+    train = importlib.import_module("train")
+    captured = {}
+    def record(config, *args, **kwargs):
+        captured.update(config=config, args=args, kwargs=kwargs)
+    monkeypatch.setattr(train, "run_training", record)
+    monkeypatch.setattr(sys, "argv", ["train.py", "--task", "mspacman",
+        "--profile", "extended", "--episodes", "6000", "--output", str(tmp_path),
+        "--development-seed", "40000", "--evaluation-seed", "200007"])
+    train.main()
+    assert captured["config"].cnn_hidden_dim == 512
+    assert captured["config"].profile == "extended"
+    assert captured["kwargs"]["evaluation_seed"] == 200007
+    assert captured["kwargs"]["development_seed"] == 40000
+
+
+def test_evaluation_progress_keeps_results_and_weights_fixed(capsys):
+    train = importlib.import_module("train")
+    from dqn import DQNAgent, defaults
+    import torch
+    agent = DQNAgent((4,), 2, defaults("cartpole"))
+    before = {k: v.clone() for k, v in agent.online.state_dict().items()}
+    expected, _ = train.evaluate_model(agent, 2, 123)
+    actual, _ = train.evaluate_model(agent, 2, 123, progress=True)
+    assert expected == actual
+    assert "2/2" in capsys.readouterr().out
+    assert all(torch.equal(before[k], v) for k, v in agent.online.state_dict().items())
+
+
+def test_frozen_evaluation_cli_uses_reserved_seed(tmp_path):
+    import csv
+    from pathlib import Path
+    from dqn import DQNAgent, defaults
+    checkpoint = tmp_path / "policy.pt"
+    DQNAgent((4,), 2, defaults("cartpole")).save(checkpoint)
+    output = tmp_path / "evaluation"
+    result = subprocess.run([sys.executable, str(Path(__file__).parents[1] / "train.py"),
+        "--evaluate", str(checkpoint), "--episodes", "2", "--evaluation-seed", "200007",
+        "--output", str(output)], text=True, capture_output=True)
+    assert result.returncode == 0, result.stderr
+    rows = list(csv.DictReader((output / "evaluation.csv").open()))
+    assert [int(row["seed"]) for row in rows] == [200007, 200008]
+    assert "2/2" in result.stdout

@@ -1,24 +1,24 @@
 {
-  "training_episodes": 2000,
-  "environment_steps": 1303878,
-  "optimizer_steps": 323470,
+  "training_episodes": 6000,
+  "environment_steps": 4737156,
+  "optimizer_steps": 1179290,
   "selected_checkpoint": {
-    "episode": 1500,
-    "steps": 943908,
-    "optimizer_steps": 233478,
-    "development_mean": 1835.0,
+    "episode": 5600,
+    "steps": 4346888,
+    "optimizer_steps": 1081723,
+    "development_mean": 2736.5,
     "development_seed": 40000
   },
   "evaluation": {
     "n": 500,
-    "mean": 1420.52,
-    "std": 511.6942364177716,
-    "median": 1275.0,
-    "min": 610.0,
-    "max": 3370.0,
-    "mean_length": 717.764,
+    "mean": 2589.44,
+    "std": 593.0540553990425,
+    "median": 2460.0,
+    "min": 510.0,
+    "max": 5830.0,
+    "mean_length": 986.576,
     "terminated_episodes": 500,
     "truncated_episodes": 0
   },
-  "wall_seconds": 5159.850245822221
+  "wall_seconds": 19333.2779841125
 }

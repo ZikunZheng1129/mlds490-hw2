@@ -1,0 +1,33 @@
+{
+  "primary_seed": 7,
+  "runs": [
+    {
+      "seed": 7,
+      "training_episodes": 1500,
+      "selected_episode": 1300,
+      "mean_reward": 500.0,
+      "std_reward": 0.0,
+      "successes": 500,
+      "episodes": 500
+    },
+    {
+      "seed": 8,
+      "training_episodes": 1900,
+      "selected_episode": 950,
+      "mean_reward": 500.0,
+      "std_reward": 0.0,
+      "successes": 500,
+      "episodes": 500
+    },
+    {
+      "seed": 9,
+      "training_episodes": 3000,
+      "selected_episode": 1050,
+      "mean_reward": 500.0,
+      "std_reward": 0.0,
+      "successes": 500,
+      "episodes": 500
+    }
+  ],
+  "note": "The primary seed-7 checkpoint is unchanged. Training-seed controls are descriptive; final test scores do not select the primary policy."
+}

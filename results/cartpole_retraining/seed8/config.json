@@ -1,0 +1,43 @@
+{
+  "task": "cartpole",
+  "seed": 8,
+  "gamma": 0.95,
+  "learning_rate": 0.0005,
+  "batch_size": 64,
+  "buffer_size": 50000,
+  "learning_starts": 1000,
+  "train_frequency": 1,
+  "target_interval": 250,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.02,
+  "epsilon_decay_steps": 30000,
+  "gradient_clip": 10.0,
+  "reward_clip": false,
+  "frame_stack": 4,
+  "cnn_hidden_dim": 256,
+  "profile": "baseline",
+  "requested_episodes": 3000,
+  "eval_every": 50,
+  "development_episodes": 20,
+  "final_episodes": 500,
+  "early_stop": true,
+  "runtime": {
+    "hostname": "mlds-deepdish3",
+    "python": "3.12.16",
+    "torch": "2.14.1+cu126",
+    "gymnasium": "1.4.0",
+    "ale_py": "0.12.1",
+    "numpy": "2.5.4",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "cuda_visible_devices": "2",
+    "source_sha256": {
+      "dqn.py": "7037d6e744c7190a50e96261b3258dc2248cc848007649b12797a9c24d41d2e2",
+      "train.py": "153abedbc4edd1cbfa240012314311c3d476bfce6413459caca5157ac0883fa1"
+    }
+  },
+  "max_q_definition": "max over visited states and all actions in each training episode",
+  "evaluation_epsilon": 0.0,
+  "evaluation_seed": 200007,
+  "development_seed": 40000
+}

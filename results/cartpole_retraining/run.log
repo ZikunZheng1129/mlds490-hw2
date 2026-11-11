@@ -1,0 +1,670 @@
+cartpole episode=1 steps=19 reward=19 last100=19.0 eps=0.999 steps/s=19.0
+cartpole episode=10 steps=206 reward=11 last100=20.6 eps=0.993 steps/s=206.0
+cartpole episode=20 steps=409 reward=29 last100=20.4 eps=0.987 steps/s=409.0
+cartpole episode=30 steps=604 reward=22 last100=20.1 eps=0.980 steps/s=604.0
+cartpole episode=40 steps=887 reward=22 last100=22.2 eps=0.971 steps/s=887.0
+cartpole episode=50 steps=1095 reward=14 last100=21.9 eps=0.964 steps/s=687.4
+Development at episode 50: mean=26.75, best=26.75
+cartpole episode=60 steps=1309 reward=17 last100=21.8 eps=0.957 steps/s=445.6
+cartpole episode=70 steps=1521 reward=22 last100=21.7 eps=0.950 steps/s=379.1
+cartpole episode=80 steps=1750 reward=17 last100=21.9 eps=0.943 steps/s=338.0
+cartpole episode=90 steps=1917 reward=13 last100=21.3 eps=0.937 steps/s=316.6
+cartpole episode=100 steps=2160 reward=20 last100=21.6 eps=0.929 steps/s=296.1
+Development at episode 100: mean=278.95, best=278.95
+cartpole episode=110 steps=2466 reward=14 last100=22.6 eps=0.919 steps/s=225.9
+cartpole episode=120 steps=2713 reward=25 last100=23.0 eps=0.911 steps/s=225.2
+cartpole episode=130 steps=2992 reward=19 last100=23.9 eps=0.902 steps/s=223.5
+cartpole episode=140 steps=3363 reward=132 last100=24.8 eps=0.890 steps/s=221.4
+cartpole episode=150 steps=3639 reward=20 last100=25.4 eps=0.881 steps/s=219.9
+Development at episode 150: mean=217.95, best=278.95
+cartpole episode=160 steps=4016 reward=17 last100=27.1 eps=0.869 steps/s=201.0
+cartpole episode=170 steps=4323 reward=27 last100=28.0 eps=0.859 steps/s=200.8
+cartpole episode=180 steps=4536 reward=13 last100=27.9 eps=0.852 steps/s=200.7
+cartpole episode=190 steps=4932 reward=37 last100=30.1 eps=0.839 steps/s=201.5
+cartpole episode=200 steps=5188 reward=12 last100=30.3 eps=0.831 steps/s=201.4
+Development at episode 200: mean=155.60, best=278.95
+cartpole episode=210 steps=5459 reward=17 last100=29.9 eps=0.822 steps/s=192.7
+cartpole episode=220 steps=5714 reward=11 last100=30.0 eps=0.813 steps/s=193.0
+cartpole episode=230 steps=6132 reward=18 last100=31.4 eps=0.800 steps/s=193.1
+cartpole episode=240 steps=6496 reward=9 last100=31.3 eps=0.788 steps/s=192.8
+cartpole episode=250 steps=6837 reward=33 last100=32.0 eps=0.777 steps/s=193.0
+Development at episode 250: mean=174.90, best=278.95
+cartpole episode=260 steps=7158 reward=8 last100=31.4 eps=0.766 steps/s=187.0
+cartpole episode=270 steps=7488 reward=21 last100=31.6 eps=0.755 steps/s=187.6
+cartpole episode=280 steps=7717 reward=21 last100=31.8 eps=0.748 steps/s=187.9
+cartpole episode=290 steps=7907 reward=10 last100=29.8 eps=0.742 steps/s=187.9
+cartpole episode=300 steps=8285 reward=23 last100=31.0 eps=0.729 steps/s=188.5
+Development at episode 300: mean=157.55, best=278.95
+cartpole episode=310 steps=8475 reward=36 last100=30.2 eps=0.723 steps/s=183.4
+cartpole episode=320 steps=8834 reward=50 last100=31.2 eps=0.711 steps/s=183.1
+cartpole episode=330 steps=9091 reward=12 last100=29.6 eps=0.703 steps/s=183.1
+cartpole episode=340 steps=9324 reward=14 last100=28.3 eps=0.695 steps/s=183.1
+cartpole episode=350 steps=9643 reward=12 last100=28.1 eps=0.685 steps/s=182.5
+Development at episode 350: mean=148.55, best=278.95
+cartpole episode=360 steps=9890 reward=24 last100=27.3 eps=0.677 steps/s=178.6
+cartpole episode=370 steps=10099 reward=10 last100=26.1 eps=0.670 steps/s=178.1
+cartpole episode=380 steps=10316 reward=46 last100=26.0 eps=0.663 steps/s=177.7
+cartpole episode=390 steps=10531 reward=16 last100=26.2 eps=0.656 steps/s=177.4
+cartpole episode=400 steps=10782 reward=34 last100=25.0 eps=0.648 steps/s=177.2
+Development at episode 400: mean=133.15, best=278.95
+cartpole episode=410 steps=10983 reward=21 last100=25.1 eps=0.641 steps/s=174.2
+cartpole episode=420 steps=11263 reward=23 last100=24.3 eps=0.632 steps/s=174.2
+cartpole episode=430 steps=11553 reward=38 last100=24.6 eps=0.623 steps/s=174.2
+cartpole episode=440 steps=11801 reward=33 last100=24.8 eps=0.615 steps/s=174.1
+cartpole episode=450 steps=12091 reward=10 last100=24.5 eps=0.605 steps/s=174.0
+Development at episode 450: mean=122.50, best=278.95
+cartpole episode=460 steps=12383 reward=15 last100=24.9 eps=0.596 steps/s=171.8
+cartpole episode=470 steps=12752 reward=122 last100=26.5 eps=0.583 steps/s=172.1
+cartpole episode=480 steps=12968 reward=12 last100=26.5 eps=0.576 steps/s=171.0
+cartpole episode=490 steps=13291 reward=15 last100=27.6 eps=0.566 steps/s=171.0
+cartpole episode=500 steps=13537 reward=15 last100=27.6 eps=0.558 steps/s=170.7
+Development at episode 500: mean=105.85, best=278.95
+cartpole episode=510 steps=14211 reward=12 last100=32.3 eps=0.536 steps/s=170.2
+cartpole episode=520 steps=14695 reward=15 last100=34.3 eps=0.520 steps/s=170.8
+cartpole episode=530 steps=15245 reward=28 last100=36.9 eps=0.502 steps/s=171.4
+cartpole episode=540 steps=15594 reward=63 last100=37.9 eps=0.491 steps/s=171.5
+cartpole episode=550 steps=16136 reward=49 last100=40.5 eps=0.473 steps/s=172.0
+Development at episode 550: mean=124.40, best=278.95
+cartpole episode=560 steps=16469 reward=17 last100=40.9 eps=0.462 steps/s=170.4
+cartpole episode=570 steps=17013 reward=26 last100=42.6 eps=0.444 steps/s=170.6
+cartpole episode=580 steps=17391 reward=12 last100=44.2 eps=0.432 steps/s=170.8
+cartpole episode=590 steps=18030 reward=18 last100=47.4 eps=0.411 steps/s=171.6
+cartpole episode=600 steps=18448 reward=30 last100=49.1 eps=0.397 steps/s=171.7
+Development at episode 600: mean=94.55, best=278.95
+cartpole episode=610 steps=18930 reward=40 last100=47.2 eps=0.382 steps/s=170.6
+cartpole episode=620 steps=19320 reward=91 last100=46.2 eps=0.369 steps/s=170.9
+cartpole episode=630 steps=19828 reward=39 last100=45.8 eps=0.352 steps/s=171.4
+cartpole episode=640 steps=20821 reward=272 last100=52.3 eps=0.320 steps/s=171.9
+cartpole episode=650 steps=21771 reward=19 last100=56.4 eps=0.289 steps/s=172.7
+Development at episode 650: mean=80.50, best=278.95
+cartpole episode=660 steps=22766 reward=414 last100=63.0 eps=0.256 steps/s=172.5
+cartpole episode=670 steps=23227 reward=41 last100=62.1 eps=0.241 steps/s=172.9
+cartpole episode=680 steps=24004 reward=12 last100=66.1 eps=0.216 steps/s=173.7
+cartpole episode=690 steps=24562 reward=28 last100=65.3 eps=0.198 steps/s=174.2
+cartpole episode=700 steps=25399 reward=104 last100=69.5 eps=0.170 steps/s=175.0
+Development at episode 700: mean=159.95, best=278.95
+cartpole episode=710 steps=26830 reward=35 last100=79.0 eps=0.124 steps/s=174.9
+cartpole episode=720 steps=27759 reward=17 last100=84.4 eps=0.093 steps/s=175.7
+cartpole episode=730 steps=28498 reward=139 last100=86.7 eps=0.069 steps/s=176.2
+cartpole episode=740 steps=30743 reward=140 last100=99.2 eps=0.020 steps/s=178.2
+cartpole episode=750 steps=31809 reward=109 last100=100.4 eps=0.020 steps/s=178.9
+Development at episode 750: mean=95.80, best=278.95
+cartpole episode=760 steps=33849 reward=17 last100=110.8 eps=0.020 steps/s=179.4
+cartpole episode=770 steps=35383 reward=111 last100=121.6 eps=0.020 steps/s=180.3
+cartpole episode=780 steps=36306 reward=108 last100=123.0 eps=0.020 steps/s=180.8
+cartpole episode=790 steps=37840 reward=122 last100=132.8 eps=0.020 steps/s=181.6
+cartpole episode=800 steps=39987 reward=115 last100=145.9 eps=0.020 steps/s=182.9
+Development at episode 800: mean=118.40, best=278.95
+cartpole episode=810 steps=40991 reward=104 last100=141.6 eps=0.020 steps/s=182.7
+cartpole episode=820 steps=41945 reward=124 last100=141.9 eps=0.020 steps/s=183.1
+cartpole episode=830 steps=43567 reward=140 last100=150.7 eps=0.020 steps/s=184.0
+cartpole episode=840 steps=47082 reward=101 last100=163.4 eps=0.020 steps/s=187.4
+cartpole episode=850 steps=48022 reward=96 last100=162.1 eps=0.020 steps/s=188.5
+Development at episode 850: mean=111.65, best=278.95
+cartpole episode=860 steps=50658 reward=500 last100=168.1 eps=0.020 steps/s=188.9
+cartpole episode=870 steps=52395 reward=213 last100=170.1 eps=0.020 steps/s=189.7
+cartpole episode=880 steps=54211 reward=88 last100=179.1 eps=0.020 steps/s=190.6
+cartpole episode=890 steps=55821 reward=181 last100=179.8 eps=0.020 steps/s=191.3
+cartpole episode=900 steps=56702 reward=98 last100=167.2 eps=0.020 steps/s=191.6
+Development at episode 900: mean=93.10, best=278.95
+cartpole episode=910 steps=57661 reward=99 last100=166.7 eps=0.020 steps/s=191.4
+cartpole episode=920 steps=60282 reward=500 last100=183.4 eps=0.020 steps/s=192.5
+cartpole episode=930 steps=63961 reward=500 last100=203.9 eps=0.020 steps/s=193.9
+cartpole episode=940 steps=67147 reward=338 last100=200.7 eps=0.020 steps/s=194.7
+cartpole episode=950 steps=70498 reward=220 last100=224.8 eps=0.020 steps/s=194.3
+Development at episode 950: mean=500.00, best=500.00
+cartpole episode=960 steps=72301 reward=356 last100=216.4 eps=0.020 steps/s=191.0
+cartpole episode=970 steps=76387 reward=500 last100=239.9 eps=0.020 steps/s=192.0
+cartpole episode=980 steps=80525 reward=500 last100=263.1 eps=0.020 steps/s=194.1
+cartpole episode=990 steps=83060 reward=153 last100=272.4 eps=0.020 steps/s=194.5
+cartpole episode=1000 steps=85998 reward=168 last100=293.0 eps=0.020 steps/s=195.2
+Development at episode 1000: mean=94.30, best=500.00
+cartpole episode=1010 steps=87360 reward=134 last100=297.0 eps=0.020 steps/s=195.1
+cartpole episode=1020 steps=88514 reward=120 last100=282.3 eps=0.020 steps/s=195.3
+cartpole episode=1030 steps=90132 reward=110 last100=261.7 eps=0.020 steps/s=195.5
+cartpole episode=1040 steps=91619 reward=242 last100=244.7 eps=0.020 steps/s=195.7
+cartpole episode=1050 steps=94812 reward=500 last100=243.1 eps=0.020 steps/s=196.2
+Development at episode 1050: mean=500.00, best=500.00
+cartpole episode=1060 steps=96749 reward=91 last100=244.5 eps=0.020 steps/s=195.2
+cartpole episode=1070 steps=100094 reward=468 last100=237.1 eps=0.020 steps/s=195.7
+cartpole episode=1080 steps=102664 reward=138 last100=221.4 eps=0.020 steps/s=196.1
+cartpole episode=1090 steps=104788 reward=500 last100=217.3 eps=0.020 steps/s=196.4
+cartpole episode=1100 steps=107087 reward=271 last100=210.9 eps=0.020 steps/s=196.7
+Development at episode 1100: mean=182.50, best=500.00
+cartpole episode=1110 steps=110578 reward=468 last100=232.2 eps=0.020 steps/s=196.7
+cartpole episode=1120 steps=112890 reward=135 last100=243.8 eps=0.020 steps/s=196.8
+cartpole episode=1130 steps=115452 reward=322 last100=253.2 eps=0.020 steps/s=197.1
+cartpole episode=1140 steps=118195 reward=278 last100=265.8 eps=0.020 steps/s=197.3
+cartpole episode=1150 steps=120087 reward=172 last100=252.8 eps=0.020 steps/s=197.4
+Development at episode 1150: mean=104.60, best=500.00
+cartpole episode=1160 steps=122836 reward=177 last100=260.9 eps=0.020 steps/s=197.5
+cartpole episode=1170 steps=125863 reward=400 last100=257.7 eps=0.020 steps/s=197.8
+cartpole episode=1180 steps=128091 reward=134 last100=254.3 eps=0.020 steps/s=198.1
+cartpole episode=1190 steps=131225 reward=480 last100=264.4 eps=0.020 steps/s=198.3
+cartpole episode=1200 steps=134902 reward=206 last100=278.1 eps=0.020 steps/s=198.7
+Development at episode 1200: mean=124.80, best=500.00
+cartpole episode=1210 steps=137012 reward=214 last100=264.3 eps=0.020 steps/s=198.5
+cartpole episode=1220 steps=138122 reward=94 last100=252.3 eps=0.020 steps/s=198.5
+cartpole episode=1230 steps=139545 reward=129 last100=240.9 eps=0.020 steps/s=198.6
+cartpole episode=1240 steps=141615 reward=432 last100=234.2 eps=0.020 steps/s=198.7
+cartpole episode=1250 steps=143437 reward=112 last100=233.5 eps=0.020 steps/s=198.8
+Development at episode 1250: mean=91.25, best=500.00
+cartpole episode=1260 steps=144934 reward=115 last100=221.0 eps=0.020 steps/s=198.7
+cartpole episode=1270 steps=146076 reward=109 last100=202.1 eps=0.020 steps/s=198.9
+cartpole episode=1280 steps=148470 reward=167 last100=203.8 eps=0.020 steps/s=199.2
+cartpole episode=1290 steps=151856 reward=500 last100=206.3 eps=0.020 steps/s=199.7
+cartpole episode=1300 steps=154345 reward=17 last100=194.4 eps=0.020 steps/s=199.7
+Development at episode 1300: mean=100.90, best=500.00
+cartpole episode=1310 steps=157406 reward=367 last100=203.9 eps=0.020 steps/s=199.7
+cartpole episode=1320 steps=160837 reward=500 last100=227.2 eps=0.020 steps/s=199.9
+cartpole episode=1330 steps=163823 reward=496 last100=242.8 eps=0.020 steps/s=200.4
+cartpole episode=1340 steps=165791 reward=79 last100=241.8 eps=0.020 steps/s=200.5
+cartpole episode=1350 steps=167328 reward=93 last100=238.9 eps=0.020 steps/s=200.9
+Development at episode 1350: mean=87.05, best=500.00
+cartpole episode=1360 steps=170490 reward=500 last100=255.6 eps=0.020 steps/s=201.7
+cartpole episode=1370 steps=171982 reward=101 last100=259.1 eps=0.020 steps/s=202.1
+cartpole episode=1380 steps=173650 reward=22 last100=251.8 eps=0.020 steps/s=202.6
+cartpole episode=1390 steps=174986 reward=96 last100=231.3 eps=0.020 steps/s=203.0
+cartpole episode=1400 steps=177067 reward=119 last100=227.2 eps=0.020 steps/s=203.6
+Development at episode 1400: mean=488.40, best=500.00
+cartpole episode=1410 steps=180350 reward=500 last100=229.4 eps=0.020 steps/s=203.1
+cartpole episode=1420 steps=182789 reward=213 last100=219.5 eps=0.020 steps/s=203.1
+cartpole episode=1430 steps=185995 reward=238 last100=221.7 eps=0.020 steps/s=203.3
+cartpole episode=1440 steps=188207 reward=500 last100=224.2 eps=0.020 steps/s=203.4
+cartpole episode=1450 steps=189466 reward=107 last100=221.4 eps=0.020 steps/s=203.4
+Development at episode 1450: mean=96.60, best=500.00
+cartpole episode=1460 steps=191172 reward=29 last100=206.8 eps=0.020 steps/s=203.4
+cartpole episode=1470 steps=193956 reward=500 last100=219.7 eps=0.020 steps/s=203.5
+cartpole episode=1480 steps=197228 reward=50 last100=235.8 eps=0.020 steps/s=203.7
+cartpole episode=1490 steps=200769 reward=500 last100=257.8 eps=0.020 steps/s=203.8
+cartpole episode=1500 steps=203213 reward=316 last100=261.5 eps=0.020 steps/s=203.9
+Development at episode 1500: mean=134.15, best=500.00
+cartpole episode=1510 steps=206720 reward=152 last100=263.7 eps=0.020 steps/s=203.8
+cartpole episode=1520 steps=208324 reward=115 last100=255.3 eps=0.020 steps/s=203.8
+cartpole episode=1530 steps=209930 reward=98 last100=239.3 eps=0.020 steps/s=203.8
+cartpole episode=1540 steps=213261 reward=162 last100=250.5 eps=0.020 steps/s=204.0
+cartpole episode=1550 steps=215037 reward=160 last100=255.7 eps=0.020 steps/s=204.1
+Development at episode 1550: mean=111.20, best=500.00
+cartpole episode=1560 steps=216034 reward=178 last100=248.6 eps=0.020 steps/s=204.0
+cartpole episode=1570 steps=218231 reward=189 last100=242.8 eps=0.020 steps/s=204.1
+cartpole episode=1580 steps=220682 reward=135 last100=234.5 eps=0.020 steps/s=204.2
+cartpole episode=1590 steps=222512 reward=112 last100=217.4 eps=0.020 steps/s=204.3
+cartpole episode=1600 steps=224851 reward=223 last100=216.4 eps=0.020 steps/s=204.4
+Development at episode 1600: mean=112.00, best=500.00
+cartpole episode=1610 steps=227054 reward=376 last100=203.3 eps=0.020 steps/s=204.3
+cartpole episode=1620 steps=229116 reward=312 last100=207.9 eps=0.020 steps/s=204.3
+cartpole episode=1630 steps=231834 reward=145 last100=219.0 eps=0.020 steps/s=204.4
+cartpole episode=1640 steps=233330 reward=80 last100=200.7 eps=0.020 steps/s=204.4
+cartpole episode=1650 steps=234861 reward=500 last100=198.2 eps=0.020 steps/s=204.4
+Development at episode 1650: mean=500.00, best=500.00
+cartpole episode=1660 steps=237510 reward=126 last100=214.8 eps=0.020 steps/s=203.9
+cartpole episode=1670 steps=240792 reward=500 last100=225.6 eps=0.020 steps/s=204.0
+cartpole episode=1680 steps=244127 reward=500 last100=234.4 eps=0.020 steps/s=204.2
+cartpole episode=1690 steps=245927 reward=128 last100=234.2 eps=0.020 steps/s=204.2
+cartpole episode=1700 steps=248788 reward=94 last100=239.4 eps=0.020 steps/s=204.2
+Development at episode 1700: mean=244.70, best=500.00
+cartpole episode=1710 steps=250752 reward=99 last100=237.0 eps=0.020 steps/s=203.9
+cartpole episode=1720 steps=252754 reward=477 last100=236.4 eps=0.020 steps/s=203.9
+cartpole episode=1730 steps=254633 reward=108 last100=228.0 eps=0.020 steps/s=204.0
+cartpole episode=1740 steps=256003 reward=248 last100=226.7 eps=0.020 steps/s=204.0
+cartpole episode=1750 steps=257457 reward=218 last100=226.0 eps=0.020 steps/s=204.0
+Development at episode 1750: mean=90.10, best=500.00
+cartpole episode=1760 steps=258732 reward=32 last100=212.2 eps=0.020 steps/s=203.9
+cartpole episode=1770 steps=261380 reward=159 last100=205.9 eps=0.020 steps/s=204.0
+cartpole episode=1780 steps=263271 reward=150 last100=191.4 eps=0.020 steps/s=204.0
+cartpole episode=1790 steps=264532 reward=287 last100=186.1 eps=0.020 steps/s=204.0
+cartpole episode=1800 steps=265479 reward=93 last100=166.9 eps=0.020 steps/s=204.0
+Development at episode 1800: mean=101.60, best=500.00
+cartpole episode=1810 steps=267565 reward=123 last100=168.1 eps=0.020 steps/s=203.9
+cartpole episode=1820 steps=268704 reward=500 last100=159.5 eps=0.020 steps/s=203.9
+cartpole episode=1830 steps=270559 reward=163 last100=159.3 eps=0.020 steps/s=204.0
+cartpole episode=1840 steps=271738 reward=145 last100=157.3 eps=0.020 steps/s=204.0
+cartpole episode=1850 steps=274975 reward=165 last100=175.2 eps=0.020 steps/s=204.1
+Development at episode 1850: mean=500.00, best=500.00
+cartpole episode=1860 steps=278127 reward=424 last100=193.9 eps=0.020 steps/s=203.6
+cartpole episode=1870 steps=279681 reward=233 last100=183.0 eps=0.020 steps/s=203.6
+cartpole episode=1880 steps=282032 reward=302 last100=187.6 eps=0.020 steps/s=203.7
+cartpole episode=1890 steps=285092 reward=126 last100=205.6 eps=0.020 steps/s=203.7
+cartpole episode=1900 steps=287160 reward=433 last100=216.8 eps=0.020 steps/s=203.8
+Development at episode 1900: mean=500.00, best=500.00
+Evaluation 50/500: mean=500.00
+Evaluation 100/500: mean=500.00
+Evaluation 150/500: mean=500.00
+Evaluation 200/500: mean=500.00
+Evaluation 250/500: mean=500.00
+Evaluation 300/500: mean=500.00
+Evaluation 350/500: mean=500.00
+Evaluation 400/500: mean=500.00
+Evaluation 450/500: mean=500.00
+Evaluation 500/500: mean=500.00
+{
+  "training_episodes": 1900,
+  "environment_steps": 287160,
+  "optimizer_steps": 286161,
+  "selected_checkpoint": {
+    "episode": 950,
+    "steps": 70498,
+    "optimizer_steps": 69499,
+    "development_mean": 500.0,
+    "development_seed": 40000
+  },
+  "evaluation": {
+    "n": 500,
+    "mean": 500.0,
+    "std": 0.0,
+    "median": 500.0,
+    "min": 500.0,
+    "max": 500.0,
+    "mean_length": 500.0,
+    "terminated_episodes": 0,
+    "truncated_episodes": 500
+  },
+  "wall_seconds": 1503.530240480788,
+  "success_rate": 1.0
+}
+cartpole episode=1 steps=14 reward=14 last100=14.0 eps=1.000 steps/s=14.0
+cartpole episode=10 steps=195 reward=24 last100=19.5 eps=0.994 steps/s=195.0
+cartpole episode=20 steps=426 reward=13 last100=21.3 eps=0.986 steps/s=426.0
+cartpole episode=30 steps=666 reward=11 last100=22.2 eps=0.978 steps/s=666.0
+cartpole episode=40 steps=930 reward=38 last100=23.2 eps=0.970 steps/s=930.0
+cartpole episode=50 steps=1208 reward=15 last100=24.2 eps=0.961 steps/s=486.6
+Development at episode 50: mean=20.85, best=20.85
+cartpole episode=60 steps=1446 reward=42 last100=24.1 eps=0.953 steps/s=362.3
+cartpole episode=70 steps=1695 reward=17 last100=24.2 eps=0.945 steps/s=319.0
+cartpole episode=80 steps=2004 reward=28 last100=25.1 eps=0.935 steps/s=289.2
+cartpole episode=90 steps=2223 reward=20 last100=24.7 eps=0.927 steps/s=273.1
+cartpole episode=100 steps=2449 reward=21 last100=24.5 eps=0.920 steps/s=262.1
+Development at episode 100: mean=283.90, best=283.90
+cartpole episode=110 steps=2650 reward=23 last100=24.6 eps=0.913 steps/s=206.3
+cartpole episode=120 steps=2855 reward=9 last100=24.3 eps=0.907 steps/s=204.7
+cartpole episode=130 steps=3128 reward=30 last100=24.6 eps=0.898 steps/s=202.8
+cartpole episode=140 steps=3437 reward=39 last100=25.1 eps=0.888 steps/s=201.5
+cartpole episode=150 steps=3653 reward=23 last100=24.4 eps=0.881 steps/s=200.6
+Development at episode 150: mean=202.25, best=283.90
+cartpole episode=160 steps=3887 reward=13 last100=24.4 eps=0.873 steps/s=183.5
+cartpole episode=170 steps=4154 reward=45 last100=24.6 eps=0.864 steps/s=183.9
+cartpole episode=180 steps=4444 reward=15 last100=24.4 eps=0.855 steps/s=184.4
+cartpole episode=190 steps=4746 reward=13 last100=25.2 eps=0.845 steps/s=185.0
+cartpole episode=200 steps=5060 reward=14 last100=26.1 eps=0.835 steps/s=185.6
+Development at episode 200: mean=174.30, best=283.90
+cartpole episode=210 steps=5412 reward=48 last100=27.6 eps=0.823 steps/s=177.8
+cartpole episode=220 steps=5634 reward=47 last100=27.8 eps=0.816 steps/s=178.2
+cartpole episode=230 steps=5974 reward=70 last100=28.5 eps=0.805 steps/s=179.3
+cartpole episode=240 steps=6189 reward=17 last100=27.5 eps=0.798 steps/s=178.7
+cartpole episode=250 steps=6599 reward=20 last100=29.5 eps=0.784 steps/s=179.1
+Development at episode 250: mean=77.45, best=283.90
+cartpole episode=260 steps=6870 reward=19 last100=29.8 eps=0.776 steps/s=176.9
+cartpole episode=270 steps=7220 reward=112 last100=30.7 eps=0.764 steps/s=177.8
+cartpole episode=280 steps=7414 reward=20 last100=29.7 eps=0.758 steps/s=178.0
+cartpole episode=290 steps=7620 reward=12 last100=28.7 eps=0.751 steps/s=178.2
+cartpole episode=300 steps=7807 reward=13 last100=27.5 eps=0.745 steps/s=178.3
+Development at episode 300: mean=93.00, best=283.90
+cartpole episode=310 steps=7958 reward=19 last100=25.5 eps=0.740 steps/s=175.4
+cartpole episode=320 steps=8166 reward=16 last100=25.3 eps=0.733 steps/s=174.9
+cartpole episode=330 steps=8368 reward=34 last100=23.9 eps=0.727 steps/s=174.7
+cartpole episode=340 steps=8644 reward=19 last100=24.6 eps=0.718 steps/s=174.6
+cartpole episode=350 steps=8815 reward=11 last100=22.2 eps=0.712 steps/s=174.2
+Development at episode 350: mean=87.70, best=283.90
+cartpole episode=360 steps=9005 reward=14 last100=21.4 eps=0.706 steps/s=172.0
+cartpole episode=370 steps=9198 reward=43 last100=19.8 eps=0.700 steps/s=171.8
+cartpole episode=380 steps=9417 reward=18 last100=20.0 eps=0.692 steps/s=171.6
+cartpole episode=390 steps=9776 reward=23 last100=21.6 eps=0.681 steps/s=171.7
+cartpole episode=400 steps=10066 reward=13 last100=22.6 eps=0.671 steps/s=171.7
+Development at episode 400: mean=107.15, best=283.90
+cartpole episode=410 steps=10335 reward=12 last100=23.8 eps=0.662 steps/s=169.8
+cartpole episode=420 steps=10678 reward=45 last100=25.1 eps=0.651 steps/s=170.0
+cartpole episode=430 steps=11043 reward=24 last100=26.8 eps=0.639 steps/s=170.3
+cartpole episode=440 steps=11325 reward=25 last100=26.8 eps=0.630 steps/s=170.3
+cartpole episode=450 steps=11818 reward=13 last100=30.0 eps=0.614 steps/s=171.2
+Development at episode 450: mean=95.45, best=283.90
+cartpole episode=460 steps=12094 reward=84 last100=30.9 eps=0.605 steps/s=169.5
+cartpole episode=470 steps=12319 reward=13 last100=31.2 eps=0.598 steps/s=169.3
+cartpole episode=480 steps=12717 reward=27 last100=33.0 eps=0.585 steps/s=169.8
+cartpole episode=490 steps=12931 reward=12 last100=31.6 eps=0.578 steps/s=169.6
+cartpole episode=500 steps=13200 reward=55 last100=31.3 eps=0.569 steps/s=169.5
+Development at episode 500: mean=71.05, best=283.90
+cartpole episode=510 steps=13496 reward=24 last100=31.6 eps=0.559 steps/s=168.3
+cartpole episode=520 steps=13955 reward=28 last100=32.8 eps=0.544 steps/s=168.6
+cartpole episode=530 steps=14230 reward=73 last100=31.9 eps=0.535 steps/s=168.5
+cartpole episode=540 steps=14592 reward=125 last100=32.7 eps=0.523 steps/s=168.6
+cartpole episode=550 steps=15008 reward=112 last100=31.9 eps=0.510 steps/s=169.1
+Development at episode 550: mean=150.25, best=283.90
+cartpole episode=560 steps=15439 reward=64 last100=33.5 eps=0.496 steps/s=167.8
+cartpole episode=570 steps=15730 reward=41 last100=34.1 eps=0.486 steps/s=168.0
+cartpole episode=580 steps=16331 reward=17 last100=36.1 eps=0.467 steps/s=168.9
+cartpole episode=590 steps=16799 reward=37 last100=38.7 eps=0.451 steps/s=169.8
+cartpole episode=600 steps=17764 reward=132 last100=45.6 eps=0.420 steps/s=171.5
+Development at episode 600: mean=114.00, best=283.90
+cartpole episode=610 steps=17999 reward=11 last100=45.0 eps=0.412 steps/s=170.2
+cartpole episode=620 steps=18253 reward=23 last100=43.0 eps=0.404 steps/s=170.0
+cartpole episode=630 steps=18546 reward=14 last100=43.2 eps=0.394 steps/s=170.0
+cartpole episode=640 steps=18951 reward=111 last100=43.6 eps=0.381 steps/s=170.4
+cartpole episode=650 steps=20165 reward=81 last100=51.6 eps=0.341 steps/s=172.1
+Development at episode 650: mean=100.90, best=283.90
+cartpole episode=660 steps=20583 reward=72 last100=51.4 eps=0.328 steps/s=171.6
+cartpole episode=670 steps=21533 reward=28 last100=58.0 eps=0.297 steps/s=172.9
+cartpole episode=680 steps=21839 reward=12 last100=55.1 eps=0.287 steps/s=173.0
+cartpole episode=690 steps=22257 reward=101 last100=54.6 eps=0.273 steps/s=173.3
+cartpole episode=700 steps=23011 reward=37 last100=52.5 eps=0.248 steps/s=174.0
+Development at episode 700: mean=101.25, best=283.90
+cartpole episode=710 steps=23961 reward=98 last100=59.6 eps=0.217 steps/s=174.1
+cartpole episode=720 steps=24445 reward=23 last100=61.9 eps=0.201 steps/s=174.4
+cartpole episode=730 steps=25118 reward=82 last100=65.7 eps=0.180 steps/s=174.9
+cartpole episode=740 steps=25636 reward=96 last100=66.8 eps=0.163 steps/s=174.6
+cartpole episode=750 steps=26318 reward=55 last100=61.5 eps=0.140 steps/s=175.0
+Development at episode 750: mean=103.20, best=283.90
+cartpole episode=760 steps=27183 reward=71 last100=66.0 eps=0.112 steps/s=174.7
+cartpole episode=770 steps=28243 reward=103 last100=67.1 eps=0.077 steps/s=175.5
+cartpole episode=780 steps=29254 reward=96 last100=74.2 eps=0.044 steps/s=176.3
+cartpole episode=790 steps=30593 reward=108 last100=83.4 eps=0.020 steps/s=177.3
+cartpole episode=800 steps=31487 reward=100 last100=84.8 eps=0.020 steps/s=177.9
+Development at episode 800: mean=103.60, best=283.90
+cartpole episode=810 steps=32452 reward=100 last100=84.9 eps=0.020 steps/s=177.8
+cartpole episode=820 steps=33383 reward=45 last100=89.4 eps=0.020 steps/s=178.3
+cartpole episode=830 steps=34453 reward=106 last100=93.3 eps=0.020 steps/s=178.9
+cartpole episode=840 steps=35500 reward=102 last100=98.6 eps=0.020 steps/s=179.5
+cartpole episode=850 steps=36506 reward=100 last100=101.9 eps=0.020 steps/s=179.5
+Development at episode 850: mean=99.80, best=283.90
+cartpole episode=860 steps=37467 reward=89 last100=102.8 eps=0.020 steps/s=178.8
+cartpole episode=870 steps=38338 reward=102 last100=101.0 eps=0.020 steps/s=179.2
+cartpole episode=880 steps=39373 reward=97 last100=101.2 eps=0.020 steps/s=178.7
+cartpole episode=890 steps=40848 reward=244 last100=102.5 eps=0.020 steps/s=178.2
+cartpole episode=900 steps=41856 reward=91 last100=103.7 eps=0.020 steps/s=177.8
+Development at episode 900: mean=90.05, best=283.90
+cartpole episode=910 steps=42832 reward=100 last100=103.8 eps=0.020 steps/s=176.8
+cartpole episode=920 steps=43615 reward=94 last100=102.3 eps=0.020 steps/s=176.5
+cartpole episode=930 steps=44519 reward=99 last100=100.7 eps=0.020 steps/s=176.1
+cartpole episode=940 steps=45563 reward=111 last100=100.6 eps=0.020 steps/s=175.9
+cartpole episode=950 steps=46691 reward=115 last100=101.8 eps=0.020 steps/s=176.5
+Development at episode 950: mean=105.35, best=283.90
+cartpole episode=960 steps=48198 reward=120 last100=107.3 eps=0.020 steps/s=176.8
+cartpole episode=970 steps=50189 reward=303 last100=118.5 eps=0.020 steps/s=177.8
+cartpole episode=980 steps=52036 reward=237 last100=126.6 eps=0.020 steps/s=178.8
+cartpole episode=990 steps=53600 reward=170 last100=127.5 eps=0.020 steps/s=179.6
+cartpole episode=1000 steps=54790 reward=111 last100=129.3 eps=0.020 steps/s=179.4
+Development at episode 1000: mean=107.30, best=283.90
+cartpole episode=1010 steps=57014 reward=269 last100=141.8 eps=0.020 steps/s=179.9
+cartpole episode=1020 steps=61364 reward=500 last100=177.5 eps=0.020 steps/s=181.7
+cartpole episode=1030 steps=64934 reward=206 last100=204.2 eps=0.020 steps/s=182.7
+cartpole episode=1040 steps=66735 reward=500 last100=211.7 eps=0.020 steps/s=183.2
+cartpole episode=1050 steps=69647 reward=500 last100=229.6 eps=0.020 steps/s=183.4
+Development at episode 1050: mean=500.00, best=500.00
+cartpole episode=1060 steps=73912 reward=438 last100=257.1 eps=0.020 steps/s=183.4
+cartpole episode=1070 steps=77051 reward=257 last100=268.6 eps=0.020 steps/s=183.1
+cartpole episode=1080 steps=80723 reward=341 last100=286.9 eps=0.020 steps/s=182.9
+cartpole episode=1090 steps=84042 reward=500 last100=304.4 eps=0.020 steps/s=182.8
+cartpole episode=1100 steps=86272 reward=500 last100=314.8 eps=0.020 steps/s=183.3
+Development at episode 1100: mean=85.80, best=500.00
+cartpole episode=1110 steps=87513 reward=67 last100=305.0 eps=0.020 steps/s=183.3
+cartpole episode=1120 steps=88442 reward=95 last100=270.8 eps=0.020 steps/s=183.5
+cartpole episode=1130 steps=89718 reward=159 last100=247.8 eps=0.020 steps/s=183.7
+cartpole episode=1140 steps=90918 reward=57 last100=241.8 eps=0.020 steps/s=184.0
+cartpole episode=1150 steps=92094 reward=142 last100=224.5 eps=0.020 steps/s=184.2
+Development at episode 1150: mean=172.60, best=500.00
+cartpole episode=1160 steps=93403 reward=140 last100=194.9 eps=0.020 steps/s=183.9
+cartpole episode=1170 steps=96287 reward=335 last100=192.4 eps=0.020 steps/s=184.5
+cartpole episode=1180 steps=98167 reward=110 last100=174.4 eps=0.020 steps/s=184.8
+cartpole episode=1190 steps=99428 reward=178 last100=153.9 eps=0.020 steps/s=185.0
+cartpole episode=1200 steps=101815 reward=341 last100=155.4 eps=0.020 steps/s=185.5
+Development at episode 1200: mean=100.40, best=500.00
+cartpole episode=1210 steps=103728 reward=247 last100=162.2 eps=0.020 steps/s=185.5
+cartpole episode=1220 steps=107053 reward=500 last100=186.1 eps=0.020 steps/s=186.1
+cartpole episode=1230 steps=109185 reward=116 last100=194.7 eps=0.020 steps/s=186.4
+cartpole episode=1240 steps=110897 reward=47 last100=199.8 eps=0.020 steps/s=186.6
+cartpole episode=1250 steps=113223 reward=500 last100=211.3 eps=0.020 steps/s=187.0
+Development at episode 1250: mean=500.00, best=500.00
+cartpole episode=1260 steps=116830 reward=500 last100=234.3 eps=0.020 steps/s=186.7
+cartpole episode=1270 steps=119323 reward=137 last100=230.4 eps=0.020 steps/s=187.3
+cartpole episode=1280 steps=122526 reward=220 last100=243.6 eps=0.020 steps/s=188.0
+cartpole episode=1290 steps=126157 reward=500 last100=267.3 eps=0.020 steps/s=189.5
+cartpole episode=1300 steps=129462 reward=410 last100=276.5 eps=0.020 steps/s=189.9
+Development at episode 1300: mean=379.35, best=500.00
+cartpole episode=1310 steps=131009 reward=180 last100=272.8 eps=0.020 steps/s=189.2
+cartpole episode=1320 steps=133451 reward=114 last100=264.0 eps=0.020 steps/s=189.5
+cartpole episode=1330 steps=135177 reward=74 last100=259.9 eps=0.020 steps/s=189.6
+cartpole episode=1340 steps=138595 reward=54 last100=277.0 eps=0.020 steps/s=190.0
+cartpole episode=1350 steps=142635 reward=230 last100=294.1 eps=0.020 steps/s=190.6
+Development at episode 1350: mean=150.30, best=500.00
+cartpole episode=1360 steps=145065 reward=340 last100=282.4 eps=0.020 steps/s=190.8
+cartpole episode=1370 steps=147126 reward=193 last100=278.0 eps=0.020 steps/s=191.0
+cartpole episode=1380 steps=149257 reward=285 last100=267.3 eps=0.020 steps/s=191.2
+cartpole episode=1390 steps=152337 reward=141 last100=261.8 eps=0.020 steps/s=191.5
+cartpole episode=1400 steps=154976 reward=356 last100=255.1 eps=0.020 steps/s=191.7
+Development at episode 1400: mean=500.00, best=500.00
+cartpole episode=1410 steps=157662 reward=500 last100=266.5 eps=0.020 steps/s=191.1
+cartpole episode=1420 steps=159854 reward=306 last100=264.0 eps=0.020 steps/s=191.3
+cartpole episode=1430 steps=162570 reward=500 last100=273.9 eps=0.020 steps/s=191.5
+cartpole episode=1440 steps=165333 reward=158 last100=267.4 eps=0.020 steps/s=191.7
+cartpole episode=1450 steps=169335 reward=500 last100=267.0 eps=0.020 steps/s=192.1
+Development at episode 1450: mean=136.50, best=500.00
+cartpole episode=1460 steps=171872 reward=171 last100=268.1 eps=0.020 steps/s=192.1
+cartpole episode=1470 steps=175217 reward=500 last100=280.9 eps=0.020 steps/s=192.4
+cartpole episode=1480 steps=179084 reward=344 last100=298.3 eps=0.020 steps/s=192.9
+cartpole episode=1490 steps=181707 reward=166 last100=293.7 eps=0.020 steps/s=193.2
+cartpole episode=1500 steps=184118 reward=459 last100=291.4 eps=0.020 steps/s=193.4
+Development at episode 1500: mean=226.90, best=500.00
+cartpole episode=1510 steps=185932 reward=295 last100=282.7 eps=0.020 steps/s=193.2
+cartpole episode=1520 steps=189361 reward=229 last100=295.1 eps=0.020 steps/s=193.4
+cartpole episode=1530 steps=191707 reward=177 last100=291.4 eps=0.020 steps/s=193.6
+cartpole episode=1540 steps=194210 reward=452 last100=288.8 eps=0.020 steps/s=193.9
+cartpole episode=1550 steps=196763 reward=126 last100=274.3 eps=0.020 steps/s=194.0
+Development at episode 1550: mean=228.25, best=500.00
+cartpole episode=1560 steps=198686 reward=82 last100=268.1 eps=0.020 steps/s=193.8
+cartpole episode=1570 steps=202267 reward=500 last100=270.5 eps=0.020 steps/s=194.1
+cartpole episode=1580 steps=204977 reward=378 last100=258.9 eps=0.020 steps/s=194.4
+cartpole episode=1590 steps=207773 reward=103 last100=260.7 eps=0.020 steps/s=194.6
+cartpole episode=1600 steps=210096 reward=165 last100=259.8 eps=0.020 steps/s=194.7
+Development at episode 1600: mean=64.45, best=500.00
+cartpole episode=1610 steps=212111 reward=55 last100=261.8 eps=0.020 steps/s=194.7
+cartpole episode=1620 steps=213734 reward=103 last100=243.7 eps=0.020 steps/s=194.8
+cartpole episode=1630 steps=215266 reward=185 last100=235.6 eps=0.020 steps/s=194.8
+cartpole episode=1640 steps=216722 reward=171 last100=225.1 eps=0.020 steps/s=194.9
+cartpole episode=1650 steps=220111 reward=138 last100=233.5 eps=0.020 steps/s=195.1
+Development at episode 1650: mean=93.45, best=500.00
+cartpole episode=1660 steps=221484 reward=262 last100=228.0 eps=0.020 steps/s=194.8
+cartpole episode=1670 steps=223518 reward=118 last100=212.5 eps=0.020 steps/s=194.9
+cartpole episode=1680 steps=225134 reward=269 last100=201.6 eps=0.020 steps/s=195.0
+cartpole episode=1690 steps=228694 reward=500 last100=209.2 eps=0.020 steps/s=195.2
+cartpole episode=1700 steps=231386 reward=163 last100=212.9 eps=0.020 steps/s=195.4
+Development at episode 1700: mean=95.70, best=500.00
+cartpole episode=1710 steps=232449 reward=109 last100=203.4 eps=0.020 steps/s=195.4
+cartpole episode=1720 steps=233563 reward=134 last100=198.3 eps=0.020 steps/s=195.3
+cartpole episode=1730 steps=235768 reward=175 last100=205.0 eps=0.020 steps/s=195.4
+cartpole episode=1740 steps=238291 reward=500 last100=215.7 eps=0.020 steps/s=195.5
+cartpole episode=1750 steps=242159 reward=500 last100=220.5 eps=0.020 steps/s=195.7
+Development at episode 1750: mean=106.00, best=500.00
+cartpole episode=1760 steps=244891 reward=134 last100=234.1 eps=0.020 steps/s=195.5
+cartpole episode=1770 steps=247436 reward=169 last100=239.2 eps=0.020 steps/s=195.5
+cartpole episode=1780 steps=248789 reward=127 last100=236.6 eps=0.020 steps/s=195.5
+cartpole episode=1790 steps=250910 reward=114 last100=222.2 eps=0.020 steps/s=195.6
+cartpole episode=1800 steps=252205 reward=102 last100=208.2 eps=0.020 steps/s=195.7
+Development at episode 1800: mean=99.70, best=500.00
+cartpole episode=1810 steps=255484 reward=313 last100=230.3 eps=0.020 steps/s=195.8
+cartpole episode=1820 steps=259458 reward=179 last100=258.9 eps=0.020 steps/s=196.3
+cartpole episode=1830 steps=262031 reward=109 last100=262.6 eps=0.020 steps/s=196.3
+cartpole episode=1840 steps=265031 reward=179 last100=267.4 eps=0.020 steps/s=196.4
+cartpole episode=1850 steps=267576 reward=128 last100=254.2 eps=0.020 steps/s=196.4
+Development at episode 1850: mean=108.50, best=500.00
+cartpole episode=1860 steps=271472 reward=500 last100=265.8 eps=0.020 steps/s=196.6
+cartpole episode=1870 steps=274907 reward=500 last100=274.7 eps=0.020 steps/s=196.7
+cartpole episode=1880 steps=277242 reward=256 last100=284.5 eps=0.020 steps/s=196.9
+cartpole episode=1890 steps=280542 reward=419 last100=296.3 eps=0.020 steps/s=196.9
+cartpole episode=1900 steps=282575 reward=105 last100=303.7 eps=0.020 steps/s=197.0
+Development at episode 1900: mean=73.25, best=500.00
+cartpole episode=1910 steps=284299 reward=112 last100=288.1 eps=0.020 steps/s=197.0
+cartpole episode=1920 steps=285700 reward=232 last100=262.4 eps=0.020 steps/s=197.0
+cartpole episode=1930 steps=286674 reward=116 last100=246.4 eps=0.020 steps/s=197.0
+cartpole episode=1940 steps=288178 reward=51 last100=231.5 eps=0.020 steps/s=197.1
+cartpole episode=1950 steps=289360 reward=118 last100=217.8 eps=0.020 steps/s=197.1
+Development at episode 1950: mean=500.00, best=500.00
+cartpole episode=1960 steps=292480 reward=500 last100=210.1 eps=0.020 steps/s=196.7
+cartpole episode=1970 steps=295712 reward=140 last100=208.1 eps=0.020 steps/s=196.9
+cartpole episode=1980 steps=298791 reward=303 last100=215.5 eps=0.020 steps/s=197.0
+cartpole episode=1990 steps=301276 reward=135 last100=207.3 eps=0.020 steps/s=197.0
+cartpole episode=2000 steps=302769 reward=127 last100=201.9 eps=0.020 steps/s=197.1
+Development at episode 2000: mean=102.05, best=500.00
+cartpole episode=2010 steps=303975 reward=129 last100=196.8 eps=0.020 steps/s=197.0
+cartpole episode=2020 steps=305449 reward=77 last100=197.5 eps=0.020 steps/s=197.0
+cartpole episode=2030 steps=308787 reward=500 last100=221.1 eps=0.020 steps/s=197.1
+cartpole episode=2040 steps=312379 reward=257 last100=242.0 eps=0.020 steps/s=197.2
+cartpole episode=2050 steps=315025 reward=500 last100=256.6 eps=0.020 steps/s=197.3
+Development at episode 2050: mean=500.00, best=500.00
+cartpole episode=2060 steps=317229 reward=21 last100=247.5 eps=0.020 steps/s=196.9
+cartpole episode=2070 steps=320266 reward=233 last100=245.5 eps=0.020 steps/s=197.0
+cartpole episode=2080 steps=322057 reward=84 last100=232.7 eps=0.020 steps/s=197.1
+cartpole episode=2090 steps=324660 reward=185 last100=233.8 eps=0.020 steps/s=197.2
+cartpole episode=2100 steps=326058 reward=118 last100=232.9 eps=0.020 steps/s=197.2
+Development at episode 2100: mean=101.80, best=500.00
+cartpole episode=2110 steps=328217 reward=500 last100=242.4 eps=0.020 steps/s=197.2
+cartpole episode=2120 steps=329752 reward=44 last100=243.0 eps=0.020 steps/s=197.2
+cartpole episode=2130 steps=332538 reward=500 last100=237.5 eps=0.020 steps/s=197.3
+cartpole episode=2140 steps=335066 reward=500 last100=226.9 eps=0.020 steps/s=197.3
+cartpole episode=2150 steps=338599 reward=385 last100=235.7 eps=0.020 steps/s=197.4
+Development at episode 2150: mean=449.55, best=500.00
+cartpole episode=2160 steps=341286 reward=206 last100=240.6 eps=0.020 steps/s=197.0
+cartpole episode=2170 steps=343380 reward=80 last100=231.1 eps=0.020 steps/s=197.0
+cartpole episode=2180 steps=346725 reward=500 last100=246.7 eps=0.020 steps/s=197.1
+cartpole episode=2190 steps=348982 reward=500 last100=243.2 eps=0.020 steps/s=197.1
+cartpole episode=2200 steps=351384 reward=133 last100=253.3 eps=0.020 steps/s=197.1
+Development at episode 2200: mean=106.00, best=500.00
+cartpole episode=2210 steps=352666 reward=112 last100=244.5 eps=0.020 steps/s=197.1
+cartpole episode=2220 steps=354338 reward=117 last100=245.9 eps=0.020 steps/s=197.0
+cartpole episode=2230 steps=356712 reward=252 last100=241.7 eps=0.020 steps/s=197.0
+cartpole episode=2240 steps=358193 reward=212 last100=231.3 eps=0.020 steps/s=196.9
+cartpole episode=2250 steps=359791 reward=40 last100=211.9 eps=0.020 steps/s=196.9
+Development at episode 2250: mean=500.00, best=500.00
+cartpole episode=2260 steps=360822 reward=25 last100=195.4 eps=0.020 steps/s=196.5
+cartpole episode=2270 steps=362821 reward=138 last100=194.4 eps=0.020 steps/s=196.4
+cartpole episode=2280 steps=364496 reward=133 last100=177.7 eps=0.020 steps/s=196.4
+cartpole episode=2290 steps=367507 reward=500 last100=185.2 eps=0.020 steps/s=196.2
+cartpole episode=2300 steps=369941 reward=500 last100=185.6 eps=0.020 steps/s=196.3
+Development at episode 2300: mean=213.85, best=500.00
+cartpole episode=2310 steps=372772 reward=500 last100=201.1 eps=0.020 steps/s=196.2
+cartpole episode=2320 steps=375302 reward=157 last100=209.6 eps=0.020 steps/s=196.2
+cartpole episode=2330 steps=377422 reward=18 last100=207.1 eps=0.020 steps/s=196.2
+cartpole episode=2340 steps=379674 reward=303 last100=214.8 eps=0.020 steps/s=196.3
+cartpole episode=2350 steps=382134 reward=221 last100=223.4 eps=0.020 steps/s=196.3
+Development at episode 2350: mean=437.45, best=500.00
+cartpole episode=2360 steps=383596 reward=38 last100=227.7 eps=0.020 steps/s=196.0
+cartpole episode=2370 steps=385749 reward=155 last100=229.3 eps=0.020 steps/s=196.0
+cartpole episode=2380 steps=388323 reward=138 last100=238.3 eps=0.020 steps/s=196.0
+cartpole episode=2390 steps=389542 reward=119 last100=220.3 eps=0.020 steps/s=196.0
+cartpole episode=2400 steps=390442 reward=29 last100=205.0 eps=0.020 steps/s=196.0
+Development at episode 2400: mean=143.55, best=500.00
+cartpole episode=2410 steps=391731 reward=180 last100=189.6 eps=0.020 steps/s=195.9
+cartpole episode=2420 steps=393208 reward=191 last100=179.1 eps=0.020 steps/s=195.8
+cartpole episode=2430 steps=394859 reward=252 last100=174.4 eps=0.020 steps/s=195.6
+cartpole episode=2440 steps=395926 reward=209 last100=162.5 eps=0.020 steps/s=195.7
+cartpole episode=2450 steps=398985 reward=500 last100=168.5 eps=0.020 steps/s=195.6
+Development at episode 2450: mean=92.30, best=500.00
+cartpole episode=2460 steps=400616 reward=237 last100=170.2 eps=0.020 steps/s=195.6
+cartpole episode=2470 steps=403701 reward=279 last100=179.5 eps=0.020 steps/s=195.7
+cartpole episode=2480 steps=406215 reward=470 last100=178.9 eps=0.020 steps/s=196.0
+cartpole episode=2490 steps=408872 reward=106 last100=193.3 eps=0.020 steps/s=196.3
+cartpole episode=2500 steps=409708 reward=103 last100=192.7 eps=0.020 steps/s=196.3
+Development at episode 2500: mean=185.65, best=500.00
+cartpole episode=2510 steps=413841 reward=500 last100=221.1 eps=0.020 steps/s=196.2
+cartpole episode=2520 steps=416332 reward=120 last100=231.2 eps=0.020 steps/s=196.3
+cartpole episode=2530 steps=419545 reward=500 last100=246.9 eps=0.020 steps/s=196.5
+cartpole episode=2540 steps=422185 reward=114 last100=262.6 eps=0.020 steps/s=196.5
+cartpole episode=2550 steps=423982 reward=50 last100=250.0 eps=0.020 steps/s=196.4
+Development at episode 2550: mean=181.50, best=500.00
+cartpole episode=2560 steps=426151 reward=269 last100=255.3 eps=0.020 steps/s=196.3
+cartpole episode=2570 steps=428935 reward=77 last100=252.3 eps=0.020 steps/s=196.2
+cartpole episode=2580 steps=430950 reward=115 last100=247.3 eps=0.020 steps/s=196.3
+cartpole episode=2590 steps=433223 reward=102 last100=243.5 eps=0.020 steps/s=196.3
+cartpole episode=2600 steps=435696 reward=323 last100=259.9 eps=0.020 steps/s=196.4
+Development at episode 2600: mean=500.00, best=500.00
+cartpole episode=2610 steps=438191 reward=500 last100=243.5 eps=0.020 steps/s=196.1
+cartpole episode=2620 steps=439542 reward=123 last100=232.1 eps=0.020 steps/s=196.1
+cartpole episode=2630 steps=441965 reward=123 last100=224.2 eps=0.020 steps/s=196.2
+cartpole episode=2640 steps=442939 reward=90 last100=207.5 eps=0.020 steps/s=196.1
+cartpole episode=2650 steps=443904 reward=111 last100=199.2 eps=0.020 steps/s=196.1
+Development at episode 2650: mean=104.80, best=500.00
+cartpole episode=2660 steps=445684 reward=156 last100=195.3 eps=0.020 steps/s=196.1
+cartpole episode=2670 steps=448316 reward=69 last100=193.8 eps=0.020 steps/s=196.1
+cartpole episode=2680 steps=449314 reward=131 last100=183.6 eps=0.020 steps/s=196.1
+cartpole episode=2690 steps=450473 reward=116 last100=172.5 eps=0.020 steps/s=196.1
+cartpole episode=2700 steps=451516 reward=120 last100=158.2 eps=0.020 steps/s=196.1
+Development at episode 2700: mean=95.05, best=500.00
+cartpole episode=2710 steps=453541 reward=363 last100=153.5 eps=0.020 steps/s=196.0
+cartpole episode=2720 steps=456273 reward=283 last100=167.3 eps=0.020 steps/s=196.1
+cartpole episode=2730 steps=459467 reward=95 last100=175.0 eps=0.020 steps/s=196.0
+cartpole episode=2740 steps=460813 reward=81 last100=178.7 eps=0.020 steps/s=196.0
+cartpole episode=2750 steps=462966 reward=48 last100=190.6 eps=0.020 steps/s=196.1
+Development at episode 2750: mean=224.75, best=500.00
+cartpole episode=2760 steps=465276 reward=500 last100=195.9 eps=0.020 steps/s=196.0
+cartpole episode=2770 steps=466694 reward=111 last100=183.8 eps=0.020 steps/s=196.0
+cartpole episode=2780 steps=468212 reward=59 last100=189.0 eps=0.020 steps/s=196.0
+cartpole episode=2790 steps=469954 reward=160 last100=194.8 eps=0.020 steps/s=196.0
+cartpole episode=2800 steps=471743 reward=336 last100=202.3 eps=0.020 steps/s=196.1
+Development at episode 2800: mean=500.00, best=500.00
+cartpole episode=2810 steps=474259 reward=500 last100=207.2 eps=0.020 steps/s=195.8
+cartpole episode=2820 steps=476743 reward=85 last100=204.7 eps=0.020 steps/s=195.8
+cartpole episode=2830 steps=478592 reward=100 last100=191.2 eps=0.020 steps/s=195.9
+cartpole episode=2840 steps=481139 reward=166 last100=203.3 eps=0.020 steps/s=195.9
+cartpole episode=2850 steps=482741 reward=92 last100=197.8 eps=0.020 steps/s=196.0
+Development at episode 2850: mean=80.80, best=500.00
+cartpole episode=2860 steps=485011 reward=142 last100=197.3 eps=0.020 steps/s=196.0
+cartpole episode=2870 steps=486772 reward=24 last100=200.8 eps=0.020 steps/s=196.0
+cartpole episode=2880 steps=488401 reward=142 last100=201.9 eps=0.020 steps/s=196.0
+cartpole episode=2890 steps=490031 reward=328 last100=200.8 eps=0.020 steps/s=196.0
+cartpole episode=2900 steps=492364 reward=500 last100=206.2 eps=0.020 steps/s=196.0
+Development at episode 2900: mean=276.25, best=500.00
+cartpole episode=2910 steps=494573 reward=286 last100=203.1 eps=0.020 steps/s=195.8
+cartpole episode=2920 steps=497110 reward=118 last100=203.7 eps=0.020 steps/s=195.8
+cartpole episode=2930 steps=498442 reward=50 last100=198.5 eps=0.020 steps/s=195.8
+cartpole episode=2940 steps=499523 reward=136 last100=183.8 eps=0.020 steps/s=195.7
+cartpole episode=2950 steps=501391 reward=103 last100=186.5 eps=0.020 steps/s=195.7
+Development at episode 2950: mean=115.20, best=500.00
+cartpole episode=2960 steps=504766 reward=250 last100=197.6 eps=0.020 steps/s=195.5
+cartpole episode=2970 steps=507396 reward=116 last100=206.2 eps=0.020 steps/s=195.4
+cartpole episode=2980 steps=509314 reward=79 last100=209.1 eps=0.020 steps/s=195.4
+cartpole episode=2990 steps=510685 reward=139 last100=206.5 eps=0.020 steps/s=195.4
+cartpole episode=3000 steps=514267 reward=394 last100=219.0 eps=0.020 steps/s=195.5
+Development at episode 3000: mean=111.20, best=500.00
+Evaluation 50/500: mean=500.00
+Evaluation 100/500: mean=500.00
+Evaluation 150/500: mean=500.00
+Evaluation 200/500: mean=500.00
+Evaluation 250/500: mean=500.00
+Evaluation 300/500: mean=500.00
+Evaluation 350/500: mean=500.00
+Evaluation 400/500: mean=500.00
+Evaluation 450/500: mean=500.00
+Evaluation 500/500: mean=500.00
+{
+  "training_episodes": 3000,
+  "environment_steps": 514267,
+  "optimizer_steps": 513268,
+  "selected_checkpoint": {
+    "episode": 1050,
+    "steps": 69647,
+    "optimizer_steps": 68648,
+    "development_mean": 500.0,
+    "development_seed": 40000
+  },
+  "evaluation": {
+    "n": 500,
+    "mean": 500.0,
+    "std": 0.0,
+    "median": 500.0,
+    "min": 500.0,
+    "max": 500.0,
+    "mean_length": 500.0,
+    "terminated_episodes": 0,
+    "truncated_episodes": 500
+  },
+  "wall_seconds": 2723.20196614787,
+  "success_rate": 1.0
+}
+Evaluation 50/500: mean=500.00
+Evaluation 100/500: mean=500.00
+Evaluation 150/500: mean=500.00
+Evaluation 200/500: mean=500.00
+Evaluation 250/500: mean=500.00
+Evaluation 300/500: mean=500.00
+Evaluation 350/500: mean=500.00
+Evaluation 400/500: mean=500.00
+Evaluation 450/500: mean=500.00
+Evaluation 500/500: mean=500.00

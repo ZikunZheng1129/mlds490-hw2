@@ -3,20 +3,22 @@
   "seed": 7,
   "gamma": 0.99,
   "learning_rate": 0.0001,
-  "batch_size": 32,
-  "buffer_size": 50000,
-  "learning_starts": 10000,
+  "batch_size": 64,
+  "buffer_size": 100000,
+  "learning_starts": 20000,
   "train_frequency": 4,
-  "target_interval": 2000,
+  "target_interval": 2500,
   "epsilon_start": 1.0,
-  "epsilon_end": 0.05,
-  "epsilon_decay_steps": 500000,
+  "epsilon_end": 0.01,
+  "epsilon_decay_steps": 1000000,
   "gradient_clip": 10.0,
   "reward_clip": true,
   "frame_stack": 4,
-  "requested_episodes": 2000,
+  "cnn_hidden_dim": 512,
+  "profile": "extended",
+  "requested_episodes": 6000,
   "eval_every": 100,
-  "development_episodes": 10,
+  "development_episodes": 20,
   "final_episodes": 500,
   "early_stop": true,
   "runtime": {
@@ -30,11 +32,12 @@
     "gpu": "NVIDIA GeForce RTX 2080 Ti",
     "cuda_visible_devices": "2",
     "source_sha256": {
-      "dqn.py": "3df46cdfcc9b05683feae918bc654a9fad646b3f153255e30e9c142c30497a09",
-      "train.py": "494bae1647d04a0df6b269ff5905ec1d244e0cbf7afb7b49f81860daa7f94f58"
+      "dqn.py": "7037d6e744c7190a50e96261b3258dc2248cc848007649b12797a9c24d41d2e2",
+      "train.py": "153abedbc4edd1cbfa240012314311c3d476bfce6413459caca5157ac0883fa1"
     }
   },
   "max_q_definition": "max over visited states and all actions in each training episode",
   "evaluation_epsilon": 0.0,
-  "evaluation_seed": 100007
+  "evaluation_seed": 200007,
+  "development_seed": 40000
 }

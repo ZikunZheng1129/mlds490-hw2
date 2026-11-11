@@ -1,0 +1,56 @@
+{
+  "recorded_utc": "2026-11-10T21:44:05.499076+00:00",
+  "baseline_source_commit": "ec92296559e7e3f5c1b92f2405842c0be4ecc166",
+  "purpose": "Improve MsPacman performance and deepen scientific validation while keeping ordinary DQN and a plain report.",
+  "mspacman": {
+    "fresh_training": true,
+    "episodes": 6000,
+    "seed": 7,
+    "profile": "extended",
+    "gamma": 0.99,
+    "cnn_hidden_dim": 512,
+    "learning_rate": 0.0001,
+    "batch_size": 64,
+    "buffer_size": 100000,
+    "learning_starts": 20000,
+    "train_frequency": 4,
+    "target_interval_optimizer_updates": 2500,
+    "epsilon_decay_steps": 1000000,
+    "epsilon_end": 0.01,
+    "life_loss_terminal": false,
+    "development_seed": 40000,
+    "development_episodes": 20,
+    "development_interval_episodes": 100,
+    "final_evaluation_seed": 200007,
+    "final_evaluation_episodes": 500
+  },
+  "selection_rule": "Choose each run checkpoint using development mean only, ties retain earlier. Promote the new run only if its best 20-game development mean exceeds the old model on those same 20 seeds (1542.0). Freeze this decision before inspecting the fresh 500-game final evaluation. Report all measured comparisons, including negative outcomes.",
+  "old_model_development_mean": 1542.0,
+  "comparison_protocol": "After new checkpoint selection is frozen, evaluate the old model and a random policy on the same fresh 500 final seeds for paired descriptive comparison; do not use these scores for checkpoint or hyperparameter selection.",
+  "cartpole_retraining_controls": {
+    "additional_seeds": [
+      8,
+      9
+    ],
+    "maximum_episodes": 3000,
+    "early_stop": "two consecutive development evaluations with all 20 games reaching 500",
+    "primary_model": "Keep existing seed7 model; do not select among retraining controls using final scores."
+  },
+  "scientific_validation": [
+    "Known-solution two-state MDP learned by the actual DQN update across gamma/reward scales, with a no-learning control.",
+    "Frozen Q versus subsequent discounted rewards sampled within trajectories; record censoring at truncation.",
+    "Matched-seed intact/repeated-latest/constant128 image interventions.",
+    "Observed terminal/truncated-transition target audits."
+  ],
+  "compute": {
+    "host": "mlds-deepdish3",
+    "physical_gpu": 2,
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "visible_gpu_count": 1
+  },
+  "limitations": [
+    "The extended run changes several settings; baseline comparison does not isolate the effect of training duration.",
+    "The previous 500 final seeds have already been seen, hence a fresh final seed range.",
+    "Single-seed MsPacman training does not establish robustness across retraining."
+  ]
+}

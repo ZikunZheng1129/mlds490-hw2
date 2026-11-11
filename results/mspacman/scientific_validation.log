@@ -1,0 +1,355 @@
+A.L.E: Arcade Learning Environment (version 0.12.1+8a8fafb)
+[Powered by Stella]
+{
+  "task": "mspacman",
+  "checkpoint_sha256": "b7c22c0e6469c8ee83e45f5291e5b327c6ff6c819ef84a3e511014b5a2365d9c",
+  "selected_checkpoint": {
+    "episode": 5600,
+    "steps": 4346888,
+    "optimizer_steps": 1081723,
+    "development_mean": 2736.5,
+    "development_seed": 40000
+  },
+  "weights_unchanged": true,
+  "seed_start": 300000,
+  "episodes": 50,
+  "source_sha256": {
+    "dqn.py": "7037d6e744c7190a50e96261b3258dc2248cc848007649b12797a9c24d41d2e2",
+    "train.py": "153abedbc4edd1cbfa240012314311c3d476bfce6413459caca5157ac0883fa1",
+    "validate.py": "4aad1a0311334d8a41cc32689f8671e2ddfe1003ed7a168a003c6f01587c11c9",
+    "scientific_validation.py": "568be8ff16909901f892c08b7b02b308f17622302be7930ebc90b040512f28ad"
+  },
+  "analytic_learning": {
+    "description": "Two-state MDP with known optimal action values; actual DQNAgent.update.",
+    "cases": [
+      {
+        "gamma": 0.95,
+        "reward_scale": 1.0,
+        "updates": 1500,
+        "learning_rate": 0.001,
+        "expected": [
+          [
+            0.95,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "learned": [
+          [
+            0.949999988079071,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "max_absolute_error": 1.1920928910669204e-08,
+        "tolerance": 0.02,
+        "passed": true,
+        "final_loss": 0.0,
+        "weights_unchanged": false
+      },
+      {
+        "gamma": 0.99,
+        "reward_scale": 1.0,
+        "updates": 1500,
+        "learning_rate": 0.001,
+        "expected": [
+          [
+            0.99,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "learned": [
+          [
+            0.9900000095367432,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "max_absolute_error": 9.536743172944284e-09,
+        "tolerance": 0.02,
+        "passed": true,
+        "final_loss": 0.0,
+        "weights_unchanged": false
+      },
+      {
+        "gamma": 0.0,
+        "reward_scale": 1.0,
+        "updates": 1500,
+        "learning_rate": 0.001,
+        "expected": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "learned": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "max_absolute_error": 0.0,
+        "tolerance": 0.02,
+        "passed": true,
+        "final_loss": 0.0,
+        "weights_unchanged": false
+      },
+      {
+        "gamma": 0.95,
+        "reward_scale": 3.0,
+        "updates": 1500,
+        "learning_rate": 0.001,
+        "expected": [
+          [
+            2.8499999999999996,
+            0.0
+          ],
+          [
+            3.0,
+            0.0
+          ]
+        ],
+        "learned": [
+          [
+            2.8499999046325684,
+            -1.6391277313232422e-07
+          ],
+          [
+            3.0,
+            -2.0116567611694336e-07
+          ]
+        ],
+        "max_absolute_error": 2.0116567611694336e-07,
+        "tolerance": 0.02,
+        "passed": true,
+        "final_loss": 7.341349750333848e-15,
+        "weights_unchanged": false
+      },
+      {
+        "gamma": 0.95,
+        "reward_scale": 0.0,
+        "updates": 1500,
+        "learning_rate": 0.001,
+        "expected": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "learned": [
+          [
+            1.1175870895385742e-08,
+            -7.450580596923828e-09
+          ],
+          [
+            3.725290298461914e-09,
+            1.4901161193847656e-08
+          ]
+        ],
+        "max_absolute_error": 1.4901161193847656e-08,
+        "tolerance": 0.02,
+        "passed": true,
+        "final_loss": 9.820269703383823e-17,
+        "weights_unchanged": false
+      }
+    ],
+    "all_known_solutions_passed": true,
+    "zero_learning_rate_control": {
+      "gamma": 0.95,
+      "reward_scale": 3.0,
+      "updates": 200,
+      "learning_rate": 0.0,
+      "expected": [
+        [
+          2.8499999999999996,
+          0.0
+        ],
+        [
+          3.0,
+          0.0
+        ]
+      ],
+      "learned": [
+        [
+          0.12726560235023499,
+          -0.011973723769187927
+        ],
+        [
+          0.2011709213256836,
+          -0.07238580286502838
+        ]
+      ],
+      "max_absolute_error": 2.7988290786743164,
+      "tolerance": 0.02,
+      "passed": false,
+      "final_loss": 0.5758897066116333,
+      "weights_unchanged": true
+    },
+    "control_detected_no_learning": true,
+    "limitation": "Tests Bellman learning and scale/discount controls, not pixel-game competence."
+  },
+  "calibration": {
+    "episodes": 50,
+    "observations": 50,
+    "mean_predicted_q": 3.7811317443847656,
+    "mean_discounted_return": 14.207107952440836,
+    "mean_signed_error": -10.425976208056074,
+    "mae": 10.425976208056074,
+    "rmse": 10.430599660368285,
+    "pearson_correlation": null,
+    "censored_episodes": 0,
+    "maximum_tail_upper_bound": 0.0,
+    "correlation_note": "Undefined for a constant variable or fewer than two observations.",
+    "sampling_note": "Within-game states are dependent; observation count is not independent sample size."
+  },
+  "sampled_calibration": {
+    "episodes": 50,
+    "observations": 2500,
+    "mean_predicted_q": 14.844696849393845,
+    "mean_discounted_return": 13.371877785334492,
+    "mean_signed_error": 1.4728190640593513,
+    "mae": 4.295289905264919,
+    "rmse": 5.979934520576479,
+    "pearson_correlation": 0.8275127757938535,
+    "censored_episodes": 0,
+    "maximum_tail_upper_bound": 0.0,
+    "correlation_note": "Undefined for a constant variable or fewer than two observations.",
+    "sampling_note": "Within-game states are dependent; observation count is not independent sample size."
+  },
+  "normal_policy": {
+    "episodes": 50,
+    "mean_reward": 2622.2,
+    "std_reward": 758.0272193702034,
+    "min_reward": 1530.0,
+    "max_reward": 6320.0,
+    "mean_length": 1021.6,
+    "length_500_fraction": 0.0,
+    "terminated_count": 50,
+    "truncated_count": 0,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "ending_target_audit": {
+    "transitions_checked": 50,
+    "terminal": {
+      "count": 50,
+      "status": "passed"
+    },
+    "truncation": {
+      "count": 0,
+      "status": "not_observed"
+    },
+    "all_observed_targets_match": true,
+    "rule": "Actual dqn.bellman_targets, checked against reward-only terminal / bootstrapped truncation targets.",
+    "scope": "Observed episode endings only; unobserved branches are not counted as passes."
+  },
+  "pixel_interventions": {
+    "seed_start": 300000,
+    "episodes_per_condition": 50,
+    "conditions": {
+      "normal": {
+        "summary": {
+          "episodes": 50,
+          "mean_reward": 2622.2,
+          "std_reward": 758.0272193702034,
+          "min_reward": 1530.0,
+          "max_reward": 6320.0,
+          "mean_length": 1021.6,
+          "length_500_fraction": 0.0,
+          "terminated_count": 50,
+          "truncated_count": 0,
+          "unterminated_count": 0,
+          "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+        }
+      },
+      "repeat_latest": {
+        "summary": {
+          "episodes": 50,
+          "mean_reward": 1894.0,
+          "std_reward": 580.0949957391744,
+          "min_reward": 1010.0,
+          "max_reward": 3910.0,
+          "mean_length": 841.6,
+          "length_500_fraction": 0.0,
+          "terminated_count": 50,
+          "truncated_count": 0,
+          "unterminated_count": 0,
+          "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+        },
+        "normal_minus_condition": {
+          "n_pairs": 50,
+          "reference_mean": 1894.0,
+          "candidate_mean": 2622.2,
+          "mean_difference": 728.2,
+          "ci95_low": 486.595,
+          "ci95_high": 1008.6,
+          "positive_difference_supported": true,
+          "bootstrap_samples": 2000,
+          "bootstrap_seed": 191,
+          "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
+        }
+      },
+      "constant128": {
+        "summary": {
+          "episodes": 50,
+          "mean_reward": 70.0,
+          "std_reward": 0.0,
+          "min_reward": 70.0,
+          "max_reward": 70.0,
+          "mean_length": 531.0,
+          "length_500_fraction": 0.0,
+          "terminated_count": 50,
+          "truncated_count": 0,
+          "unterminated_count": 0,
+          "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+        },
+        "normal_minus_condition": {
+          "n_pairs": 50,
+          "reference_mean": 70.0,
+          "candidate_mean": 2622.2,
+          "mean_difference": 2552.2,
+          "ci95_low": 2375.7200000000003,
+          "ci95_high": 2782.405,
+          "positive_difference_supported": true,
+          "bootstrap_samples": 2000,
+          "bootstrap_seed": 191,
+          "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
+        }
+      }
+    },
+    "interpretation": "Repeated latest frame removes temporal history; constant 128 normalizes to zero and removes visual information. Both introduce distribution shifts; neither retrains the agent."
+  },
+  "limitations": [
+    "One training seed does not establish robustness across retraining.",
+    "Calibration uses raw CartPole rewards and sign-clipped MsPacman rewards, with full-game termination.",
+    "At truncation the observed return omits a nonnegative tail bounded by gamma**remaining/(1-gamma).",
+    "Within-game calibration selects at most 50 evenly spaced states; truncated episodes require at least 100 remaining steps.",
+    "Initial Atari inputs may be identical across seeds; constant-variable correlations are reported as null.",
+    "Image interventions change the input distribution, not the environment or game scoring."
+  ]
+}

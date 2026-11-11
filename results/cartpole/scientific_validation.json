@@ -1,0 +1,278 @@
+{
+  "task": "cartpole",
+  "checkpoint_sha256": "3f1b8d895421dd78713a396094a82da6b1b474d1e0b56ba8a2dcd07cecd293c0",
+  "selected_checkpoint": {
+    "episode": 1300,
+    "steps": 105811,
+    "optimizer_steps": 104812,
+    "development_mean": 500.0,
+    "development_seed": 40000
+  },
+  "weights_unchanged": true,
+  "seed_start": 300000,
+  "episodes": 50,
+  "source_sha256": {
+    "dqn.py": "7037d6e744c7190a50e96261b3258dc2248cc848007649b12797a9c24d41d2e2",
+    "train.py": "153abedbc4edd1cbfa240012314311c3d476bfce6413459caca5157ac0883fa1",
+    "validate.py": "4aad1a0311334d8a41cc32689f8671e2ddfe1003ed7a168a003c6f01587c11c9",
+    "scientific_validation.py": "568be8ff16909901f892c08b7b02b308f17622302be7930ebc90b040512f28ad"
+  },
+  "analytic_learning": {
+    "description": "Two-state MDP with known optimal action values; actual DQNAgent.update.",
+    "cases": [
+      {
+        "gamma": 0.95,
+        "reward_scale": 1.0,
+        "updates": 1500,
+        "learning_rate": 0.001,
+        "expected": [
+          [
+            0.95,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "learned": [
+          [
+            0.949999988079071,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "max_absolute_error": 1.1920928910669204e-08,
+        "tolerance": 0.02,
+        "passed": true,
+        "final_loss": 0.0,
+        "weights_unchanged": false
+      },
+      {
+        "gamma": 0.99,
+        "reward_scale": 1.0,
+        "updates": 1500,
+        "learning_rate": 0.001,
+        "expected": [
+          [
+            0.99,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "learned": [
+          [
+            0.9900000095367432,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "max_absolute_error": 9.536743172944284e-09,
+        "tolerance": 0.02,
+        "passed": true,
+        "final_loss": 0.0,
+        "weights_unchanged": false
+      },
+      {
+        "gamma": 0.0,
+        "reward_scale": 1.0,
+        "updates": 1500,
+        "learning_rate": 0.001,
+        "expected": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "learned": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            1.0,
+            0.0
+          ]
+        ],
+        "max_absolute_error": 0.0,
+        "tolerance": 0.02,
+        "passed": true,
+        "final_loss": 0.0,
+        "weights_unchanged": false
+      },
+      {
+        "gamma": 0.95,
+        "reward_scale": 3.0,
+        "updates": 1500,
+        "learning_rate": 0.001,
+        "expected": [
+          [
+            2.8499999999999996,
+            0.0
+          ],
+          [
+            3.0,
+            0.0
+          ]
+        ],
+        "learned": [
+          [
+            2.8499999046325684,
+            -1.6391277313232422e-07
+          ],
+          [
+            3.0,
+            -2.0116567611694336e-07
+          ]
+        ],
+        "max_absolute_error": 2.0116567611694336e-07,
+        "tolerance": 0.02,
+        "passed": true,
+        "final_loss": 7.341349750333848e-15,
+        "weights_unchanged": false
+      },
+      {
+        "gamma": 0.95,
+        "reward_scale": 0.0,
+        "updates": 1500,
+        "learning_rate": 0.001,
+        "expected": [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "learned": [
+          [
+            1.1175870895385742e-08,
+            -7.450580596923828e-09
+          ],
+          [
+            3.725290298461914e-09,
+            1.4901161193847656e-08
+          ]
+        ],
+        "max_absolute_error": 1.4901161193847656e-08,
+        "tolerance": 0.02,
+        "passed": true,
+        "final_loss": 9.820269703383823e-17,
+        "weights_unchanged": false
+      }
+    ],
+    "all_known_solutions_passed": true,
+    "zero_learning_rate_control": {
+      "gamma": 0.95,
+      "reward_scale": 3.0,
+      "updates": 200,
+      "learning_rate": 0.0,
+      "expected": [
+        [
+          2.8499999999999996,
+          0.0
+        ],
+        [
+          3.0,
+          0.0
+        ]
+      ],
+      "learned": [
+        [
+          0.12726560235023499,
+          -0.011973723769187927
+        ],
+        [
+          0.2011709213256836,
+          -0.07238580286502838
+        ]
+      ],
+      "max_absolute_error": 2.7988290786743164,
+      "tolerance": 0.02,
+      "passed": false,
+      "final_loss": 0.5758897066116333,
+      "weights_unchanged": true
+    },
+    "control_detected_no_learning": true,
+    "limitation": "Tests Bellman learning and scale/discount controls, not pixel-game competence."
+  },
+  "calibration": {
+    "episodes": 50,
+    "observations": 50,
+    "mean_predicted_q": 20.50066493988037,
+    "mean_discounted_return": 19.999999999854495,
+    "mean_signed_error": 0.500664940025876,
+    "mae": 0.500664940025876,
+    "rmse": 0.5010211197027671,
+    "pearson_correlation": null,
+    "censored_episodes": 50,
+    "maximum_tail_upper_bound": 1.4548983122878096e-10,
+    "correlation_note": "Undefined for a constant variable or fewer than two observations.",
+    "sampling_note": "Within-game states are dependent; observation count is not independent sample size."
+  },
+  "sampled_calibration": {
+    "episodes": 50,
+    "observations": 2500,
+    "mean_predicted_q": 20.514198912811278,
+    "mean_discounted_return": 19.993217852418706,
+    "mean_signed_error": 0.5209810603925746,
+    "mae": 0.5209810603925746,
+    "rmse": 0.5262814160509637,
+    "pearson_correlation": -0.22390722791590179,
+    "censored_episodes": 50,
+    "maximum_tail_upper_bound": 0.11841058440667984,
+    "correlation_note": "Undefined for a constant variable or fewer than two observations.",
+    "sampling_note": "Within-game states are dependent; observation count is not independent sample size."
+  },
+  "normal_policy": {
+    "episodes": 50,
+    "mean_reward": 500.0,
+    "std_reward": 0.0,
+    "min_reward": 500.0,
+    "max_reward": 500.0,
+    "mean_length": 500.0,
+    "length_500_fraction": 1.0,
+    "terminated_count": 0,
+    "truncated_count": 50,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "ending_target_audit": {
+    "transitions_checked": 50,
+    "terminal": {
+      "count": 0,
+      "status": "not_observed"
+    },
+    "truncation": {
+      "count": 50,
+      "status": "passed"
+    },
+    "all_observed_targets_match": true,
+    "rule": "Actual dqn.bellman_targets, checked against reward-only terminal / bootstrapped truncation targets.",
+    "scope": "Observed episode endings only; unobserved branches are not counted as passes."
+  },
+  "pixel_interventions": null,
+  "limitations": [
+    "One training seed does not establish robustness across retraining.",
+    "Calibration uses raw CartPole rewards and sign-clipped MsPacman rewards, with full-game termination.",
+    "At truncation the observed return omits a nonnegative tail bounded by gamma**remaining/(1-gamma).",
+    "Within-game calibration selects at most 50 evenly spaced states; truncated episodes require at least 100 remaining steps.",
+    "Initial Atari inputs may be identical across seeds; constant-variable correlations are reported as null.",
+    "Image interventions change the input distribution, not the environment or game scoring."
+  ]
+}

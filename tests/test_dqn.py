@@ -191,3 +191,38 @@ def test_complete_short_environment_replay_update_checkpoint_flow(core, tmp_path
         assert restored.act(state, 0, rng) in [0, 1]
     finally:
         env.close()
+
+
+def test_extended_mspacman_profile_preserves_baseline_and_uses_larger_cnn(core):
+    baseline = core.defaults("mspacman")
+    extended = core.defaults("mspacman", seed=11, profile="extended")
+    assert baseline.cnn_hidden_dim == 256 and baseline.batch_size == 32
+    assert baseline.buffer_size == 50_000 and baseline.epsilon_end == .05
+    assert extended.profile == "extended" and extended.seed == 11
+    assert extended.cnn_hidden_dim == 512 and extended.buffer_size == 100_000
+    assert extended.batch_size == 64 and extended.learning_starts == 20_000
+    assert extended.target_interval == 2500 and extended.train_frequency == 4
+    assert extended.epsilon_decay_steps == 1_000_000 and extended.epsilon_end == .01
+    assert extended.gamma == .99 and extended.learning_rate == 1e-4
+    agent = core.DQNAgent((4, 88, 80), 9, extended)
+    linear = [module for module in agent.online.modules() if isinstance(module, torch.nn.Linear)]
+    assert linear[0].out_features == 512 and linear[-1].out_features == 9
+    for kwargs in ({"task": "cartpole", "profile": "extended"},
+                   {"task": "mspacman", "profile": "unknown"}):
+        with pytest.raises(ValueError):
+            core.defaults(**kwargs)
+
+
+def test_old_image_checkpoint_without_new_fields_still_loads(core, tmp_path):
+    agent = core.DQNAgent((4, 88, 80), 9, core.defaults("mspacman"))
+    path = tmp_path / "legacy.pt"
+    agent.save(path, {"episode": 1500})
+    payload = torch.load(path, map_location="cpu", weights_only=True)
+    legacy_config = {key: value for key, value in payload["config"].items()
+                     if key not in {"cnn_hidden_dim", "profile"}}
+    torch.save({**payload, "config": legacy_config}, path)
+    loaded, metadata = core.DQNAgent.load(path)
+    assert loaded.config.cnn_hidden_dim == 256 and loaded.config.profile == "baseline"
+    assert metadata == {"episode": 1500}
+    state = torch.zeros(1, 4, 88, 80, dtype=torch.uint8)
+    assert torch.equal(loaded.online(state), agent.online(state))

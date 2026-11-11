@@ -4,7 +4,7 @@ Configuration and sampled records are immutable. Replay storage and optimizer
 state are the explicitly stateful parts of the learning algorithm.
 """
 from copy import deepcopy
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, replace
 import json
 from pathlib import Path
 
@@ -32,12 +32,17 @@ class Config:
     gradient_clip: float = 10.0
     reward_clip: bool = False
     frame_stack: int = 4
+    cnn_hidden_dim: int = 256
+    profile: str = "baseline"
 
     def __post_init__(self):
         if self.task not in {"cartpole", "mspacman"}:
             raise ValueError("task must be cartpole or mspacman")
+        if self.profile not in {"baseline", "extended"} or (self.profile == "extended" and self.task != "mspacman"):
+            raise ValueError("extended profile is only supported for mspacman")
         positive = (self.batch_size, self.buffer_size, self.train_frequency,
-                    self.target_interval, self.epsilon_decay_steps, self.frame_stack)
+                    self.target_interval, self.epsilon_decay_steps, self.frame_stack,
+                    self.cnn_hidden_dim)
         if any(not isinstance(v, int) or isinstance(v, bool) or v < 1 for v in positive):
             raise ValueError("sizes, frequencies and frame_stack must be positive integers")
         if self.buffer_size < self.batch_size or self.learning_starts < 0:
@@ -52,11 +57,18 @@ class Config:
             raise ValueError("gradient_clip must be finite and positive")
 
 
-def defaults(task: str, seed: int = 7) -> Config:
+def defaults(task: str, seed: int = 7, profile: str = "baseline") -> Config:
+    if profile not in {"baseline", "extended"} or (profile == "extended" and task != "mspacman"):
+        raise ValueError("extended profile is only supported for mspacman")
     if task == "mspacman":
-        return Config(task, seed, 0.99, learning_rate=1e-4, batch_size=32,
-                      learning_starts=10_000, train_frequency=4, target_interval=2_000,
-                      epsilon_end=0.05, epsilon_decay_steps=500_000, reward_clip=True)
+        baseline = Config(task, seed, 0.99, learning_rate=1e-4, batch_size=32,
+                          learning_starts=10_000, train_frequency=4, target_interval=2_000,
+                          epsilon_end=0.05, epsilon_decay_steps=500_000, reward_clip=True)
+        return (replace(baseline, profile="extended", cnn_hidden_dim=512,
+                        batch_size=64, buffer_size=100_000, learning_starts=20_000,
+                        target_interval=2_500, epsilon_end=0.01,
+                        epsilon_decay_steps=1_000_000)
+                if profile == "extended" else baseline)
     return Config(task, seed, 0.95)
 
 
@@ -110,11 +122,13 @@ def make_env(task: str, seed: int | None = None, frame_stack: int = 4,
 
 
 class QNetwork(nn.Module):
-    def __init__(self, observation_shape, n_actions: int):
+    def __init__(self, observation_shape, n_actions: int, image_hidden_dim: int = 256):
         super().__init__()
         shape = tuple(observation_shape)
         if n_actions < 1 or len(shape) not in {1, 3} or any(v < 1 for v in shape):
             raise ValueError("QNetwork needs a vector or CHW image and positive action count")
+        if not isinstance(image_hidden_dim, int) or isinstance(image_hidden_dim, bool) or image_hidden_dim < 1:
+            raise ValueError("image_hidden_dim must be a positive integer")
         self.image_input = len(shape) == 3
         if self.image_input:
             encoder = nn.Sequential(
@@ -123,8 +137,8 @@ class QNetwork(nn.Module):
                 nn.Conv2d(64, 64, 3, 1), nn.ReLU(), nn.Flatten())
             with torch.no_grad():
                 features = encoder(torch.zeros(1, *shape)).shape[1]
-            self.network = nn.Sequential(encoder, nn.Linear(features, 256),
-                                         nn.ReLU(), nn.Linear(256, n_actions))
+            self.network = nn.Sequential(encoder, nn.Linear(features, image_hidden_dim),
+                                         nn.ReLU(), nn.Linear(image_hidden_dim, n_actions))
         else:
             self.network = nn.Sequential(nn.Linear(shape[0], 128), nn.ReLU(),
                                          nn.Linear(128, 128), nn.ReLU(),
@@ -219,7 +233,7 @@ class DQNAgent:
         self.config = config
         self.device = torch.device(device)
         torch.manual_seed(config.seed)
-        self.online = QNetwork(self.observation_shape, n_actions).to(self.device)
+        self.online = QNetwork(self.observation_shape, n_actions, config.cnn_hidden_dim).to(self.device)
         self.target = deepcopy(self.online).eval()
         self.target.requires_grad_(False)
         self.optimizer = torch.optim.Adam(self.online.parameters(), lr=config.learning_rate)

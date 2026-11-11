@@ -1,0 +1,38 @@
+{
+  "checkpoint_sha256": "39639727929f6622cd30d40e9eac09c80524de850089e772de68c39300f45103",
+  "checkpoint_metadata": {
+    "episode": 1500,
+    "steps": 943908,
+    "optimizer_steps": 233478,
+    "development_mean": 1835.0,
+    "development_seed": 40000
+  },
+  "seed_start": 40000,
+  "selection_role": "Reference development score fixed before extended training or fresh final test",
+  "development": {
+    "n": 20,
+    "mean": 1542.0,
+    "std": 606.0797237814077,
+    "median": 1390.0,
+    "min": 860.0,
+    "max": 3260.0,
+    "mean_length": 784.4,
+    "terminated_episodes": 20,
+    "truncated_episodes": 0
+  },
+  "runtime": {
+    "hostname": "mlds-deepdish3",
+    "python": "3.12.16",
+    "torch": "2.14.1+cu126",
+    "gymnasium": "1.4.0",
+    "ale_py": "0.12.1",
+    "numpy": "2.5.4",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "cuda_visible_devices": "2",
+    "source_sha256": {
+      "dqn.py": "3df46cdfcc9b05683feae918bc654a9fad646b3f153255e30e9c142c30497a09",
+      "train.py": "494bae1647d04a0df6b269ff5905ec1d244e0cbf7afb7b49f81860daa7f94f58"
+    }
+  }
+}

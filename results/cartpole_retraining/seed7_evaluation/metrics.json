@@ -1,0 +1,11 @@
+{
+  "n": 500,
+  "mean": 500.0,
+  "std": 0.0,
+  "median": 500.0,
+  "min": 500.0,
+  "max": 500.0,
+  "mean_length": 500.0,
+  "terminated_episodes": 0,
+  "truncated_episodes": 500
+}

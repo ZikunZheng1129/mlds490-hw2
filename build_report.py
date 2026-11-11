@@ -107,6 +107,23 @@ def learning_statement(comparison):
     return "The paired interval includes zero and does not establish a positive improvement."
 
 
+def load_supplemental(results_dir):
+    root = Path(results_dir)
+    paths = {task: root / task / "scientific_validation.json"
+             for task in ("cartpole", "mspacman")}
+    present = [path.is_file() for path in paths.values()]
+    if any(present) and not all(present):
+        raise ValueError("Scientific validation must be supplied for both tasks")
+    science = {task: _read(path) for task, path in paths.items()} if all(present) else {}
+    for task, result in science.items():
+        if result["task"] != task or len(result["analytic_learning"]["cases"]) != 5:
+            raise ValueError(f"{task}: scientific evidence must match the task and contain five known-MDP cases")
+    optional = {"comparison": root / "upgrade_comparison" / "comparison.json",
+                "retraining": root / "cartpole_retraining" / "summary.json"}
+    return {"science": science,
+            **{key: _read(path) if path.is_file() else None for key, path in optional.items()}}
+
+
 def _save_figure(fig, path):
     fig.tight_layout(pad=1.0)
     fig.savefig(path, dpi=160, bbox_inches="tight", facecolor="white")
@@ -245,7 +262,8 @@ def methods(cart, pac, repo_url):
             table(rows, [240, 132, 132]), Spacer(1, 8),
             p("<b>Networks.</b> CartPole: 4 inputs, two 128-unit ReLU layers, 2 Q outputs. "
               "MsPacman: four 88 x 80 frames; convolution layers 32 (8 x 8, stride 4), "
-              "64 (4 x 4, stride 2), and 64 (3 x 3, stride 1); 256 ReLU units; 9 Q outputs. "
+              f"64 (4 x 4, stride 2), and 64 (3 x 3, stride 1); {pac.config.get('cnn_hidden_dim', 256)} "
+              f"ReLU units; 9 Q outputs ({escape(pac.config.get('profile', 'baseline'))} profile). "
               "Outputs are raw action values, with no softmax."),
             p("<b>MsPacman preprocessing.</b> The assignment's crop, grayscale and contrast mask are used. "
               "Replay stores uint8 images; the network computes (pixel - 128)/128. Four frames provide "
@@ -253,14 +271,15 @@ def methods(cart, pac, repo_url):
               "points. ALE/MsPacman-v5 uses frame skip 4, sticky-action probability 0.25 and 9 actions. "
               "Life loss does not end a full-game episode."),
             p("<b>Evaluation.</b> The highest greedy development mean selects the saved model; ties keep "
-              "the earlier model. Development seeds start at 40000. Each selected model is evaluated "
+              f"the earlier model. Development seeds start at {cart.config.get('development_seed', 40000)} "
+              f"(CartPole) and {pac.config.get('development_seed', 40000)} (MsPacman). Each selected model is evaluated "
               "without updates or exploration on 500 complete episodes with independent seeds. These "
               "scores never select the model. Standard deviations below use ddof=1."),
             p("<b>Validation.</b> Random, untrained and selected policies share held-out seeds "
               "starting at 80000. Untrained and selected policies are greedy; the random policy samples "
               "uniformly. Paired 95% intervals use 2,000 bootstrap resamples. These compare learned "
               "behavior beyond software tests. Different actions can produce different trajectories "
-              "even with matched seeds. One training seed per task limits claims about retraining."),
+              "even with matched seeds. Evaluation episodes do not measure variation across retraining."),
             p("<b>Shared edge cases.</b> Both termination and truncation end rollouts, but only true "
               "termination removes the Bellman bootstrap. Learning waits for warm-up and a full batch. "
               "Replay is bounded and copies observations. Non-finite losses fail visibly. Tests cover "
@@ -282,7 +301,11 @@ def training_page(run, paths):
               "The 100-episode moving average begins only when 100 complete episodes exist. "
               "Exploration changes over training, so the fixed-policy held-out comparisons on the next "
               "page provide a separate check of actual learned behavior."),
-            p(f"Frozen evaluation uses the development-selected checkpoint from episode "
+            p(f"The run completed <b>{len(run.training):,}</b> training episodes, "
+              f"{run.metrics['environment_steps']:,} environment decisions and "
+              f"{run.metrics['optimizer_steps']:,} optimizer updates in "
+              f"{run.metrics['wall_seconds']/3600:.2f} hours, including final evaluation. "
+              f"Frozen evaluation uses the development-selected checkpoint from episode "
               f"<b>{run.metrics['selected_checkpoint']['episode']}</b>. The training curve includes "
               "exploratory actions and subsequent parameter updates; its final moving average therefore "
               "need not match the selected checkpoint's greedy evaluation score.")]
@@ -361,23 +384,148 @@ def diagnostic_page(run, paths):
              "validation_first10_steps.json.", True)]
 
 
+def _analytic_section(science):
+    cart, pac = [science[task]["analytic_learning"] for task in ("cartpole", "mspacman")]
+    rows = [["Known MDP: gamma / reward scale", "CartPole check: error / result", "MsPacman check: error / result"]]
+    for a, b in zip(cart["cases"], pac["cases"]):
+        if (a["gamma"], a["reward_scale"]) != (b["gamma"], b["reward_scale"]):
+            raise ValueError("Known-MDP cases must match between tasks")
+        rows.append([f"{a['gamma']:g} / {a['reward_scale']:g}",
+                     *[f"{case['max_absolute_error']:.2g} / {'pass' if case['passed'] else 'FAIL'}"
+                       for case in (a, b)]])
+    controls = []
+    for label, result in (("CartPole", cart), ("MsPacman", pac)):
+        control = result["zero_learning_rate_control"]
+        controls.append(f"{label}: error {control['max_absolute_error']:.3g}, "
+                        f"weights unchanged={control['weights_unchanged']}, "
+                        f"no-learning detected={result['control_detected_no_learning']}")
+    return [p("<b>Learning a known MDP.</b> Actual DQN updates learn a two-state problem with exact "
+              "Q* = [[gamma x scale, 0], [scale, 0]]. Maximum absolute errors and recorded "
+              f"pass/fail checks use tolerance {cart['cases'][0]['tolerance']:g} after "
+              f"{cart['cases'][0]['updates']} updates; this tests Bellman learning, not pixel-game competence.", True),
+            table(rows, [180, 162, 162]),
+            p("The <b>zero learning rate</b> negative control should remain unlearned. " + "; ".join(controls) + ".", True)]
+
+
+def _calibration_section(science):
+    rows = [["Within-game states", "Mean Q", "Mean G", "Q - G", "MAE", "Pearson r"]]
+    notes = []
+    for task, result in science.items():
+        name = "CartPole" if task == "cartpole" else "MsPacman"
+        sample = result.get("sampled_calibration")
+        if sample is None:
+            notes.append(f"{name}: within-game calibration not available")
+            continue
+        correlation = sample["pearson_correlation"]
+        rows.append([f"{name} ({sample['observations']})",
+                     *[f"{sample[key]:.3f}" for key in ("mean_predicted_q", "mean_discounted_return",
+                                                       "mean_signed_error", "mae")],
+                     "undefined" if correlation is None else f"{correlation:.3f}"])
+        notes.append(f"{name}: {sample['censored_episodes']}/{sample['episodes']} games truncated, "
+                     f"maximum omitted tail {sample['maximum_tail_upper_bound']:.4g}")
+    endings = []
+    for task, result in science.items():
+        audit = result["ending_target_audit"]
+        branches = "; ".join(f"{key} {audit[key]['count']} ({audit[key]['status']})"
+                             for key in ("terminal", "truncation"))
+        endings.append(f"{task}: {branches}; all observed targets match={audit['all_observed_targets_match']}")
+    return [p("<b>Value calibration.</b> Frozen greedy Q(s,a) is compared with the observed discounted "
+              "return G from the same state and trajectory: raw CartPole / sign-clipped MsPacman rewards.", True),
+            table(rows, [154, 70, 70, 70, 70, 70]),
+            p("; ".join(notes) + ". Truncation omits a nonnegative tail: the true Q-minus-return error "
+              "can be smaller by at most this bound. States within a game are dependent. Nearly constant "
+              "returns make correlation hard to interpret; good scores do not imply accurate Q values.", True),
+            p("<b>Actual ending targets.</b> " + " | ".join(endings) + ". Unobserved branches are not passes.", True)]
+
+
+def _intervention_section(science):
+    intervention = science["mspacman"].get("pixel_interventions")
+    if intervention is None:
+        return [p("MsPacman image interventions: not available.", True)]
+    conditions = intervention["conditions"]
+    rows = [["MsPacman input", "Mean game score", "Sample SD", "Normal minus input: paired 95% CI"]]
+    for label in ("normal", "repeat_latest", "constant128"):
+        condition = conditions[label]
+        summary = condition["summary"]
+        c = condition.get("normal_minus_condition")
+        difference = ("reference" if c is None else
+                      f"{c['mean_difference']:.2f} [{c['ci95_low']:.2f}, {c['ci95_high']:.2f}]")
+        rows.append([label, f"{summary['mean_reward']:.2f}", f"{summary['std_reward']:.2f}", difference])
+    return [p(f"<b>History and image interventions.</b> Same {intervention['episodes_per_condition']} seeds "
+              f"starting at {intervention['seed_start']}; repeat_latest repeats the newest frame in all "
+              "four channels, constant128 becomes zero after normalization.", True),
+            table(rows, [116, 90, 70, 228]),
+            p("Only policy inputs change; both interventions introduce distribution shift and do not "
+              "isolate causality. An interval including zero gives no clear positive effect. "
+              "Selected network/target weights and checkpoint files unchanged: "
+              + ", ".join(f"{task}={result['weights_unchanged']}" for task, result in science.items()) + ".", True)]
+
+
+def _comparison_section(comparison):
+    if comparison is None:
+        return []
+    selection, evaluation = comparison["selection"], comparison["evaluation"]
+    means = "; ".join(f"{key} {comparison[key]['mean_reward']:.2f} (SD {comparison[key]['std_reward']:.2f})"
+                      for key in ("baseline", "candidate", "random"))
+    intervals = []
+    for label in ("baseline", "random"):
+        c = comparison["comparisons"][f"candidate_minus_{label}"]
+        conclusion = ("positive" if c["ci95_low"] > 0 else
+                      "negative" if c["ci95_high"] < 0 else "includes zero")
+        intervals.append(f"candidate minus {label}: {c['mean_difference']:.2f} "
+                         f"[{c['ci95_low']:.2f}, {c['ci95_high']:.2f}] ({conclusion})")
+    return [p("<b>MsPacman upgrade comparison.</b> Development means: baseline "
+              f"{selection['baseline_development_mean']:.2f}, candidate {selection['candidate_development_mean']:.2f}; "
+              f"candidate selected={selection['candidate_selected']}. Promotion uses development scores only. "
+              f"All three policies then use the same {evaluation['episodes']} fresh final seeds "
+              f"{evaluation['seed_start']}-{evaluation['seed_end']}; these scores never select a model. "
+              + means + ". Paired 95% intervals: " + "; ".join(intervals) + ". "
+              "The upgrade changes architecture and hyperparameters as well as training budget; "
+              "it does not isolate the effect of extra episodes. Each MsPacman configuration has "
+              "one training seed; intervals measure evaluation-seed variation only.", True)]
+
+
+def supplemental_page(supplemental):
+    story = [heading("Additional measured checks")]
+    science = supplemental["science"]
+    if science:
+        story += _analytic_section(science) + _calibration_section(science) + _intervention_section(science)
+    story += _comparison_section(supplemental["comparison"])
+    retraining = supplemental["retraining"]
+    if retraining is not None:
+        runs = []
+        for run in retraining["runs"]:
+            runs.append(f"seed {run['seed']}: {run['mean_reward']:.2f} (SD {run['std_reward']:.2f}), "
+                        f"{run['successes']}/{run['episodes']} successes, trained {run['training_episodes']} "
+                        f"episodes / selected {run['selected_episode']}")
+        story.append(p("<b>CartPole retraining controls.</b> " + "; ".join(runs) + ". "
+                       f"The primary seed {retraining['primary_seed']} is retained; controls are not selected "
+                       "by test scores. A few runs give limited evidence about training-seed robustness.", True))
+    return story
+
+
 def training_command(run):
     c = run.config
     stop = "" if c.get("early_stop", True) else " --no-early-stop"
     return (f"python train.py --task {run.task} --episodes {c['requested_episodes']} "
             f"--seed {c['seed']} --learning-rate {c['learning_rate']} \\\n"
+            f"  --profile {c.get('profile', 'baseline')} --development-seed {c.get('development_seed', 40000)} "
+            f"--evaluation-seed {c['evaluation_seed']} \\\n"
             f"  --eval-every {c['eval_every']} --eval-episodes {c['development_episodes']} "
             f"--epsilon-decay-steps {c['epsilon_decay_steps']} \\\n"
             f"  --device cuda:0 --output results/rerun/{run.task}{stop}\n")
 
 
 def reproducibility(cart, pac):
-    runtime = cart.config["runtime"]
+    hardware = "; ".join(f"{name}: {escape(str(run.config['runtime']['gpu']))} on "
+                         f"{escape(str(run.config['runtime']['hostname']))}, visible GPU "
+                         f"{escape(str(run.config['runtime']['cuda_visible_devices']))}"
+                         for name, run in (("CartPole", cart), ("MsPacman", pac)))
     return [heading("Running the code and validation"),
-            p(f"Both runs used one {escape(str(runtime['gpu']))} on "
-              f"{escape(str(runtime['hostname']))}, visible GPU {runtime['cuda_visible_devices']}. "
+            p(hardware + ". "
               "Use Python 3.12 and run from the repository root. Select one available GPU on deepdish. "
-              "The fresh output folders below preserve the supplied experiment records."),
+              "The fresh folders preserve supplied records. For the baseline comparison, replace the MsPacman "
+              "training command below with README's background/freeze procedure before starting."),
             Preformatted("python3.12 -m venv .venv\n"
               "source .venv/bin/activate\n"
               "python -m pip install --upgrade pip\n"
@@ -389,13 +537,18 @@ def reproducibility(cart, pac):
               f"  --grid-size {cart.validation['perturbation']['grid_size']} --grid-repeats {cart.validation['perturbation']['repeats_per_cell']} --device cuda:0\n"
               f"python validate.py --task mspacman --run results/rerun/mspacman --episodes {pac.validation['sampling']['episodes_per_condition']} \\\n"
               "  --device cuda:0\n"
-              "python -m pytest --cov=dqn --cov=train --cov=validate --cov=build_report\n"
+              "python scientific_validation.py --run results/rerun/cartpole --device cuda:0\n"
+              "python scientific_validation.py --run results/rerun/mspacman --device cuda:0\n"
+              "python -m pytest --cov=dqn --cov=train --cov=validate \\\n"
+              "  --cov=scientific_validation --cov=compare_runs --cov=build_report\n"
               "python build_report.py --results results/rerun --output hw2_report_rerun.pdf \\\n"
               "  --repo-url https://github.com/ZikunZheng1129/mlds490-hw2", STYLES["CodeHW"]),
             p("Training automatically performs the 500-episode evaluation. Validation compares "
               "random/untrained/selected policies, runs the CartPole recovery grid or MsPacman "
               "blackout experiment, and saves the ten-step target audit. To validate the supplied "
               "models, replace results/rerun/&lt;task&gt; with results/&lt;task&gt;. "
+              "Scientific validation adds exact-MDP learning, value calibration, actual ending audits "
+              "and frame-history controls. README also gives independent retraining commands. "
               "The JSON/CSV files contain configurations, source hashes, raw outcomes and intervals. "
               "Checkpoints omit replay and random-generator state; reproduction starts a fresh run.")]
 
@@ -419,7 +572,12 @@ def future_and_references():
               'color="black">PyTorch DQN tutorial</link>; '
               '<link href="https://ale.farama.org/environments/" color="black">ALE environments</link>; '
               '<link href="https://gymnasium.farama.org/tutorials/gymnasium_basics/handling_time_limits/" '
-              'color="black">Gymnasium time limits</link>.', True)]
+              'color="black">Gymnasium time limits</link>.', True),
+            p('Peer comparisons: <link href="https://github.com/Dorrie-ge/mlds-diego-hw2-dqn" '
+              'color="black">Dorrie-ge/mlds-diego-hw2-dqn</link> and '
+              '<link href="https://github.com/Graf-J/MLDS-Q4-490-Advanced-Algorithms-HW2" '
+              'color="black">Graf-J/MLDS-Q4-490-Advanced-Algorithms-HW2</link> informed '
+              'training-budget and validation ideas. Code was implemented independently.', True)]
 
 
 def build_report(results_dir, output, repo_url):
@@ -427,11 +585,14 @@ def build_report(results_dir, output, repo_url):
     if parsed.scheme != "https" or parsed.netloc != "github.com" or len(parsed.path.strip("/").split("/")) != 2:
         raise ValueError("--repo-url must be an HTTPS GitHub repository URL")
     cart, pac = load_run(results_dir, "cartpole"), load_run(results_dir, "mspacman")
+    supplemental = load_supplemental(results_dir)
     figures = {r.task: plot_run(r) for r in (cart, pac)}
     pages = [methods(cart, pac, repo_url)]
     for run in (cart, pac):
         paths = figures[run.task]
         pages += [training_page(run, paths), evaluation_page(run, paths)]
+    if any(supplemental.values()):
+        pages += [supplemental_page(supplemental)]
     pages += [reproducibility(cart, pac) + future_and_references()]
     story = []
     for index, page in enumerate(pages):

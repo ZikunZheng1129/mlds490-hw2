@@ -1,0 +1,100 @@
+{
+  "baseline": {
+    "episodes": 500,
+    "mean_reward": 1416.28,
+    "std_reward": 471.98824923384444,
+    "min_reward": 610.0,
+    "max_reward": 3220.0,
+    "mean_length": 723.524,
+    "length_500_fraction": 0.0,
+    "terminated_count": 500,
+    "truncated_count": 0,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "candidate": {
+    "episodes": 500,
+    "mean_reward": 2589.44,
+    "std_reward": 593.0540553990425,
+    "min_reward": 510.0,
+    "max_reward": 5830.0,
+    "mean_length": 986.576,
+    "length_500_fraction": 0.0,
+    "terminated_count": 500,
+    "truncated_count": 0,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "random": {
+    "episodes": 500,
+    "mean_reward": 262.54,
+    "std_reward": 111.44410247272803,
+    "min_reward": 70.0,
+    "max_reward": 1280.0,
+    "mean_length": 503.28,
+    "length_500_fraction": 0.0,
+    "terminated_count": 500,
+    "truncated_count": 0,
+    "unterminated_count": 0,
+    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
+  },
+  "comparisons": {
+    "candidate_minus_baseline": {
+      "n_pairs": 500,
+      "reference_mean": 1416.28,
+      "candidate_mean": 2589.44,
+      "mean_difference": 1173.16,
+      "ci95_low": 1107.5425,
+      "ci95_high": 1236.62,
+      "positive_difference_supported": true,
+      "bootstrap_samples": 2000,
+      "bootstrap_seed": 191,
+      "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
+    },
+    "candidate_minus_random": {
+      "n_pairs": 500,
+      "reference_mean": 262.54,
+      "candidate_mean": 2589.44,
+      "mean_difference": 2326.9,
+      "ci95_low": 2275.999,
+      "ci95_high": 2379.8635,
+      "positive_difference_supported": true,
+      "bootstrap_samples": 2000,
+      "bootstrap_seed": 191,
+      "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
+    }
+  },
+  "selection": {
+    "baseline_development_mean": 1542.0,
+    "candidate_development_mean": 2736.5,
+    "candidate_selected": true,
+    "candidate_selected_episode": 5600
+  },
+  "evaluation": {
+    "episodes": 500,
+    "seed_start": 200007,
+    "seed_end": 200506
+  },
+  "weights_unchanged": true,
+  "evidence_sha256": {
+    "baseline_checkpoint": "39639727929f6622cd30d40e9eac09c80524de850089e772de68c39300f45103",
+    "candidate_checkpoint": "b7c22c0e6469c8ee83e45f5291e5b327c6ff6c819ef84a3e511014b5a2365d9c",
+    "plan": "7db3b5f71c947fa8d8214d4cc0200396e031e1c1359c5f607b8727dfb53583bf",
+    "baseline_development": "e2ceab1a25ba338741cc8ef1f83f57baf9bcba029f64ffb8804792bdf4527fc8",
+    "baseline_development_rows": "fb1f897b4193172119347cc1bfb01866502b5d6155c5a2b663f8cfe61b186ac5",
+    "candidate_development": "a71e7da39b71ab37a25e3aa2419b18cc3d01e082d2a3214f1fee103db48362f9",
+    "candidate_config": "e987ee5ca46a4d39c31b34396ec2945d1415c7913962a22a762593334403a565"
+  },
+  "selection_frozen_at_utc": "2026-11-11T02:55:06.473434+00:00",
+  "source_sha256": {
+    "compare_runs.py": "324cb254cf6f954fdf9cf1c5811979b4218527d7762f03452276cb88f2f700ac",
+    "dqn.py": "7037d6e744c7190a50e96261b3258dc2248cc848007649b12797a9c24d41d2e2",
+    "train.py": "153abedbc4edd1cbfa240012314311c3d476bfce6413459caca5157ac0883fa1",
+    "validate.py": "4aad1a0311334d8a41cc32689f8671e2ddfe1003ed7a168a003c6f01587c11c9"
+  },
+  "sampling_protocol": "Same fresh seed set; complete games; greedy learned policies; uniform random actions. Final results are descriptive and never select the adopted policy.",
+  "limitations": [
+    "Training configuration and budget changed together; this is not an isolated ablation.",
+    "One training seed per Ms. Pac-Man configuration; paired intervals measure evaluation-seed variation only."
+  ]
+}

@@ -110,7 +110,7 @@ def _evaluate_episode(agent, env, seed, epsilon, transform, initial_state, trace
 
 
 def evaluate_model(agent, episodes, seed, epsilon=0.0, observation_transform=None,
-                   initial_state=None, trace_steps=0):
+                   initial_state=None, trace_steps=0, progress=False):
     if episodes <= 0 or not 0 <= epsilon <= 1:
         raise ValueError("Episodes must be positive and epsilon must lie in [0, 1]")
     env = make_env(agent.config.task, frame_stack=agent.config.frame_stack)
@@ -122,6 +122,9 @@ def evaluate_model(agent, episodes, seed, epsilon=0.0, observation_transform=Non
                                            trace_steps if episode == 0 else 0)
             rows += ({"episode": episode + 1, **row},)
             trace += steps
+            if progress and ((episode + 1) % 50 == 0 or episode + 1 == episodes):
+                mean = np.mean([item["reward"] for item in rows])
+                print(f"Evaluation {episode + 1}/{episodes}: mean={mean:.2f}", flush=True)
     finally:
         env.close()
     return list(rows), list(trace)
@@ -170,13 +173,14 @@ def collect_episode(agent, env, replay, rng, episode, steps, updates):
             return row, steps, updates
 
 
-def _development(agent, episode, steps, updates, episodes, output, best_score, history):
-    rows, _ = evaluate_model(agent, episodes, seed=40_000, epsilon=0.0)
+def _development(agent, episode, steps, updates, episodes, output, best_score, history,
+                 seed=40_000):
+    rows, _ = evaluate_model(agent, episodes, seed=seed, epsilon=0.0)
     stats = summarize(rows)
     new_history = history + ({"training_episode": episode, **stats},)
     write_csv(output / "development.csv", new_history)
     metadata = {"episode": episode, "steps": steps, "optimizer_steps": updates,
-                "development_mean": stats["mean"], "development_seed": 40_000}
+                "development_mean": stats["mean"], "development_seed": seed}
     agent.save(output / "latest.pt", metadata)
     if stats["mean"] > best_score:
         agent.save(output / "policy.pt", metadata)
@@ -187,9 +191,17 @@ def _development(agent, episode, steps, updates, episodes, output, best_score, h
 
 
 def run_training(config: Config, episodes, output, device="cpu", eval_every=50,
-                 eval_episodes=10, final_episodes=500, early_stop=True):
+                 eval_episodes=10, final_episodes=500, early_stop=True,
+                 evaluation_seed=None, development_seed=40_000):
     if min(episodes, eval_every, eval_episodes, final_episodes) <= 0:
         raise ValueError("All episode counts and evaluation intervals must be positive")
+    evaluation_seed = 100_000 + config.seed if evaluation_seed is None else evaluation_seed
+    if any(not isinstance(value, int) or isinstance(value, bool) or value < 0
+           for value in (evaluation_seed, development_seed)):
+        raise ValueError("Development and evaluation seeds must be nonnegative integers")
+    if max(development_seed, evaluation_seed) < min(development_seed + eval_episodes,
+                                                   evaluation_seed + final_episodes):
+        raise ValueError("Development and final evaluation seed ranges must not overlap")
     output = Path(output)
     if (output / "config.json").exists():
         raise FileExistsError(f"Run already exists: {output}; choose a fresh output directory")
@@ -205,7 +217,8 @@ def run_training(config: Config, episodes, output, device="cpu", eval_every=50,
                "eval_every": eval_every, "development_episodes": eval_episodes,
                "final_episodes": final_episodes, "early_stop": early_stop,
                "runtime": runtime_info(device), "max_q_definition": "max over visited states and all actions in each training episode",
-               "evaluation_epsilon": 0.0, "evaluation_seed": 100_000 + config.seed})
+               "evaluation_epsilon": 0.0, "evaluation_seed": evaluation_seed,
+               "development_seed": development_seed})
     agent.save(output / "initial.pt", {"episode": 0})
     history, development, steps, updates, solved_streak = (), (), 0, 0, 0
     best_score, started = -float("inf"), time.monotonic()
@@ -221,7 +234,7 @@ def run_training(config: Config, episodes, output, device="cpu", eval_every=50,
                       f"steps/s={steps / max(time.monotonic()-started, 1):.1f}", flush=True)
             if episode % eval_every == 0 or episode == episodes:
                 best_score, development, stats = _development(agent, episode, steps, updates,
-                    eval_episodes, output, best_score, development)
+                    eval_episodes, output, best_score, development, seed=development_seed)
                 solved = stats["min"] == 500 and stats["terminated_episodes"] == 0
                 solved_streak = solved_streak + 1 if solved else 0
                 if early_stop and config.task == "cartpole" and solved_streak >= 2:
@@ -230,7 +243,8 @@ def run_training(config: Config, episodes, output, device="cpu", eval_every=50,
         env.close()
     # The independent final evaluation never selects the checkpoint.
     selected, selected_metadata = DQNAgent.load(output / "policy.pt", device)
-    scores, trace = evaluate_model(selected, final_episodes, 100_000 + config.seed, trace_steps=10)
+    scores, trace = evaluate_model(selected, final_episodes, evaluation_seed,
+                                   trace_steps=10, progress=True)
     write_csv(output / "evaluation.csv", scores)
     write_json(output / "first10_steps.json", trace)
     result = {"training_episodes": len(history), "environment_steps": steps,
@@ -251,13 +265,24 @@ def positive_integer(value):
     return result
 
 
+def nonnegative_integer(value):
+    result = int(value)
+    if result < 0:
+        raise argparse.ArgumentTypeError("must be a nonnegative integer")
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--task", choices=("cartpole", "mspacman"))
     parser.add_argument("--episodes", type=positive_integer, default=1000)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--device", default="cpu")
-    parser.add_argument("--seed", type=int, default=7)
+    parser.add_argument("--seed", type=nonnegative_integer, default=7)
+    parser.add_argument("--profile", choices=("baseline", "extended"), default="baseline")
+    parser.add_argument("--development-seed", type=nonnegative_integer, default=40_000)
+    parser.add_argument("--evaluation-seed", type=nonnegative_integer,
+                        help="First final evaluation seed; default is 100000 + training seed")
     parser.add_argument("--eval-every", type=positive_integer, default=50)
     parser.add_argument("--eval-episodes", type=positive_integer, default=10)
     parser.add_argument("--final-episodes", type=positive_integer, default=500)
@@ -271,19 +296,23 @@ def main():
         if any((args.output / name).exists() for name in ("config.json", "metrics.json", "evaluation.csv")):
             parser.error("Evaluation results already exist; choose a fresh output directory")
         agent, _ = DQNAgent.load(args.evaluate, args.device)
-        rows, trace = evaluate_model(agent, args.episodes, 100_000 + args.seed, trace_steps=10)
+        seed = 100_000 + args.seed if args.evaluation_seed is None else args.evaluation_seed
+        rows, trace = evaluate_model(agent, args.episodes, seed, trace_steps=10, progress=True)
         write_csv(args.output / "evaluation.csv", rows)
         write_json(args.output / "metrics.json", summarize(rows))
         write_json(args.output / "first10_steps.json", trace)
         return
     if args.task is None:
         parser.error("--task is required for training")
-    config = defaults(args.task, args.seed)
+    if args.profile == "extended" and args.task != "mspacman":
+        parser.error("--profile extended is only supported for mspacman")
+    config = defaults(args.task, args.seed, profile=args.profile)
     overrides = {key: getattr(args, key) for key in ("learning_rate", "epsilon_decay_steps")
                  if getattr(args, key) is not None}
     config = replace(config, **overrides)
     run_training(config, args.episodes, args.output, args.device, args.eval_every,
-                 args.eval_episodes, args.final_episodes, not args.no_early_stop)
+                 args.eval_episodes, args.final_episodes, not args.no_early_stop,
+                 evaluation_seed=args.evaluation_seed, development_seed=args.development_seed)
 
 
 if __name__ == "__main__":

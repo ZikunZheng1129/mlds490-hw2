@@ -1,0 +1,24 @@
+{
+  "frozen_at_utc": "2026-11-11T02:55:06.473434+00:00",
+  "selection": {
+    "baseline_development_mean": 1542.0,
+    "candidate_development_mean": 2736.5,
+    "candidate_selected": true,
+    "candidate_selected_episode": 5600
+  },
+  "selection_rule": "Choose each run checkpoint using development mean only, ties retain earlier. Promote the new run only if its best 20-game development mean exceeds the old model on those same 20 seeds (1542.0). Freeze this decision before inspecting the fresh 500-game final evaluation. Report all measured comparisons, including negative outcomes.",
+  "evaluation": {
+    "episodes": 500,
+    "seed_start": 200007,
+    "seed_end": 200506
+  },
+  "evidence_sha256": {
+    "baseline_checkpoint": "39639727929f6622cd30d40e9eac09c80524de850089e772de68c39300f45103",
+    "candidate_checkpoint": "b7c22c0e6469c8ee83e45f5291e5b327c6ff6c819ef84a3e511014b5a2365d9c",
+    "plan": "7db3b5f71c947fa8d8214d4cc0200396e031e1c1359c5f607b8727dfb53583bf",
+    "baseline_development": "e2ceab1a25ba338741cc8ef1f83f57baf9bcba029f64ffb8804792bdf4527fc8",
+    "baseline_development_rows": "fb1f897b4193172119347cc1bfb01866502b5d6155c5a2b663f8cfe61b186ac5",
+    "candidate_development": "a71e7da39b71ab37a25e3aa2419b18cc3d01e082d2a3214f1fee103db48362f9",
+    "candidate_config": "e987ee5ca46a4d39c31b34396ec2945d1415c7913962a22a762593334403a565"
+  }
+}

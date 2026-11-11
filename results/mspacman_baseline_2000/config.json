@@ -1,0 +1,40 @@
+{
+  "task": "mspacman",
+  "seed": 7,
+  "gamma": 0.99,
+  "learning_rate": 0.0001,
+  "batch_size": 32,
+  "buffer_size": 50000,
+  "learning_starts": 10000,
+  "train_frequency": 4,
+  "target_interval": 2000,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "epsilon_decay_steps": 500000,
+  "gradient_clip": 10.0,
+  "reward_clip": true,
+  "frame_stack": 4,
+  "requested_episodes": 2000,
+  "eval_every": 100,
+  "development_episodes": 10,
+  "final_episodes": 500,
+  "early_stop": true,
+  "runtime": {
+    "hostname": "mlds-deepdish3",
+    "python": "3.12.16",
+    "torch": "2.14.1+cu126",
+    "gymnasium": "1.4.0",
+    "ale_py": "0.12.1",
+    "numpy": "2.5.4",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "cuda_visible_devices": "2",
+    "source_sha256": {
+      "dqn.py": "3df46cdfcc9b05683feae918bc654a9fad646b3f153255e30e9c142c30497a09",
+      "train.py": "494bae1647d04a0df6b269ff5905ec1d244e0cbf7afb7b49f81860daa7f94f58"
+    }
+  },
+  "max_q_definition": "max over visited states and all actions in each training episode",
+  "evaluation_epsilon": 0.0,
+  "evaluation_seed": 100007
+}

@@ -1,0 +1,43 @@
+{
+  "started_utc": "2026-11-10T21:46:00.041225+00:00",
+  "pid": 4050763,
+  "argv": [
+    ".venv312/bin/python",
+    "-u",
+    "train.py",
+    "--task",
+    "mspacman",
+    "--profile",
+    "extended",
+    "--episodes",
+    "6000",
+    "--seed",
+    "7",
+    "--device",
+    "cuda",
+    "--eval-every",
+    "100",
+    "--eval-episodes",
+    "20",
+    "--final-episodes",
+    "500",
+    "--development-seed",
+    "40000",
+    "--evaluation-seed",
+    "200007",
+    "--output",
+    "results/mspacman_extended"
+  ],
+  "cwd": "/nfs/home/suv6790/mlds490_hw2",
+  "physical_gpu": 2,
+  "environment_overrides": {
+    "CUDA_VISIBLE_DEVICES": "2",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "source_sha256": {
+    "dqn.py": "7037d6e744c7190a50e96261b3258dc2248cc848007649b12797a9c24d41d2e2",
+    "train.py": "153abedbc4edd1cbfa240012314311c3d476bfce6413459caca5157ac0883fa1"
+  },
+  "next_stage": "After training and fresh500evaluation finish, run validate.py and scientific_validation.py; mark COMPLETE only after all evidence exists."
+}

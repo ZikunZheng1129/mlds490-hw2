@@ -1,380 +1,697 @@
 A.L.E: Arcade Learning Environment (version 0.12.1+8a8fafb)
 [Powered by Stella]
-mspacman episode=1 steps=399 reward=190 last100=190.0 eps=0.999 steps/s=283.4
-mspacman episode=10 steps=4886 reward=270 last100=239.0 eps=0.991 steps/s=481.7
-mspacman episode=20 steps=9700 reward=210 last100=234.5 eps=0.982 steps/s=496.9
-mspacman episode=30 steps=14416 reward=200 last100=231.7 eps=0.973 steps/s=386.2
-mspacman episode=40 steps=19348 reward=150 last100=238.8 eps=0.963 steps/s=346.8
-mspacman episode=50 steps=24324 reward=250 last100=248.0 eps=0.954 steps/s=327.8
-mspacman episode=60 steps=29306 reward=250 last100=250.5 eps=0.944 steps/s=316.9
-mspacman episode=70 steps=34284 reward=220 last100=264.3 eps=0.935 steps/s=309.3
-mspacman episode=80 steps=38678 reward=240 last100=258.1 eps=0.927 steps/s=303.8
-mspacman episode=90 steps=43300 reward=210 last100=255.9 eps=0.918 steps/s=298.3
-mspacman episode=100 steps=48278 reward=320 last100=257.0 eps=0.908 steps/s=293.5
-Development at episode 100: mean=481.00, best=481.00
-mspacman episode=110 steps=53662 reward=290 last100=271.9 eps=0.898 steps/s=271.4
-mspacman episode=120 steps=58426 reward=250 last100=273.4 eps=0.889 steps/s=271.6
-mspacman episode=130 steps=64260 reward=340 last100=284.8 eps=0.878 steps/s=273.8
-mspacman episode=140 steps=69530 reward=160 last100=295.5 eps=0.868 steps/s=274.1
-mspacman episode=150 steps=74496 reward=230 last100=295.5 eps=0.858 steps/s=273.3
-mspacman episode=160 steps=79976 reward=600 last100=300.6 eps=0.848 steps/s=272.8
-mspacman episode=170 steps=85062 reward=380 last100=294.6 eps=0.838 steps/s=272.4
-mspacman episode=180 steps=90560 reward=340 last100=309.0 eps=0.828 steps/s=272.1
-mspacman episode=190 steps=95752 reward=1830 last100=328.8 eps=0.818 steps/s=271.7
-mspacman episode=200 steps=101038 reward=260 last100=335.8 eps=0.808 steps/s=271.3
-Development at episode 200: mean=210.00, best=481.00
-mspacman episode=210 steps=105498 reward=140 last100=320.2 eps=0.800 steps/s=265.5
-mspacman episode=220 steps=110560 reward=370 last100=328.1 eps=0.790 steps/s=265.6
-mspacman episode=230 steps=115644 reward=230 last100=324.5 eps=0.780 steps/s=265.7
-mspacman episode=240 steps=121056 reward=350 last100=322.3 eps=0.770 steps/s=265.8
-mspacman episode=250 steps=126404 reward=330 last100=334.7 eps=0.760 steps/s=265.6
-mspacman episode=260 steps=131404 reward=380 last100=332.8 eps=0.750 steps/s=265.4
-mspacman episode=270 steps=137102 reward=520 last100=347.6 eps=0.740 steps/s=265.1
-mspacman episode=280 steps=143010 reward=310 last100=365.2 eps=0.728 steps/s=264.9
-mspacman episode=290 steps=147670 reward=260 last100=353.3 eps=0.719 steps/s=264.8
-mspacman episode=300 steps=153388 reward=300 last100=369.4 eps=0.709 steps/s=264.2
-Development at episode 300: mean=1049.00, best=1049.00
-mspacman episode=310 steps=158538 reward=350 last100=379.0 eps=0.699 steps/s=257.7
-mspacman episode=320 steps=164170 reward=330 last100=387.7 eps=0.688 steps/s=257.4
-mspacman episode=330 steps=169744 reward=270 last100=395.4 eps=0.677 steps/s=257.6
-mspacman episode=340 steps=174746 reward=500 last100=395.0 eps=0.668 steps/s=257.7
-mspacman episode=350 steps=179792 reward=300 last100=391.4 eps=0.658 steps/s=257.9
-mspacman episode=360 steps=184806 reward=240 last100=395.8 eps=0.649 steps/s=258.0
-mspacman episode=370 steps=189808 reward=290 last100=406.9 eps=0.639 steps/s=258.0
-mspacman episode=380 steps=195708 reward=350 last100=408.0 eps=0.628 steps/s=258.2
-mspacman episode=390 steps=201776 reward=320 last100=423.5 eps=0.617 steps/s=258.5
-mspacman episode=400 steps=207212 reward=350 last100=431.0 eps=0.606 steps/s=258.6
-Development at episode 400: mean=806.00, best=1049.00
-mspacman episode=410 steps=212976 reward=280 last100=446.3 eps=0.595 steps/s=255.3
-mspacman episode=420 steps=218292 reward=330 last100=444.3 eps=0.585 steps/s=255.5
-mspacman episode=430 steps=223488 reward=470 last100=444.3 eps=0.575 steps/s=255.7
-mspacman episode=440 steps=229102 reward=350 last100=458.7 eps=0.565 steps/s=255.9
-mspacman episode=450 steps=234966 reward=640 last100=470.3 eps=0.554 steps/s=256.6
-mspacman episode=460 steps=241118 reward=320 last100=499.8 eps=0.542 steps/s=256.9
-mspacman episode=470 steps=246430 reward=340 last100=494.9 eps=0.532 steps/s=257.1
-mspacman episode=480 steps=252440 reward=500 last100=491.3 eps=0.520 steps/s=258.0
-mspacman episode=490 steps=258496 reward=330 last100=502.0 eps=0.509 steps/s=258.9
-mspacman episode=500 steps=264056 reward=250 last100=491.7 eps=0.498 steps/s=259.8
-Development at episode 500: mean=741.00, best=1049.00
-mspacman episode=510 steps=270262 reward=330 last100=495.4 eps=0.487 steps/s=257.4
-mspacman episode=520 steps=276564 reward=590 last100=514.4 eps=0.475 steps/s=258.4
-mspacman episode=530 steps=282418 reward=1140 last100=531.3 eps=0.463 steps/s=259.2
-mspacman episode=540 steps=288388 reward=420 last100=537.2 eps=0.452 steps/s=260.0
-mspacman episode=550 steps=294682 reward=460 last100=555.1 eps=0.440 steps/s=260.9
-mspacman episode=560 steps=300456 reward=450 last100=550.9 eps=0.429 steps/s=261.6
-mspacman episode=570 steps=306924 reward=1020 last100=560.9 eps=0.417 steps/s=262.4
-mspacman episode=580 steps=312684 reward=1990 last100=581.0 eps=0.406 steps/s=263.1
-mspacman episode=590 steps=318838 reward=1010 last100=591.9 eps=0.394 steps/s=263.9
-mspacman episode=600 steps=325680 reward=610 last100=619.3 eps=0.381 steps/s=264.8
-Development at episode 600: mean=677.00, best=1049.00
-mspacman episode=610 steps=332106 reward=510 last100=634.5 eps=0.369 steps/s=263.4
-mspacman episode=620 steps=338804 reward=630 last100=642.6 eps=0.356 steps/s=264.2
-mspacman episode=630 steps=345658 reward=1220 last100=662.1 eps=0.343 steps/s=264.9
-mspacman episode=640 steps=351804 reward=370 last100=668.3 eps=0.332 steps/s=265.8
-mspacman episode=650 steps=357866 reward=490 last100=675.1 eps=0.320 steps/s=266.4
-mspacman episode=660 steps=364536 reward=690 last100=679.0 eps=0.307 steps/s=267.1
-mspacman episode=670 steps=371518 reward=680 last100=697.4 eps=0.294 steps/s=267.8
-mspacman episode=680 steps=376916 reward=360 last100=692.1 eps=0.284 steps/s=268.2
-mspacman episode=690 steps=383588 reward=480 last100=708.4 eps=0.271 steps/s=268.8
-mspacman episode=700 steps=389962 reward=400 last100=710.0 eps=0.259 steps/s=269.4
-Development at episode 700: mean=1176.00, best=1176.00
-mspacman episode=710 steps=395654 reward=650 last100=713.7 eps=0.248 steps/s=267.2
-mspacman episode=720 steps=401374 reward=380 last100=707.9 eps=0.237 steps/s=267.7
-mspacman episode=730 steps=407488 reward=670 last100=706.2 eps=0.226 steps/s=268.3
-mspacman episode=740 steps=414262 reward=650 last100=739.4 eps=0.213 steps/s=268.8
-mspacman episode=750 steps=421044 reward=630 last100=748.3 eps=0.200 steps/s=269.3
-mspacman episode=760 steps=430110 reward=1590 last100=799.4 eps=0.183 steps/s=270.2
-mspacman episode=770 steps=437080 reward=800 last100=803.2 eps=0.170 steps/s=270.8
-mspacman episode=780 steps=443654 reward=630 last100=812.8 eps=0.157 steps/s=271.3
-mspacman episode=790 steps=450014 reward=330 last100=811.5 eps=0.145 steps/s=271.8
-mspacman episode=800 steps=456388 reward=1260 last100=819.7 eps=0.133 steps/s=272.3
-Development at episode 800: mean=1045.00, best=1176.00
-mspacman episode=810 steps=463492 reward=630 last100=845.5 eps=0.119 steps/s=270.8
-mspacman episode=820 steps=470558 reward=1210 last100=880.1 eps=0.106 steps/s=271.5
-mspacman episode=830 steps=478512 reward=1240 last100=913.6 eps=0.091 steps/s=272.1
-mspacman episode=840 steps=485942 reward=980 last100=914.7 eps=0.077 steps/s=272.6
-mspacman episode=850 steps=493166 reward=730 last100=939.0 eps=0.063 steps/s=273.1
-mspacman episode=860 steps=500234 reward=960 last100=922.6 eps=0.050 steps/s=273.5
-mspacman episode=870 steps=507206 reward=580 last100=932.0 eps=0.050 steps/s=274.0
-mspacman episode=880 steps=514460 reward=1350 last100=954.0 eps=0.050 steps/s=274.4
-mspacman episode=890 steps=521884 reward=1360 last100=977.4 eps=0.050 steps/s=274.9
-mspacman episode=900 steps=528780 reward=1960 last100=1001.0 eps=0.050 steps/s=275.3
-Development at episode 900: mean=886.00, best=1176.00
-mspacman episode=910 steps=535694 reward=680 last100=999.7 eps=0.050 steps/s=273.7
-mspacman episode=920 steps=542094 reward=730 last100=1008.8 eps=0.050 steps/s=274.0
-mspacman episode=930 steps=549326 reward=760 last100=1004.1 eps=0.050 steps/s=274.4
-mspacman episode=940 steps=556484 reward=700 last100=998.7 eps=0.050 steps/s=274.7
-mspacman episode=950 steps=563552 reward=1020 last100=986.0 eps=0.050 steps/s=275.1
-mspacman episode=960 steps=570372 reward=1460 last100=977.8 eps=0.050 steps/s=275.4
-mspacman episode=970 steps=577514 reward=620 last100=972.0 eps=0.050 steps/s=275.8
-mspacman episode=980 steps=583652 reward=1350 last100=952.6 eps=0.050 steps/s=276.1
-mspacman episode=990 steps=590406 reward=590 last100=945.9 eps=0.050 steps/s=276.4
-mspacman episode=1000 steps=596692 reward=1440 last100=925.6 eps=0.050 steps/s=276.7
-Development at episode 1000: mean=749.00, best=1176.00
-mspacman episode=1010 steps=602482 reward=650 last100=910.1 eps=0.050 steps/s=275.5
-mspacman episode=1020 steps=609856 reward=1040 last100=898.4 eps=0.050 steps/s=275.9
-mspacman episode=1030 steps=615756 reward=690 last100=878.0 eps=0.050 steps/s=276.1
-mspacman episode=1040 steps=622496 reward=530 last100=886.7 eps=0.050 steps/s=276.4
-mspacman episode=1050 steps=629322 reward=830 last100=878.2 eps=0.050 steps/s=276.7
-mspacman episode=1060 steps=636814 reward=1980 last100=886.0 eps=0.050 steps/s=277.0
-mspacman episode=1070 steps=643158 reward=620 last100=884.3 eps=0.050 steps/s=277.3
-mspacman episode=1080 steps=650088 reward=1320 last100=899.6 eps=0.050 steps/s=277.6
-mspacman episode=1090 steps=657982 reward=2280 last100=916.4 eps=0.050 steps/s=277.9
-mspacman episode=1100 steps=665094 reward=700 last100=933.3 eps=0.050 steps/s=278.2
-Development at episode 1100: mean=983.00, best=1176.00
-mspacman episode=1110 steps=673708 reward=990 last100=1018.3 eps=0.050 steps/s=277.2
-mspacman episode=1120 steps=681264 reward=620 last100=1029.5 eps=0.050 steps/s=277.5
-mspacman episode=1130 steps=687268 reward=640 last100=1036.1 eps=0.050 steps/s=277.7
-mspacman episode=1140 steps=695402 reward=1220 last100=1064.5 eps=0.050 steps/s=278.0
-mspacman episode=1150 steps=702832 reward=1560 last100=1084.1 eps=0.050 steps/s=278.3
-mspacman episode=1160 steps=710558 reward=650 last100=1109.1 eps=0.050 steps/s=278.7
-mspacman episode=1170 steps=717112 reward=670 last100=1113.4 eps=0.050 steps/s=278.9
-mspacman episode=1180 steps=723566 reward=1500 last100=1126.8 eps=0.050 steps/s=279.2
-mspacman episode=1190 steps=730846 reward=1390 last100=1126.7 eps=0.050 steps/s=279.4
-mspacman episode=1200 steps=738404 reward=1460 last100=1121.8 eps=0.050 steps/s=279.7
-Development at episode 1200: mean=790.00, best=1176.00
-mspacman episode=1210 steps=744954 reward=660 last100=1046.7 eps=0.050 steps/s=278.9
-mspacman episode=1220 steps=751804 reward=830 last100=1052.3 eps=0.050 steps/s=279.1
-mspacman episode=1230 steps=758526 reward=740 last100=1066.0 eps=0.050 steps/s=279.3
-mspacman episode=1240 steps=765054 reward=890 last100=1038.5 eps=0.050 steps/s=279.5
-mspacman episode=1250 steps=771198 reward=950 last100=1025.7 eps=0.050 steps/s=279.7
-mspacman episode=1260 steps=778598 reward=870 last100=1033.5 eps=0.050 steps/s=279.9
-mspacman episode=1270 steps=785944 reward=770 last100=1051.7 eps=0.050 steps/s=280.2
-mspacman episode=1280 steps=792810 reward=1440 last100=1059.3 eps=0.050 steps/s=280.4
-mspacman episode=1290 steps=800756 reward=1460 last100=1069.4 eps=0.050 steps/s=280.6
-mspacman episode=1300 steps=807520 reward=910 last100=1074.9 eps=0.050 steps/s=280.8
-Development at episode 1300: mean=1426.00, best=1426.00
-mspacman episode=1310 steps=814336 reward=920 last100=1103.3 eps=0.050 steps/s=279.8
-mspacman episode=1320 steps=821206 reward=1280 last100=1103.7 eps=0.050 steps/s=279.9
-mspacman episode=1330 steps=828676 reward=1670 last100=1134.3 eps=0.050 steps/s=280.1
-mspacman episode=1340 steps=835266 reward=910 last100=1133.8 eps=0.050 steps/s=280.3
-mspacman episode=1350 steps=841904 reward=690 last100=1137.2 eps=0.050 steps/s=280.5
-mspacman episode=1360 steps=848830 reward=1120 last100=1113.9 eps=0.050 steps/s=280.7
-mspacman episode=1370 steps=856102 reward=980 last100=1136.2 eps=0.050 steps/s=280.9
-mspacman episode=1380 steps=863052 reward=1920 last100=1161.8 eps=0.050 steps/s=281.1
-mspacman episode=1390 steps=869120 reward=640 last100=1137.7 eps=0.050 steps/s=281.3
-mspacman episode=1400 steps=875524 reward=1650 last100=1138.6 eps=0.050 steps/s=281.4
-Development at episode 1400: mean=1273.00, best=1426.00
-mspacman episode=1410 steps=882476 reward=2200 last100=1129.5 eps=0.050 steps/s=280.4
-mspacman episode=1420 steps=888670 reward=600 last100=1105.1 eps=0.050 steps/s=280.5
-mspacman episode=1430 steps=895856 reward=1000 last100=1085.2 eps=0.050 steps/s=280.7
-mspacman episode=1440 steps=903310 reward=1740 last100=1115.2 eps=0.050 steps/s=280.9
-mspacman episode=1450 steps=909306 reward=720 last100=1109.6 eps=0.050 steps/s=281.1
-mspacman episode=1460 steps=915482 reward=650 last100=1113.9 eps=0.050 steps/s=281.2
-mspacman episode=1470 steps=922558 reward=800 last100=1100.7 eps=0.050 steps/s=281.4
-mspacman episode=1480 steps=929510 reward=1930 last100=1095.3 eps=0.050 steps/s=281.6
-mspacman episode=1490 steps=937248 reward=1150 last100=1128.9 eps=0.050 steps/s=281.8
-mspacman episode=1500 steps=943908 reward=1200 last100=1131.9 eps=0.050 steps/s=281.9
-Development at episode 1500: mean=1835.00, best=1835.00
-mspacman episode=1510 steps=950420 reward=990 last100=1138.5 eps=0.050 steps/s=281.0
-mspacman episode=1520 steps=957258 reward=880 last100=1194.8 eps=0.050 steps/s=281.2
-mspacman episode=1530 steps=964352 reward=1140 last100=1205.2 eps=0.050 steps/s=281.3
-mspacman episode=1540 steps=971116 reward=1070 last100=1188.6 eps=0.050 steps/s=281.5
-mspacman episode=1550 steps=978282 reward=550 last100=1212.5 eps=0.050 steps/s=281.6
-mspacman episode=1560 steps=985602 reward=1050 last100=1215.2 eps=0.050 steps/s=281.8
-mspacman episode=1570 steps=992818 reward=1720 last100=1224.7 eps=0.050 steps/s=282.0
-mspacman episode=1580 steps=1000294 reward=1180 last100=1215.6 eps=0.050 steps/s=282.2
-mspacman episode=1590 steps=1007554 reward=1310 last100=1220.5 eps=0.050 steps/s=282.4
-mspacman episode=1600 steps=1014556 reward=1430 last100=1245.6 eps=0.050 steps/s=282.6
-Development at episode 1600: mean=1583.00, best=1835.00
-mspacman episode=1610 steps=1022092 reward=880 last100=1259.5 eps=0.050 steps/s=281.7
-mspacman episode=1620 steps=1028870 reward=550 last100=1243.3 eps=0.050 steps/s=281.8
-mspacman episode=1630 steps=1036072 reward=2070 last100=1250.9 eps=0.050 steps/s=282.0
-mspacman episode=1640 steps=1043292 reward=1180 last100=1262.9 eps=0.050 steps/s=282.1
-mspacman episode=1650 steps=1050554 reward=2130 last100=1270.9 eps=0.050 steps/s=282.3
-mspacman episode=1660 steps=1057570 reward=800 last100=1280.9 eps=0.050 steps/s=282.4
-mspacman episode=1670 steps=1064252 reward=1340 last100=1280.3 eps=0.050 steps/s=282.6
-mspacman episode=1680 steps=1071402 reward=800 last100=1295.9 eps=0.050 steps/s=282.7
-mspacman episode=1690 steps=1078378 reward=1200 last100=1264.4 eps=0.050 steps/s=282.9
-mspacman episode=1700 steps=1084972 reward=1100 last100=1252.6 eps=0.050 steps/s=283.1
-Development at episode 1700: mean=1390.00, best=1835.00
-mspacman episode=1710 steps=1091908 reward=1190 last100=1250.3 eps=0.050 steps/s=282.2
-mspacman episode=1720 steps=1098074 reward=1280 last100=1220.2 eps=0.050 steps/s=282.3
-mspacman episode=1730 steps=1105204 reward=1290 last100=1207.5 eps=0.050 steps/s=282.5
-mspacman episode=1740 steps=1112526 reward=1670 last100=1218.3 eps=0.050 steps/s=282.6
-mspacman episode=1750 steps=1118588 reward=1020 last100=1195.0 eps=0.050 steps/s=282.7
-mspacman episode=1760 steps=1125778 reward=830 last100=1193.8 eps=0.050 steps/s=282.9
-mspacman episode=1770 steps=1132872 reward=560 last100=1176.6 eps=0.050 steps/s=283.0
-mspacman episode=1780 steps=1140682 reward=1600 last100=1163.8 eps=0.050 steps/s=283.2
-mspacman episode=1790 steps=1148414 reward=2930 last100=1195.0 eps=0.050 steps/s=283.4
-mspacman episode=1800 steps=1154520 reward=2040 last100=1178.9 eps=0.050 steps/s=283.5
-Development at episode 1800: mean=1546.00, best=1835.00
-mspacman episode=1810 steps=1161940 reward=1770 last100=1176.2 eps=0.050 steps/s=282.8
-mspacman episode=1820 steps=1168382 reward=1310 last100=1190.0 eps=0.050 steps/s=282.9
-mspacman episode=1830 steps=1175982 reward=570 last100=1205.5 eps=0.050 steps/s=283.0
-mspacman episode=1840 steps=1183704 reward=940 last100=1199.2 eps=0.050 steps/s=283.2
-mspacman episode=1850 steps=1191294 reward=860 last100=1214.7 eps=0.050 steps/s=283.3
-mspacman episode=1860 steps=1198444 reward=1120 last100=1219.9 eps=0.050 steps/s=283.4
-mspacman episode=1870 steps=1205686 reward=960 last100=1230.5 eps=0.050 steps/s=283.5
-mspacman episode=1880 steps=1214978 reward=1060 last100=1253.9 eps=0.050 steps/s=283.7
-mspacman episode=1890 steps=1221150 reward=670 last100=1229.9 eps=0.050 steps/s=283.8
-mspacman episode=1900 steps=1228004 reward=890 last100=1255.2 eps=0.050 steps/s=283.9
-Development at episode 1900: mean=955.00, best=1835.00
-mspacman episode=1910 steps=1235750 reward=1690 last100=1268.5 eps=0.050 steps/s=283.4
-mspacman episode=1920 steps=1242736 reward=1480 last100=1278.9 eps=0.050 steps/s=283.6
-mspacman episode=1930 steps=1250326 reward=1180 last100=1281.4 eps=0.050 steps/s=283.7
-mspacman episode=1940 steps=1259122 reward=1260 last100=1332.5 eps=0.050 steps/s=283.9
-mspacman episode=1950 steps=1266356 reward=1760 last100=1347.1 eps=0.050 steps/s=284.0
-mspacman episode=1960 steps=1274104 reward=2160 last100=1371.4 eps=0.050 steps/s=284.1
-mspacman episode=1970 steps=1282634 reward=1600 last100=1406.6 eps=0.050 steps/s=284.3
-mspacman episode=1980 steps=1289302 reward=760 last100=1369.4 eps=0.050 steps/s=284.4
-mspacman episode=1990 steps=1297068 reward=1510 last100=1388.0 eps=0.050 steps/s=284.5
-mspacman episode=2000 steps=1303878 reward=910 last100=1377.7 eps=0.050 steps/s=284.6
-Development at episode 2000: mean=1267.00, best=1835.00
+mspacman episode=1 steps=399 reward=190 last100=190.0 eps=1.000 steps/s=311.4
+mspacman episode=10 steps=4726 reward=250 last100=238.0 eps=0.995 steps/s=556.6
+mspacman episode=20 steps=10316 reward=200 last100=258.0 eps=0.990 steps/s=587.9
+mspacman episode=30 steps=15120 reward=300 last100=258.3 eps=0.985 steps/s=592.4
+mspacman episode=40 steps=19988 reward=330 last100=255.0 eps=0.980 steps/s=594.9
+mspacman episode=50 steps=24816 reward=110 last100=251.8 eps=0.975 steps/s=495.8
+mspacman episode=60 steps=29646 reward=90 last100=249.0 eps=0.971 steps/s=449.4
+mspacman episode=70 steps=34594 reward=520 last100=251.4 eps=0.966 steps/s=417.4
+mspacman episode=80 steps=39566 reward=240 last100=250.0 eps=0.961 steps/s=387.6
+mspacman episode=90 steps=44110 reward=180 last100=244.2 eps=0.956 steps/s=368.1
+mspacman episode=100 steps=48740 reward=270 last100=245.5 eps=0.952 steps/s=353.8
+Development at episode 100: mean=260.00, best=260.00
+mspacman episode=110 steps=53922 reward=270 last100=252.9 eps=0.947 steps/s=303.1
+mspacman episode=120 steps=59024 reward=250 last100=251.1 eps=0.942 steps/s=298.5
+mspacman episode=130 steps=63870 reward=280 last100=251.8 eps=0.937 steps/s=294.4
+mspacman episode=140 steps=69250 reward=220 last100=260.4 eps=0.931 steps/s=291.0
+mspacman episode=150 steps=74644 reward=630 last100=266.2 eps=0.926 steps/s=288.1
+mspacman episode=160 steps=79460 reward=320 last100=270.2 eps=0.921 steps/s=286.2
+mspacman episode=170 steps=84408 reward=220 last100=267.0 eps=0.916 steps/s=284.6
+mspacman episode=180 steps=89626 reward=240 last100=269.1 eps=0.911 steps/s=283.6
+mspacman episode=190 steps=94616 reward=160 last100=277.6 eps=0.906 steps/s=282.9
+mspacman episode=200 steps=99682 reward=180 last100=281.7 eps=0.901 steps/s=282.1
+Development at episode 200: mean=616.00, best=616.00
+mspacman episode=210 steps=104490 reward=250 last100=275.9 eps=0.897 steps/s=268.2
+mspacman episode=220 steps=109662 reward=380 last100=278.7 eps=0.891 steps/s=268.3
+mspacman episode=230 steps=114480 reward=230 last100=279.9 eps=0.887 steps/s=268.0
+mspacman episode=240 steps=119732 reward=450 last100=277.6 eps=0.881 steps/s=267.3
+mspacman episode=250 steps=124594 reward=280 last100=279.0 eps=0.877 steps/s=267.1
+mspacman episode=260 steps=129972 reward=310 last100=280.0 eps=0.871 steps/s=267.1
+mspacman episode=270 steps=134882 reward=1040 last100=292.5 eps=0.866 steps/s=267.0
+mspacman episode=280 steps=139790 reward=240 last100=294.7 eps=0.862 steps/s=266.8
+mspacman episode=290 steps=144366 reward=230 last100=294.0 eps=0.857 steps/s=266.7
+mspacman episode=300 steps=149436 reward=280 last100=299.7 eps=0.852 steps/s=266.6
+Development at episode 300: mean=425.00, best=616.00
+mspacman episode=310 steps=154694 reward=240 last100=307.0 eps=0.847 steps/s=257.8
+mspacman episode=320 steps=159626 reward=330 last100=307.3 eps=0.842 steps/s=258.1
+mspacman episode=330 steps=165320 reward=320 last100=315.7 eps=0.836 steps/s=258.4
+mspacman episode=340 steps=170100 reward=260 last100=313.3 eps=0.832 steps/s=258.5
+mspacman episode=350 steps=175012 reward=240 last100=311.1 eps=0.827 steps/s=258.6
+mspacman episode=360 steps=180248 reward=370 last100=318.4 eps=0.822 steps/s=258.8
+mspacman episode=370 steps=185234 reward=210 last100=318.4 eps=0.817 steps/s=258.8
+mspacman episode=380 steps=190964 reward=330 last100=343.9 eps=0.811 steps/s=259.0
+mspacman episode=390 steps=195418 reward=170 last100=342.5 eps=0.807 steps/s=259.1
+mspacman episode=400 steps=200200 reward=300 last100=337.6 eps=0.802 steps/s=259.2
+Development at episode 400: mean=686.50, best=686.50
+mspacman episode=410 steps=205594 reward=360 last100=341.5 eps=0.796 steps/s=251.0
+mspacman episode=420 steps=210868 reward=340 last100=347.0 eps=0.791 steps/s=251.3
+mspacman episode=430 steps=216640 reward=300 last100=350.8 eps=0.786 steps/s=251.6
+mspacman episode=440 steps=222292 reward=230 last100=356.8 eps=0.780 steps/s=251.9
+mspacman episode=450 steps=227884 reward=360 last100=368.0 eps=0.774 steps/s=252.4
+mspacman episode=460 steps=232968 reward=270 last100=367.6 eps=0.769 steps/s=252.7
+mspacman episode=470 steps=238228 reward=400 last100=369.4 eps=0.764 steps/s=253.0
+mspacman episode=480 steps=243246 reward=290 last100=350.4 eps=0.759 steps/s=253.1
+mspacman episode=490 steps=248964 reward=1060 last100=367.1 eps=0.754 steps/s=253.3
+mspacman episode=500 steps=254394 reward=490 last100=373.6 eps=0.748 steps/s=253.5
+Development at episode 500: mean=933.50, best=933.50
+mspacman episode=510 steps=260180 reward=340 last100=382.9 eps=0.742 steps/s=247.9
+mspacman episode=520 steps=265978 reward=530 last100=397.3 eps=0.737 steps/s=248.1
+mspacman episode=530 steps=271768 reward=460 last100=409.5 eps=0.731 steps/s=248.4
+mspacman episode=540 steps=277458 reward=220 last100=416.3 eps=0.725 steps/s=248.7
+mspacman episode=550 steps=283256 reward=550 last100=418.7 eps=0.720 steps/s=249.0
+mspacman episode=560 steps=289016 reward=300 last100=428.1 eps=0.714 steps/s=249.4
+mspacman episode=570 steps=294396 reward=830 last100=448.9 eps=0.709 steps/s=249.6
+mspacman episode=580 steps=300236 reward=430 last100=462.5 eps=0.703 steps/s=249.9
+mspacman episode=590 steps=305326 reward=300 last100=460.8 eps=0.698 steps/s=249.9
+mspacman episode=600 steps=311270 reward=730 last100=480.0 eps=0.692 steps/s=249.9
+Development at episode 600: mean=510.00, best=933.50
+mspacman episode=610 steps=317274 reward=240 last100=473.2 eps=0.686 steps/s=245.6
+mspacman episode=620 steps=322966 reward=550 last100=467.1 eps=0.680 steps/s=245.8
+mspacman episode=630 steps=329210 reward=500 last100=462.1 eps=0.674 steps/s=246.0
+mspacman episode=640 steps=334410 reward=420 last100=454.5 eps=0.669 steps/s=246.2
+mspacman episode=650 steps=340502 reward=430 last100=468.5 eps=0.663 steps/s=246.6
+mspacman episode=660 steps=345682 reward=450 last100=462.6 eps=0.658 steps/s=246.7
+mspacman episode=670 steps=350826 reward=560 last100=441.5 eps=0.653 steps/s=246.8
+mspacman episode=680 steps=356816 reward=230 last100=439.1 eps=0.647 steps/s=247.1
+mspacman episode=690 steps=361770 reward=290 last100=434.5 eps=0.642 steps/s=247.3
+mspacman episode=700 steps=366564 reward=340 last100=414.6 eps=0.637 steps/s=247.5
+Development at episode 700: mean=542.50, best=933.50
+mspacman episode=710 steps=371848 reward=320 last100=420.5 eps=0.632 steps/s=244.2
+mspacman episode=720 steps=376892 reward=240 last100=426.5 eps=0.627 steps/s=244.4
+mspacman episode=730 steps=382346 reward=420 last100=423.5 eps=0.621 steps/s=244.7
+mspacman episode=740 steps=387766 reward=970 last100=435.1 eps=0.616 steps/s=244.9
+mspacman episode=750 steps=393312 reward=460 last100=428.4 eps=0.611 steps/s=245.3
+mspacman episode=760 steps=399452 reward=770 last100=445.9 eps=0.605 steps/s=245.5
+mspacman episode=770 steps=404276 reward=270 last100=456.6 eps=0.600 steps/s=245.6
+mspacman episode=780 steps=410568 reward=1600 last100=467.5 eps=0.594 steps/s=245.9
+mspacman episode=790 steps=416342 reward=1060 last100=491.8 eps=0.588 steps/s=246.1
+mspacman episode=800 steps=421696 reward=200 last100=497.7 eps=0.583 steps/s=246.3
+Development at episode 800: mean=1141.00, best=1141.00
+mspacman episode=810 steps=428064 reward=710 last100=534.0 eps=0.576 steps/s=242.7
+mspacman episode=820 steps=434328 reward=340 last100=562.3 eps=0.570 steps/s=242.9
+mspacman episode=830 steps=440350 reward=440 last100=575.6 eps=0.564 steps/s=243.1
+mspacman episode=840 steps=446608 reward=1250 last100=598.5 eps=0.558 steps/s=243.4
+mspacman episode=850 steps=452382 reward=540 last100=606.8 eps=0.552 steps/s=243.6
+mspacman episode=860 steps=458222 reward=780 last100=603.2 eps=0.546 steps/s=243.8
+mspacman episode=870 steps=464498 reward=400 last100=622.3 eps=0.540 steps/s=244.0
+mspacman episode=880 steps=470316 reward=750 last100=621.3 eps=0.534 steps/s=244.2
+mspacman episode=890 steps=476574 reward=370 last100=615.2 eps=0.528 steps/s=244.4
+mspacman episode=900 steps=482332 reward=340 last100=637.2 eps=0.522 steps/s=244.5
+Development at episode 900: mean=846.50, best=1141.00
+mspacman episode=910 steps=487720 reward=1040 last100=604.7 eps=0.517 steps/s=241.5
+mspacman episode=920 steps=494610 reward=920 last100=601.7 eps=0.510 steps/s=241.7
+mspacman episode=930 steps=500512 reward=420 last100=618.6 eps=0.504 steps/s=241.9
+mspacman episode=940 steps=506194 reward=430 last100=598.0 eps=0.499 steps/s=242.1
+mspacman episode=950 steps=511286 reward=410 last100=592.5 eps=0.494 steps/s=242.3
+mspacman episode=960 steps=517648 reward=710 last100=604.5 eps=0.488 steps/s=242.5
+mspacman episode=970 steps=523372 reward=560 last100=592.1 eps=0.482 steps/s=242.7
+mspacman episode=980 steps=530066 reward=450 last100=627.9 eps=0.475 steps/s=242.9
+mspacman episode=990 steps=536164 reward=330 last100=630.1 eps=0.469 steps/s=243.1
+mspacman episode=1000 steps=542808 reward=610 last100=638.8 eps=0.463 steps/s=243.3
+Development at episode 1000: mean=918.00, best=1141.00
+mspacman episode=1010 steps=548776 reward=610 last100=646.2 eps=0.457 steps/s=240.8
+mspacman episode=1020 steps=554710 reward=340 last100=622.5 eps=0.451 steps/s=240.8
+mspacman episode=1030 steps=561034 reward=620 last100=615.1 eps=0.445 steps/s=241.0
+mspacman episode=1040 steps=566264 reward=920 last100=628.6 eps=0.439 steps/s=241.1
+mspacman episode=1050 steps=572386 reward=420 last100=644.1 eps=0.433 steps/s=241.4
+mspacman episode=1060 steps=578606 reward=700 last100=640.7 eps=0.427 steps/s=241.5
+mspacman episode=1070 steps=584138 reward=500 last100=634.2 eps=0.422 steps/s=241.7
+mspacman episode=1080 steps=590250 reward=480 last100=603.9 eps=0.416 steps/s=241.7
+mspacman episode=1090 steps=597420 reward=530 last100=623.5 eps=0.409 steps/s=241.9
+mspacman episode=1100 steps=603792 reward=520 last100=617.5 eps=0.402 steps/s=242.0
+Development at episode 1100: mean=858.00, best=1141.00
+mspacman episode=1110 steps=610662 reward=980 last100=631.8 eps=0.395 steps/s=239.8
+mspacman episode=1120 steps=616534 reward=710 last100=648.7 eps=0.390 steps/s=240.0
+mspacman episode=1130 steps=623162 reward=610 last100=658.3 eps=0.383 steps/s=240.2
+mspacman episode=1140 steps=629672 reward=480 last100=665.7 eps=0.377 steps/s=240.4
+mspacman episode=1150 steps=635244 reward=390 last100=667.1 eps=0.371 steps/s=240.5
+mspacman episode=1160 steps=642160 reward=430 last100=704.1 eps=0.364 steps/s=240.7
+mspacman episode=1170 steps=648138 reward=510 last100=717.8 eps=0.358 steps/s=240.9
+mspacman episode=1180 steps=654440 reward=790 last100=725.1 eps=0.352 steps/s=241.1
+mspacman episode=1190 steps=660682 reward=2090 last100=731.9 eps=0.346 steps/s=241.3
+mspacman episode=1200 steps=667012 reward=1440 last100=740.9 eps=0.340 steps/s=241.5
+Development at episode 1200: mean=865.00, best=1141.00
+mspacman episode=1210 steps=673578 reward=1470 last100=758.2 eps=0.333 steps/s=239.6
+mspacman episode=1220 steps=680016 reward=1170 last100=767.4 eps=0.327 steps/s=239.8
+mspacman episode=1230 steps=686486 reward=500 last100=765.5 eps=0.320 steps/s=240.2
+mspacman episode=1240 steps=692514 reward=490 last100=771.8 eps=0.314 steps/s=240.5
+mspacman episode=1250 steps=698706 reward=530 last100=773.5 eps=0.308 steps/s=240.6
+mspacman episode=1260 steps=705480 reward=620 last100=769.4 eps=0.302 steps/s=240.7
+mspacman episode=1270 steps=712900 reward=850 last100=802.3 eps=0.294 steps/s=241.0
+mspacman episode=1280 steps=719130 reward=260 last100=818.6 eps=0.288 steps/s=241.3
+mspacman episode=1290 steps=725924 reward=450 last100=824.3 eps=0.281 steps/s=241.5
+mspacman episode=1300 steps=732740 reward=420 last100=835.4 eps=0.275 steps/s=241.9
+Development at episode 1300: mean=1157.50, best=1157.50
+mspacman episode=1310 steps=739356 reward=1120 last100=833.6 eps=0.268 steps/s=240.2
+mspacman episode=1320 steps=745630 reward=530 last100=835.4 eps=0.262 steps/s=240.4
+mspacman episode=1330 steps=752646 reward=320 last100=856.0 eps=0.255 steps/s=240.6
+mspacman episode=1340 steps=759020 reward=650 last100=861.8 eps=0.249 steps/s=240.9
+mspacman episode=1350 steps=764662 reward=580 last100=848.1 eps=0.243 steps/s=241.0
+mspacman episode=1360 steps=772354 reward=450 last100=863.4 eps=0.235 steps/s=241.3
+mspacman episode=1370 steps=778892 reward=1220 last100=866.9 eps=0.229 steps/s=241.6
+mspacman episode=1380 steps=786096 reward=1080 last100=884.1 eps=0.222 steps/s=242.0
+mspacman episode=1390 steps=791792 reward=600 last100=858.2 eps=0.216 steps/s=242.2
+mspacman episode=1400 steps=798276 reward=960 last100=877.6 eps=0.210 steps/s=242.5
+Development at episode 1400: mean=1173.00, best=1173.00
+mspacman episode=1410 steps=805580 reward=1080 last100=886.6 eps=0.202 steps/s=240.7
+mspacman episode=1420 steps=811752 reward=1030 last100=905.8 eps=0.196 steps/s=240.8
+mspacman episode=1430 steps=818096 reward=590 last100=896.8 eps=0.190 steps/s=241.0
+mspacman episode=1440 steps=824986 reward=1700 last100=915.8 eps=0.183 steps/s=241.1
+mspacman episode=1450 steps=831748 reward=1120 last100=951.8 eps=0.177 steps/s=241.2
+mspacman episode=1460 steps=838464 reward=1520 last100=960.5 eps=0.170 steps/s=241.4
+mspacman episode=1470 steps=845088 reward=830 last100=953.4 eps=0.163 steps/s=241.5
+mspacman episode=1480 steps=851386 reward=480 last100=929.4 eps=0.157 steps/s=241.5
+mspacman episode=1490 steps=858510 reward=1020 last100=1002.6 eps=0.150 steps/s=241.5
+mspacman episode=1500 steps=864322 reward=630 last100=976.2 eps=0.144 steps/s=241.5
+Development at episode 1500: mean=881.00, best=1173.00
+mspacman episode=1510 steps=871050 reward=740 last100=962.0 eps=0.138 steps/s=240.2
+mspacman episode=1520 steps=877530 reward=480 last100=966.6 eps=0.131 steps/s=240.3
+mspacman episode=1530 steps=883628 reward=960 last100=964.7 eps=0.125 steps/s=240.4
+mspacman episode=1540 steps=889644 reward=490 last100=944.3 eps=0.119 steps/s=240.6
+mspacman episode=1550 steps=896612 reward=1800 last100=960.2 eps=0.112 steps/s=240.7
+mspacman episode=1560 steps=903018 reward=540 last100=943.5 eps=0.106 steps/s=240.9
+mspacman episode=1570 steps=909498 reward=1820 last100=950.9 eps=0.100 steps/s=241.0
+mspacman episode=1580 steps=916746 reward=2630 last100=1012.3 eps=0.092 steps/s=241.2
+mspacman episode=1590 steps=924408 reward=700 last100=990.2 eps=0.085 steps/s=241.3
+mspacman episode=1600 steps=930676 reward=720 last100=994.7 eps=0.079 steps/s=241.5
+Development at episode 1600: mean=951.00, best=1173.00
+mspacman episode=1610 steps=936784 reward=510 last100=1002.3 eps=0.073 steps/s=240.0
+mspacman episode=1620 steps=943810 reward=560 last100=998.5 eps=0.066 steps/s=240.2
+mspacman episode=1630 steps=952242 reward=980 last100=1038.5 eps=0.057 steps/s=240.3
+mspacman episode=1640 steps=958182 reward=500 last100=1049.0 eps=0.051 steps/s=240.4
+mspacman episode=1650 steps=963844 reward=890 last100=1026.4 eps=0.046 steps/s=240.4
+mspacman episode=1660 steps=969398 reward=870 last100=1001.7 eps=0.040 steps/s=240.5
+mspacman episode=1670 steps=974682 reward=500 last100=985.0 eps=0.035 steps/s=240.5
+mspacman episode=1680 steps=980694 reward=490 last100=929.0 eps=0.029 steps/s=240.6
+mspacman episode=1690 steps=987420 reward=1490 last100=929.2 eps=0.022 steps/s=240.7
+mspacman episode=1700 steps=994210 reward=2340 last100=950.0 eps=0.016 steps/s=240.8
+Development at episode 1700: mean=1076.00, best=1173.00
+mspacman episode=1710 steps=1000466 reward=730 last100=946.5 eps=0.010 steps/s=239.4
+mspacman episode=1720 steps=1006672 reward=920 last100=949.4 eps=0.010 steps/s=239.5
+mspacman episode=1730 steps=1012554 reward=560 last100=912.1 eps=0.010 steps/s=239.6
+mspacman episode=1740 steps=1019756 reward=1940 last100=932.9 eps=0.010 steps/s=239.8
+mspacman episode=1750 steps=1027146 reward=620 last100=995.1 eps=0.010 steps/s=239.9
+mspacman episode=1760 steps=1033018 reward=850 last100=1006.8 eps=0.010 steps/s=240.0
+mspacman episode=1770 steps=1039874 reward=660 last100=1038.6 eps=0.010 steps/s=240.3
+mspacman episode=1780 steps=1045846 reward=760 last100=1054.2 eps=0.010 steps/s=240.4
+mspacman episode=1790 steps=1052276 reward=1040 last100=1033.4 eps=0.010 steps/s=240.5
+mspacman episode=1800 steps=1058374 reward=850 last100=1031.2 eps=0.010 steps/s=240.6
+Development at episode 1800: mean=1085.00, best=1173.00
+mspacman episode=1810 steps=1065708 reward=1280 last100=1072.2 eps=0.010 steps/s=239.6
+mspacman episode=1820 steps=1073012 reward=980 last100=1090.0 eps=0.010 steps/s=240.0
+mspacman episode=1830 steps=1080026 reward=1060 last100=1137.1 eps=0.010 steps/s=240.4
+mspacman episode=1840 steps=1087738 reward=1060 last100=1144.3 eps=0.010 steps/s=240.7
+mspacman episode=1850 steps=1095098 reward=960 last100=1121.0 eps=0.010 steps/s=241.1
+mspacman episode=1860 steps=1102724 reward=970 last100=1148.8 eps=0.010 steps/s=241.5
+mspacman episode=1870 steps=1110132 reward=1660 last100=1165.8 eps=0.010 steps/s=241.8
+mspacman episode=1880 steps=1117466 reward=1020 last100=1188.7 eps=0.010 steps/s=242.2
+mspacman episode=1890 steps=1126036 reward=1420 last100=1236.5 eps=0.010 steps/s=242.6
+mspacman episode=1900 steps=1133668 reward=1090 last100=1279.0 eps=0.010 steps/s=243.0
+Development at episode 1900: mean=1496.00, best=1496.00
+mspacman episode=1910 steps=1141388 reward=1920 last100=1292.7 eps=0.010 steps/s=242.0
+mspacman episode=1920 steps=1148690 reward=820 last100=1307.4 eps=0.010 steps/s=242.4
+mspacman episode=1930 steps=1156586 reward=1850 last100=1305.7 eps=0.010 steps/s=242.7
+mspacman episode=1940 steps=1164058 reward=1330 last100=1336.0 eps=0.010 steps/s=243.1
+mspacman episode=1950 steps=1171172 reward=800 last100=1339.8 eps=0.010 steps/s=243.4
+mspacman episode=1960 steps=1179632 reward=1240 last100=1378.9 eps=0.010 steps/s=243.9
+mspacman episode=1970 steps=1187076 reward=1520 last100=1392.8 eps=0.010 steps/s=244.2
+mspacman episode=1980 steps=1194964 reward=2030 last100=1416.6 eps=0.010 steps/s=244.5
+mspacman episode=1990 steps=1203266 reward=1160 last100=1430.3 eps=0.010 steps/s=244.9
+mspacman episode=2000 steps=1211186 reward=1150 last100=1418.8 eps=0.010 steps/s=245.3
+Development at episode 2000: mean=2088.00, best=2088.00
+mspacman episode=2010 steps=1219384 reward=1030 last100=1412.4 eps=0.010 steps/s=244.3
+mspacman episode=2020 steps=1227058 reward=1260 last100=1412.8 eps=0.010 steps/s=244.7
+mspacman episode=2030 steps=1234578 reward=2600 last100=1413.4 eps=0.010 steps/s=245.0
+mspacman episode=2040 steps=1241840 reward=1460 last100=1376.0 eps=0.010 steps/s=245.3
+mspacman episode=2050 steps=1248934 reward=1400 last100=1363.2 eps=0.010 steps/s=245.6
+mspacman episode=2060 steps=1257340 reward=990 last100=1336.6 eps=0.010 steps/s=246.0
+mspacman episode=2070 steps=1265246 reward=1230 last100=1316.4 eps=0.010 steps/s=246.3
+mspacman episode=2080 steps=1272956 reward=1120 last100=1306.0 eps=0.010 steps/s=246.6
+mspacman episode=2090 steps=1280266 reward=1760 last100=1280.7 eps=0.010 steps/s=246.9
+mspacman episode=2100 steps=1288236 reward=2110 last100=1294.8 eps=0.010 steps/s=247.2
+Development at episode 2100: mean=1407.50, best=2088.00
+mspacman episode=2110 steps=1296164 reward=1280 last100=1293.7 eps=0.010 steps/s=246.4
+mspacman episode=2120 steps=1304160 reward=1210 last100=1299.2 eps=0.010 steps/s=246.7
+mspacman episode=2130 steps=1312134 reward=810 last100=1309.3 eps=0.010 steps/s=247.0
+mspacman episode=2140 steps=1319630 reward=1450 last100=1345.9 eps=0.010 steps/s=247.3
+mspacman episode=2150 steps=1327944 reward=1120 last100=1382.9 eps=0.010 steps/s=247.6
+mspacman episode=2160 steps=1336034 reward=4900 last100=1452.1 eps=0.010 steps/s=247.9
+mspacman episode=2170 steps=1343610 reward=1620 last100=1447.3 eps=0.010 steps/s=248.2
+mspacman episode=2180 steps=1351804 reward=2540 last100=1469.6 eps=0.010 steps/s=248.5
+mspacman episode=2190 steps=1359028 reward=1020 last100=1464.3 eps=0.010 steps/s=248.8
+mspacman episode=2200 steps=1366704 reward=990 last100=1455.1 eps=0.010 steps/s=249.0
+Development at episode 2200: mean=1434.00, best=2088.00
+mspacman episode=2210 steps=1374238 reward=1480 last100=1468.9 eps=0.010 steps/s=248.2
+mspacman episode=2220 steps=1381888 reward=1330 last100=1482.4 eps=0.010 steps/s=248.5
+mspacman episode=2230 steps=1389624 reward=1310 last100=1482.4 eps=0.010 steps/s=248.8
+mspacman episode=2240 steps=1396856 reward=2030 last100=1486.2 eps=0.010 steps/s=249.1
+mspacman episode=2250 steps=1404240 reward=1520 last100=1484.7 eps=0.010 steps/s=249.3
+mspacman episode=2260 steps=1411628 reward=880 last100=1437.7 eps=0.010 steps/s=249.6
+mspacman episode=2270 steps=1420568 reward=1020 last100=1480.5 eps=0.010 steps/s=249.9
+mspacman episode=2280 steps=1429134 reward=3370 last100=1486.4 eps=0.010 steps/s=250.2
+mspacman episode=2290 steps=1436912 reward=1190 last100=1502.4 eps=0.010 steps/s=250.5
+mspacman episode=2300 steps=1444848 reward=1600 last100=1514.0 eps=0.010 steps/s=250.8
+Development at episode 2300: mean=1397.00, best=2088.00
+mspacman episode=2310 steps=1453162 reward=1930 last100=1531.5 eps=0.010 steps/s=250.1
+mspacman episode=2320 steps=1460522 reward=1200 last100=1519.0 eps=0.010 steps/s=250.3
+mspacman episode=2330 steps=1468100 reward=1560 last100=1523.0 eps=0.010 steps/s=250.6
+mspacman episode=2340 steps=1476402 reward=1260 last100=1540.9 eps=0.010 steps/s=250.9
+mspacman episode=2350 steps=1483630 reward=2520 last100=1546.9 eps=0.010 steps/s=251.1
+mspacman episode=2360 steps=1494152 reward=1740 last100=1582.7 eps=0.010 steps/s=251.5
+mspacman episode=2370 steps=1502254 reward=1810 last100=1589.8 eps=0.010 steps/s=251.8
+mspacman episode=2380 steps=1510458 reward=1770 last100=1586.4 eps=0.010 steps/s=252.0
+mspacman episode=2390 steps=1518672 reward=1660 last100=1614.0 eps=0.010 steps/s=252.3
+mspacman episode=2400 steps=1526362 reward=1200 last100=1600.8 eps=0.010 steps/s=252.5
+Development at episode 2400: mean=1518.00, best=2088.00
+mspacman episode=2410 steps=1534878 reward=1710 last100=1624.7 eps=0.010 steps/s=251.8
+mspacman episode=2420 steps=1542278 reward=2030 last100=1638.8 eps=0.010 steps/s=252.1
+mspacman episode=2430 steps=1551172 reward=1460 last100=1677.0 eps=0.010 steps/s=252.4
+mspacman episode=2440 steps=1559194 reward=1420 last100=1658.3 eps=0.010 steps/s=252.6
+mspacman episode=2450 steps=1568434 reward=1940 last100=1694.2 eps=0.010 steps/s=252.9
+mspacman episode=2460 steps=1577540 reward=1540 last100=1678.3 eps=0.010 steps/s=253.2
+mspacman episode=2470 steps=1586296 reward=3140 last100=1725.6 eps=0.010 steps/s=253.5
+mspacman episode=2480 steps=1594506 reward=1430 last100=1740.3 eps=0.010 steps/s=253.7
+mspacman episode=2490 steps=1601688 reward=1650 last100=1732.3 eps=0.010 steps/s=253.9
+mspacman episode=2500 steps=1609384 reward=1330 last100=1734.9 eps=0.010 steps/s=254.1
+Development at episode 2500: mean=1393.50, best=2088.00
+mspacman episode=2510 steps=1617176 reward=1170 last100=1719.9 eps=0.010 steps/s=253.4
+mspacman episode=2520 steps=1623948 reward=1880 last100=1698.1 eps=0.010 steps/s=253.5
+mspacman episode=2530 steps=1632202 reward=720 last100=1662.9 eps=0.010 steps/s=253.7
+mspacman episode=2540 steps=1640100 reward=1030 last100=1658.1 eps=0.010 steps/s=253.9
+mspacman episode=2550 steps=1648818 reward=1320 last100=1631.4 eps=0.010 steps/s=254.1
+mspacman episode=2560 steps=1657528 reward=1680 last100=1619.7 eps=0.010 steps/s=254.4
+mspacman episode=2570 steps=1665012 reward=2230 last100=1543.0 eps=0.010 steps/s=254.5
+mspacman episode=2580 steps=1673534 reward=1450 last100=1534.2 eps=0.010 steps/s=254.6
+mspacman episode=2590 steps=1682190 reward=1520 last100=1559.1 eps=0.010 steps/s=254.8
+mspacman episode=2600 steps=1691548 reward=1610 last100=1579.4 eps=0.010 steps/s=255.0
+Development at episode 2600: mean=1620.50, best=2088.00
+mspacman episode=2610 steps=1700126 reward=2220 last100=1587.6 eps=0.010 steps/s=254.1
+mspacman episode=2620 steps=1709228 reward=2440 last100=1646.4 eps=0.010 steps/s=254.3
+mspacman episode=2630 steps=1718394 reward=1420 last100=1669.4 eps=0.010 steps/s=254.5
+mspacman episode=2640 steps=1726832 reward=2140 last100=1697.3 eps=0.010 steps/s=254.7
+mspacman episode=2650 steps=1735068 reward=1510 last100=1676.9 eps=0.010 steps/s=254.9
+mspacman episode=2660 steps=1744598 reward=2110 last100=1692.8 eps=0.010 steps/s=255.2
+mspacman episode=2670 steps=1752356 reward=1170 last100=1696.5 eps=0.010 steps/s=255.3
+mspacman episode=2680 steps=1760068 reward=1930 last100=1702.4 eps=0.010 steps/s=255.5
+mspacman episode=2690 steps=1769034 reward=2000 last100=1726.3 eps=0.010 steps/s=255.7
+mspacman episode=2700 steps=1778786 reward=1770 last100=1745.6 eps=0.010 steps/s=256.0
+Development at episode 2700: mean=1984.50, best=2088.00
+mspacman episode=2710 steps=1787682 reward=1330 last100=1725.4 eps=0.010 steps/s=255.1
+mspacman episode=2720 steps=1796098 reward=1090 last100=1713.4 eps=0.010 steps/s=255.3
+mspacman episode=2730 steps=1805050 reward=1550 last100=1703.0 eps=0.010 steps/s=255.6
+mspacman episode=2740 steps=1813110 reward=1190 last100=1684.3 eps=0.010 steps/s=255.8
+mspacman episode=2750 steps=1822066 reward=1810 last100=1717.1 eps=0.010 steps/s=256.0
+mspacman episode=2760 steps=1830228 reward=1200 last100=1704.1 eps=0.010 steps/s=256.1
+mspacman episode=2770 steps=1839304 reward=1460 last100=1773.9 eps=0.010 steps/s=256.3
+mspacman episode=2780 steps=1847476 reward=3020 last100=1768.0 eps=0.010 steps/s=256.5
+mspacman episode=2790 steps=1856300 reward=1110 last100=1755.3 eps=0.010 steps/s=256.7
+mspacman episode=2800 steps=1865286 reward=2150 last100=1768.0 eps=0.010 steps/s=256.9
+Development at episode 2800: mean=1921.50, best=2088.00
+mspacman episode=2810 steps=1874246 reward=1510 last100=1807.9 eps=0.010 steps/s=256.1
+mspacman episode=2820 steps=1881628 reward=2020 last100=1803.1 eps=0.010 steps/s=256.2
+mspacman episode=2830 steps=1889472 reward=2050 last100=1792.8 eps=0.010 steps/s=256.4
+mspacman episode=2840 steps=1897958 reward=3440 last100=1834.7 eps=0.010 steps/s=256.6
+mspacman episode=2850 steps=1906204 reward=1770 last100=1826.8 eps=0.010 steps/s=256.7
+mspacman episode=2860 steps=1914464 reward=3520 last100=1838.2 eps=0.010 steps/s=256.9
+mspacman episode=2870 steps=1922300 reward=1880 last100=1802.1 eps=0.010 steps/s=257.1
+mspacman episode=2880 steps=1930658 reward=2980 last100=1822.2 eps=0.010 steps/s=257.2
+mspacman episode=2890 steps=1939096 reward=2040 last100=1820.6 eps=0.010 steps/s=257.4
+mspacman episode=2900 steps=1946666 reward=1560 last100=1801.8 eps=0.010 steps/s=257.5
+Development at episode 2900: mean=1779.50, best=2088.00
+mspacman episode=2910 steps=1954772 reward=1860 last100=1771.5 eps=0.010 steps/s=256.8
+mspacman episode=2920 steps=1962568 reward=1460 last100=1767.1 eps=0.010 steps/s=257.0
+mspacman episode=2930 steps=1970414 reward=1590 last100=1783.5 eps=0.010 steps/s=257.1
+mspacman episode=2940 steps=1979658 reward=3040 last100=1797.6 eps=0.010 steps/s=257.3
+mspacman episode=2950 steps=1988748 reward=2130 last100=1806.3 eps=0.010 steps/s=257.5
+mspacman episode=2960 steps=1997468 reward=1900 last100=1828.5 eps=0.010 steps/s=257.7
+mspacman episode=2970 steps=2005814 reward=1380 last100=1838.6 eps=0.010 steps/s=257.8
+mspacman episode=2980 steps=2013802 reward=1440 last100=1820.4 eps=0.010 steps/s=258.0
+mspacman episode=2990 steps=2021338 reward=1880 last100=1785.1 eps=0.010 steps/s=258.1
+mspacman episode=3000 steps=2029860 reward=1620 last100=1805.3 eps=0.010 steps/s=258.3
+Development at episode 3000: mean=1680.00, best=2088.00
+mspacman episode=3010 steps=2038018 reward=1850 last100=1783.4 eps=0.010 steps/s=257.6
+mspacman episode=3020 steps=2046548 reward=2730 last100=1798.6 eps=0.010 steps/s=257.7
+mspacman episode=3030 steps=2055046 reward=2570 last100=1812.1 eps=0.010 steps/s=257.9
+mspacman episode=3040 steps=2063748 reward=1930 last100=1791.0 eps=0.010 steps/s=258.1
+mspacman episode=3050 steps=2072788 reward=1910 last100=1817.9 eps=0.010 steps/s=258.2
+mspacman episode=3060 steps=2081248 reward=3320 last100=1838.0 eps=0.010 steps/s=258.4
+mspacman episode=3070 steps=2089624 reward=2920 last100=1856.3 eps=0.010 steps/s=258.5
+mspacman episode=3080 steps=2097684 reward=1740 last100=1865.5 eps=0.010 steps/s=258.7
+mspacman episode=3090 steps=2105434 reward=1300 last100=1886.1 eps=0.010 steps/s=258.8
+mspacman episode=3100 steps=2112982 reward=3390 last100=1864.5 eps=0.010 steps/s=258.9
+Development at episode 3100: mean=1939.50, best=2088.00
+mspacman episode=3110 steps=2121306 reward=2090 last100=1903.8 eps=0.010 steps/s=258.2
+mspacman episode=3120 steps=2130216 reward=1880 last100=1933.4 eps=0.010 steps/s=258.4
+mspacman episode=3130 steps=2138236 reward=2270 last100=1940.0 eps=0.010 steps/s=258.5
+mspacman episode=3140 steps=2146132 reward=1610 last100=1927.8 eps=0.010 steps/s=258.7
+mspacman episode=3150 steps=2154790 reward=1930 last100=1881.8 eps=0.010 steps/s=258.9
+mspacman episode=3160 steps=2163992 reward=1790 last100=1866.4 eps=0.010 steps/s=259.0
+mspacman episode=3170 steps=2171524 reward=1890 last100=1851.1 eps=0.010 steps/s=259.2
+mspacman episode=3180 steps=2180544 reward=2090 last100=1885.0 eps=0.010 steps/s=259.3
+mspacman episode=3190 steps=2189122 reward=1890 last100=1879.1 eps=0.010 steps/s=259.5
+mspacman episode=3200 steps=2196928 reward=1600 last100=1891.5 eps=0.010 steps/s=259.6
+Development at episode 3200: mean=1905.50, best=2088.00
+mspacman episode=3210 steps=2205002 reward=2420 last100=1881.7 eps=0.010 steps/s=258.9
+mspacman episode=3220 steps=2213412 reward=2720 last100=1860.9 eps=0.010 steps/s=259.0
+mspacman episode=3230 steps=2221518 reward=1190 last100=1880.0 eps=0.010 steps/s=259.2
+mspacman episode=3240 steps=2229450 reward=2040 last100=1881.1 eps=0.010 steps/s=259.3
+mspacman episode=3250 steps=2237804 reward=1840 last100=1928.2 eps=0.010 steps/s=259.4
+mspacman episode=3260 steps=2245804 reward=1720 last100=1928.4 eps=0.010 steps/s=259.5
+mspacman episode=3270 steps=2254574 reward=2020 last100=1917.6 eps=0.010 steps/s=259.7
+mspacman episode=3280 steps=2262852 reward=1880 last100=1881.9 eps=0.010 steps/s=259.8
+mspacman episode=3290 steps=2271186 reward=1540 last100=1908.2 eps=0.010 steps/s=260.0
+mspacman episode=3300 steps=2278940 reward=1970 last100=1902.1 eps=0.010 steps/s=260.1
+Development at episode 3300: mean=1898.50, best=2088.00
+mspacman episode=3310 steps=2287144 reward=1930 last100=1913.2 eps=0.010 steps/s=259.5
+mspacman episode=3320 steps=2295048 reward=1520 last100=1888.1 eps=0.010 steps/s=259.6
+mspacman episode=3330 steps=2303256 reward=1810 last100=1861.1 eps=0.010 steps/s=259.8
+mspacman episode=3340 steps=2312566 reward=1740 last100=1857.8 eps=0.010 steps/s=260.0
+mspacman episode=3350 steps=2322290 reward=2690 last100=1839.5 eps=0.010 steps/s=260.2
+mspacman episode=3360 steps=2330724 reward=2050 last100=1808.6 eps=0.010 steps/s=260.4
+mspacman episode=3370 steps=2339372 reward=2000 last100=1801.1 eps=0.010 steps/s=260.6
+mspacman episode=3380 steps=2347846 reward=2260 last100=1818.6 eps=0.010 steps/s=260.7
+mspacman episode=3390 steps=2357040 reward=1740 last100=1808.0 eps=0.010 steps/s=260.9
+mspacman episode=3400 steps=2365074 reward=1850 last100=1804.5 eps=0.010 steps/s=261.0
+Development at episode 3400: mean=1938.50, best=2088.00
+mspacman episode=3410 steps=2373350 reward=2250 last100=1801.0 eps=0.010 steps/s=260.3
+mspacman episode=3420 steps=2381890 reward=1750 last100=1819.8 eps=0.010 steps/s=260.4
+mspacman episode=3430 steps=2390580 reward=2280 last100=1822.7 eps=0.010 steps/s=260.5
+mspacman episode=3440 steps=2398962 reward=2070 last100=1834.9 eps=0.010 steps/s=260.6
+mspacman episode=3450 steps=2406238 reward=1710 last100=1810.3 eps=0.010 steps/s=260.6
+mspacman episode=3460 steps=2414372 reward=1750 last100=1840.5 eps=0.010 steps/s=260.6
+mspacman episode=3470 steps=2423460 reward=1670 last100=1898.3 eps=0.010 steps/s=260.6
+mspacman episode=3480 steps=2431434 reward=2250 last100=1901.2 eps=0.010 steps/s=260.7
+mspacman episode=3490 steps=2439196 reward=1740 last100=1886.6 eps=0.010 steps/s=260.8
+mspacman episode=3500 steps=2448072 reward=2280 last100=1915.0 eps=0.010 steps/s=260.9
+Development at episode 3500: mean=1908.50, best=2088.00
+mspacman episode=3510 steps=2456086 reward=1720 last100=1942.2 eps=0.010 steps/s=260.3
+mspacman episode=3520 steps=2464990 reward=1490 last100=1947.5 eps=0.010 steps/s=260.4
+mspacman episode=3530 steps=2472956 reward=2030 last100=1945.3 eps=0.010 steps/s=260.5
+mspacman episode=3540 steps=2480982 reward=1940 last100=1936.1 eps=0.010 steps/s=260.6
+mspacman episode=3550 steps=2489140 reward=1980 last100=1951.3 eps=0.010 steps/s=260.7
+mspacman episode=3560 steps=2498652 reward=1490 last100=1932.7 eps=0.010 steps/s=260.8
+mspacman episode=3570 steps=2507180 reward=1950 last100=1901.4 eps=0.010 steps/s=260.9
+mspacman episode=3580 steps=2516706 reward=1870 last100=1937.0 eps=0.010 steps/s=261.0
+mspacman episode=3590 steps=2525356 reward=1970 last100=1957.6 eps=0.010 steps/s=261.2
+mspacman episode=3600 steps=2533662 reward=1660 last100=1957.0 eps=0.010 steps/s=261.3
+Development at episode 3600: mean=1910.50, best=2088.00
+mspacman episode=3610 steps=2542892 reward=2850 last100=1961.3 eps=0.010 steps/s=260.7
+mspacman episode=3620 steps=2550724 reward=1420 last100=1934.9 eps=0.010 steps/s=260.8
+mspacman episode=3630 steps=2559590 reward=1630 last100=1961.8 eps=0.010 steps/s=260.9
+mspacman episode=3640 steps=2568910 reward=1640 last100=1988.9 eps=0.010 steps/s=261.0
+mspacman episode=3650 steps=2577416 reward=2250 last100=2008.7 eps=0.010 steps/s=261.1
+mspacman episode=3660 steps=2586544 reward=1580 last100=2050.8 eps=0.010 steps/s=261.2
+mspacman episode=3670 steps=2594780 reward=2310 last100=2055.5 eps=0.010 steps/s=261.3
+mspacman episode=3680 steps=2603420 reward=2130 last100=2013.2 eps=0.010 steps/s=261.4
+mspacman episode=3690 steps=2611632 reward=1980 last100=2000.1 eps=0.010 steps/s=261.5
+mspacman episode=3700 steps=2620958 reward=2440 last100=2017.5 eps=0.010 steps/s=261.6
+Development at episode 3700: mean=2229.00, best=2229.00
+mspacman episode=3710 steps=2629744 reward=3070 last100=2024.5 eps=0.010 steps/s=261.0
+mspacman episode=3720 steps=2637916 reward=1280 last100=2051.3 eps=0.010 steps/s=261.1
+mspacman episode=3730 steps=2646668 reward=1950 last100=2068.9 eps=0.010 steps/s=261.2
+mspacman episode=3740 steps=2655872 reward=1980 last100=2053.4 eps=0.010 steps/s=261.3
+mspacman episode=3750 steps=2665016 reward=1930 last100=2093.4 eps=0.010 steps/s=261.4
+mspacman episode=3760 steps=2673554 reward=1800 last100=2071.5 eps=0.010 steps/s=261.5
+mspacman episode=3770 steps=2681840 reward=1630 last100=2060.3 eps=0.010 steps/s=261.6
+mspacman episode=3780 steps=2689762 reward=1950 last100=2073.2 eps=0.010 steps/s=261.5
+mspacman episode=3790 steps=2697570 reward=1450 last100=2078.0 eps=0.010 steps/s=261.5
+mspacman episode=3800 steps=2705676 reward=1940 last100=2058.8 eps=0.010 steps/s=261.6
+Development at episode 3800: mean=2009.50, best=2229.00
+mspacman episode=3810 steps=2714540 reward=3240 last100=2049.1 eps=0.010 steps/s=261.0
+mspacman episode=3820 steps=2723482 reward=2170 last100=2070.3 eps=0.010 steps/s=261.0
+mspacman episode=3830 steps=2731678 reward=2480 last100=2042.0 eps=0.010 steps/s=261.1
+mspacman episode=3840 steps=2740984 reward=2050 last100=2044.0 eps=0.010 steps/s=261.3
+mspacman episode=3850 steps=2749750 reward=2370 last100=2011.8 eps=0.010 steps/s=261.3
+mspacman episode=3860 steps=2758296 reward=1780 last100=2020.7 eps=0.010 steps/s=261.4
+mspacman episode=3870 steps=2766366 reward=2570 last100=1994.2 eps=0.010 steps/s=261.4
+mspacman episode=3880 steps=2776428 reward=1760 last100=2006.7 eps=0.010 steps/s=261.4
+mspacman episode=3890 steps=2783530 reward=1430 last100=1982.0 eps=0.010 steps/s=261.5
+mspacman episode=3900 steps=2791818 reward=1210 last100=1978.0 eps=0.010 steps/s=261.5
+Development at episode 3900: mean=1936.50, best=2229.00
+mspacman episode=3910 steps=2800214 reward=1760 last100=1956.1 eps=0.010 steps/s=260.8
+mspacman episode=3920 steps=2809308 reward=2100 last100=1976.0 eps=0.010 steps/s=260.9
+mspacman episode=3930 steps=2818892 reward=1670 last100=1999.7 eps=0.010 steps/s=260.9
+mspacman episode=3940 steps=2827424 reward=1210 last100=1989.2 eps=0.010 steps/s=260.8
+mspacman episode=3950 steps=2836754 reward=1750 last100=1987.0 eps=0.010 steps/s=260.6
+mspacman episode=3960 steps=2845028 reward=2880 last100=1973.6 eps=0.010 steps/s=260.5
+mspacman episode=3970 steps=2853840 reward=1630 last100=2004.4 eps=0.010 steps/s=260.5
+mspacman episode=3980 steps=2862606 reward=1950 last100=1993.8 eps=0.010 steps/s=260.5
+mspacman episode=3990 steps=2871410 reward=1890 last100=2020.3 eps=0.010 steps/s=260.5
+mspacman episode=4000 steps=2880846 reward=1970 last100=2050.1 eps=0.010 steps/s=260.6
+Development at episode 4000: mean=1753.00, best=2229.00
+mspacman episode=4010 steps=2889106 reward=2200 last100=2033.5 eps=0.010 steps/s=259.9
+mspacman episode=4020 steps=2898542 reward=4810 last100=2078.1 eps=0.010 steps/s=260.0
+mspacman episode=4030 steps=2907004 reward=1630 last100=2052.5 eps=0.010 steps/s=260.0
+mspacman episode=4040 steps=2915124 reward=2270 last100=2055.4 eps=0.010 steps/s=260.1
+mspacman episode=4050 steps=2924498 reward=3340 last100=2089.1 eps=0.010 steps/s=260.1
+mspacman episode=4060 steps=2933258 reward=2000 last100=2130.2 eps=0.010 steps/s=260.1
+mspacman episode=4070 steps=2941076 reward=1680 last100=2098.2 eps=0.010 steps/s=260.2
+mspacman episode=4080 steps=2949740 reward=2230 last100=2076.4 eps=0.010 steps/s=260.3
+mspacman episode=4090 steps=2958380 reward=2250 last100=2093.8 eps=0.010 steps/s=260.3
+mspacman episode=4100 steps=2967026 reward=1800 last100=2053.0 eps=0.010 steps/s=260.4
+Development at episode 4100: mean=2116.00, best=2229.00
+mspacman episode=4110 steps=2975626 reward=2290 last100=2114.2 eps=0.010 steps/s=259.7
+mspacman episode=4120 steps=2984764 reward=1840 last100=2061.8 eps=0.010 steps/s=259.8
+mspacman episode=4130 steps=2993982 reward=2010 last100=2078.9 eps=0.010 steps/s=259.9
+mspacman episode=4140 steps=3002668 reward=1880 last100=2120.7 eps=0.010 steps/s=259.9
+mspacman episode=4150 steps=3011012 reward=2590 last100=2104.3 eps=0.010 steps/s=259.9
+mspacman episode=4160 steps=3020138 reward=3010 last100=2081.4 eps=0.010 steps/s=260.0
+mspacman episode=4170 steps=3029358 reward=1600 last100=2131.7 eps=0.010 steps/s=260.1
+mspacman episode=4180 steps=3038202 reward=2700 last100=2173.8 eps=0.010 steps/s=260.1
+mspacman episode=4190 steps=3046896 reward=2290 last100=2170.2 eps=0.010 steps/s=260.2
+mspacman episode=4200 steps=3056094 reward=1680 last100=2183.0 eps=0.010 steps/s=260.2
+Development at episode 4200: mean=2299.50, best=2299.50
+mspacman episode=4210 steps=3063972 reward=540 last100=2134.9 eps=0.010 steps/s=259.7
+mspacman episode=4220 steps=3072188 reward=2240 last100=2104.5 eps=0.010 steps/s=259.8
+mspacman episode=4230 steps=3080654 reward=2290 last100=2112.2 eps=0.010 steps/s=259.9
+mspacman episode=4240 steps=3090422 reward=2730 last100=2107.0 eps=0.010 steps/s=260.0
+mspacman episode=4250 steps=3099074 reward=2240 last100=2083.1 eps=0.010 steps/s=260.1
+mspacman episode=4260 steps=3107540 reward=1910 last100=2070.4 eps=0.010 steps/s=260.2
+mspacman episode=4270 steps=3116422 reward=2120 last100=2065.4 eps=0.010 steps/s=260.3
+mspacman episode=4280 steps=3125384 reward=2310 last100=2057.1 eps=0.010 steps/s=260.4
+mspacman episode=4290 steps=3134490 reward=1490 last100=2069.3 eps=0.010 steps/s=260.5
+mspacman episode=4300 steps=3144086 reward=1970 last100=2110.5 eps=0.010 steps/s=260.6
+Development at episode 4300: mean=2065.00, best=2299.50
+mspacman episode=4310 steps=3152468 reward=2250 last100=2138.7 eps=0.010 steps/s=260.1
+mspacman episode=4320 steps=3160456 reward=1490 last100=2139.7 eps=0.010 steps/s=260.2
+mspacman episode=4330 steps=3167986 reward=2040 last100=2089.3 eps=0.010 steps/s=260.3
+mspacman episode=4340 steps=3177478 reward=2400 last100=2098.7 eps=0.010 steps/s=260.4
+mspacman episode=4350 steps=3186270 reward=1920 last100=2095.7 eps=0.010 steps/s=260.5
+mspacman episode=4360 steps=3195364 reward=2420 last100=2125.9 eps=0.010 steps/s=260.6
+mspacman episode=4370 steps=3203616 reward=1600 last100=2099.7 eps=0.010 steps/s=260.7
+mspacman episode=4380 steps=3212654 reward=1990 last100=2104.2 eps=0.010 steps/s=260.8
+mspacman episode=4390 steps=3221918 reward=2890 last100=2099.2 eps=0.010 steps/s=261.0
+mspacman episode=4400 steps=3230946 reward=3320 last100=2072.5 eps=0.010 steps/s=261.1
+Development at episode 4400: mean=1712.00, best=2299.50
+mspacman episode=4410 steps=3240094 reward=1910 last100=2092.4 eps=0.010 steps/s=260.6
+mspacman episode=4420 steps=3248846 reward=2550 last100=2105.2 eps=0.010 steps/s=260.8
+mspacman episode=4430 steps=3258120 reward=1490 last100=2148.9 eps=0.010 steps/s=260.9
+mspacman episode=4440 steps=3267222 reward=2150 last100=2118.4 eps=0.010 steps/s=261.0
+mspacman episode=4450 steps=3276984 reward=1770 last100=2124.8 eps=0.010 steps/s=261.1
+mspacman episode=4460 steps=3286716 reward=1480 last100=2098.1 eps=0.010 steps/s=261.2
+mspacman episode=4470 steps=3296212 reward=3180 last100=2123.1 eps=0.010 steps/s=261.4
+mspacman episode=4480 steps=3304208 reward=1560 last100=2090.6 eps=0.010 steps/s=261.5
+mspacman episode=4490 steps=3312666 reward=2250 last100=2086.4 eps=0.010 steps/s=261.6
+mspacman episode=4500 steps=3322204 reward=3520 last100=2129.9 eps=0.010 steps/s=261.7
+Development at episode 4500: mean=2121.00, best=2299.50
+mspacman episode=4510 steps=3331736 reward=2090 last100=2111.7 eps=0.010 steps/s=261.2
+mspacman episode=4520 steps=3340582 reward=1920 last100=2105.6 eps=0.010 steps/s=261.3
+mspacman episode=4530 steps=3349734 reward=3810 last100=2119.2 eps=0.010 steps/s=261.4
+mspacman episode=4540 steps=3358964 reward=2450 last100=2144.1 eps=0.010 steps/s=261.6
+mspacman episode=4550 steps=3367580 reward=1520 last100=2170.0 eps=0.010 steps/s=261.6
+mspacman episode=4560 steps=3376110 reward=1960 last100=2178.9 eps=0.010 steps/s=261.7
+mspacman episode=4570 steps=3385276 reward=2230 last100=2163.0 eps=0.010 steps/s=261.8
+mspacman episode=4580 steps=3394426 reward=2210 last100=2178.6 eps=0.010 steps/s=261.9
+mspacman episode=4590 steps=3404290 reward=2250 last100=2212.7 eps=0.010 steps/s=261.9
+mspacman episode=4600 steps=3412466 reward=2520 last100=2164.4 eps=0.010 steps/s=262.0
+Development at episode 4600: mean=2218.00, best=2299.50
+mspacman episode=4610 steps=3423292 reward=2770 last100=2189.5 eps=0.010 steps/s=261.5
+mspacman episode=4620 steps=3432352 reward=2120 last100=2237.5 eps=0.010 steps/s=261.5
+mspacman episode=4630 steps=3441656 reward=2110 last100=2238.2 eps=0.010 steps/s=261.6
+mspacman episode=4640 steps=3451216 reward=2330 last100=2250.5 eps=0.010 steps/s=261.7
+mspacman episode=4650 steps=3459724 reward=1950 last100=2225.0 eps=0.010 steps/s=261.8
+mspacman episode=4660 steps=3468842 reward=1860 last100=2249.8 eps=0.010 steps/s=262.0
+mspacman episode=4670 steps=3476956 reward=1350 last100=2256.3 eps=0.010 steps/s=262.1
+mspacman episode=4680 steps=3485756 reward=1470 last100=2268.5 eps=0.010 steps/s=262.2
+mspacman episode=4690 steps=3494596 reward=1840 last100=2231.6 eps=0.010 steps/s=262.3
+mspacman episode=4700 steps=3503082 reward=2310 last100=2205.8 eps=0.010 steps/s=262.4
+Development at episode 4700: mean=1833.50, best=2299.50
+mspacman episode=4710 steps=3511594 reward=2170 last100=2143.4 eps=0.010 steps/s=262.0
+mspacman episode=4720 steps=3520606 reward=1890 last100=2079.9 eps=0.010 steps/s=262.1
+mspacman episode=4730 steps=3529790 reward=1790 last100=2086.2 eps=0.010 steps/s=262.2
+mspacman episode=4740 steps=3539036 reward=1690 last100=2063.7 eps=0.010 steps/s=262.3
+mspacman episode=4750 steps=3548786 reward=2600 last100=2085.1 eps=0.010 steps/s=262.4
+mspacman episode=4760 steps=3558218 reward=1960 last100=2082.7 eps=0.010 steps/s=262.5
+mspacman episode=4770 steps=3566926 reward=1920 last100=2106.2 eps=0.010 steps/s=262.6
+mspacman episode=4780 steps=3575422 reward=3240 last100=2134.6 eps=0.010 steps/s=262.7
+mspacman episode=4790 steps=3584284 reward=780 last100=2121.1 eps=0.010 steps/s=262.8
+mspacman episode=4800 steps=3593414 reward=2250 last100=2152.0 eps=0.010 steps/s=262.9
+Development at episode 4800: mean=2062.00, best=2299.50
+mspacman episode=4810 steps=3601976 reward=2960 last100=2175.4 eps=0.010 steps/s=262.5
+mspacman episode=4820 steps=3611542 reward=2310 last100=2237.0 eps=0.010 steps/s=262.6
+mspacman episode=4830 steps=3620156 reward=2580 last100=2213.7 eps=0.010 steps/s=262.6
+mspacman episode=4840 steps=3629774 reward=2440 last100=2242.5 eps=0.010 steps/s=262.7
+mspacman episode=4850 steps=3639816 reward=2060 last100=2248.1 eps=0.010 steps/s=262.9
+mspacman episode=4860 steps=3649184 reward=1950 last100=2256.3 eps=0.010 steps/s=262.9
+mspacman episode=4870 steps=3657678 reward=1450 last100=2246.8 eps=0.010 steps/s=263.0
+mspacman episode=4880 steps=3666666 reward=2770 last100=2223.1 eps=0.010 steps/s=263.1
+mspacman episode=4890 steps=3676358 reward=1800 last100=2305.1 eps=0.010 steps/s=263.2
+mspacman episode=4900 steps=3685288 reward=2130 last100=2317.7 eps=0.010 steps/s=263.3
+Development at episode 4900: mean=2027.00, best=2299.50
+mspacman episode=4910 steps=3694572 reward=2620 last100=2341.5 eps=0.010 steps/s=262.9
+mspacman episode=4920 steps=3703428 reward=2360 last100=2308.5 eps=0.010 steps/s=263.0
+mspacman episode=4930 steps=3712318 reward=2340 last100=2308.2 eps=0.010 steps/s=263.1
+mspacman episode=4940 steps=3721482 reward=1560 last100=2266.2 eps=0.010 steps/s=263.2
+mspacman episode=4950 steps=3730100 reward=1440 last100=2242.3 eps=0.010 steps/s=263.3
+mspacman episode=4960 steps=3739582 reward=2420 last100=2195.7 eps=0.010 steps/s=263.3
+mspacman episode=4970 steps=3748164 reward=1530 last100=2200.8 eps=0.010 steps/s=263.3
+mspacman episode=4980 steps=3757606 reward=2210 last100=2184.0 eps=0.010 steps/s=263.3
+mspacman episode=4990 steps=3766882 reward=2420 last100=2143.8 eps=0.010 steps/s=263.3
+mspacman episode=5000 steps=3777446 reward=1020 last100=2144.7 eps=0.010 steps/s=263.3
+Development at episode 5000: mean=2013.00, best=2299.50
+mspacman episode=5010 steps=3787066 reward=4230 last100=2142.6 eps=0.010 steps/s=262.6
+mspacman episode=5020 steps=3797102 reward=1960 last100=2147.3 eps=0.010 steps/s=262.6
+mspacman episode=5030 steps=3806964 reward=2460 last100=2153.5 eps=0.010 steps/s=262.6
+mspacman episode=5040 steps=3816322 reward=2050 last100=2163.3 eps=0.010 steps/s=262.6
+mspacman episode=5050 steps=3826526 reward=2130 last100=2199.6 eps=0.010 steps/s=262.5
+mspacman episode=5060 steps=3835736 reward=1870 last100=2218.7 eps=0.010 steps/s=262.4
+mspacman episode=5070 steps=3845092 reward=3270 last100=2207.8 eps=0.010 steps/s=262.3
+mspacman episode=5080 steps=3854108 reward=1760 last100=2228.2 eps=0.010 steps/s=262.2
+mspacman episode=5090 steps=3864028 reward=2460 last100=2227.7 eps=0.010 steps/s=262.2
+mspacman episode=5100 steps=3873402 reward=1590 last100=2216.8 eps=0.010 steps/s=262.1
+Development at episode 5100: mean=2466.00, best=2466.00
+mspacman episode=5110 steps=3883060 reward=4890 last100=2227.1 eps=0.010 steps/s=261.4
+mspacman episode=5120 steps=3892588 reward=1940 last100=2241.8 eps=0.010 steps/s=261.4
+mspacman episode=5130 steps=3902400 reward=3200 last100=2271.6 eps=0.010 steps/s=261.3
+mspacman episode=5140 steps=3911710 reward=1910 last100=2284.7 eps=0.010 steps/s=261.3
+mspacman episode=5150 steps=3921490 reward=2450 last100=2268.0 eps=0.010 steps/s=261.3
+mspacman episode=5160 steps=3930880 reward=1670 last100=2304.6 eps=0.010 steps/s=261.2
+mspacman episode=5170 steps=3940190 reward=1840 last100=2316.7 eps=0.010 steps/s=261.2
+mspacman episode=5180 steps=3948908 reward=3580 last100=2308.9 eps=0.010 steps/s=261.3
+mspacman episode=5190 steps=3959206 reward=3460 last100=2308.9 eps=0.010 steps/s=261.2
+mspacman episode=5200 steps=3968872 reward=2760 last100=2343.5 eps=0.010 steps/s=261.2
+Development at episode 5200: mean=2420.50, best=2466.00
+mspacman episode=5210 steps=3979316 reward=1960 last100=2363.4 eps=0.010 steps/s=260.6
+mspacman episode=5220 steps=3989106 reward=1940 last100=2352.2 eps=0.010 steps/s=260.6
+mspacman episode=5230 steps=3998268 reward=2270 last100=2329.9 eps=0.010 steps/s=260.6
+mspacman episode=5240 steps=4008418 reward=2680 last100=2324.3 eps=0.010 steps/s=260.6
+mspacman episode=5250 steps=4017266 reward=2470 last100=2317.0 eps=0.010 steps/s=260.6
+mspacman episode=5260 steps=4025820 reward=2580 last100=2286.9 eps=0.010 steps/s=260.7
+mspacman episode=5270 steps=4035010 reward=4800 last100=2317.7 eps=0.010 steps/s=260.7
+mspacman episode=5280 steps=4044604 reward=1380 last100=2336.9 eps=0.010 steps/s=260.7
+mspacman episode=5290 steps=4054212 reward=2480 last100=2370.0 eps=0.010 steps/s=260.8
+mspacman episode=5300 steps=4063768 reward=3280 last100=2411.3 eps=0.010 steps/s=260.8
+Development at episode 5300: mean=2251.00, best=2466.00
+mspacman episode=5310 steps=4072396 reward=2490 last100=2332.6 eps=0.010 steps/s=260.3
+mspacman episode=5320 steps=4081040 reward=2270 last100=2299.2 eps=0.010 steps/s=260.3
+mspacman episode=5330 steps=4091392 reward=1660 last100=2306.8 eps=0.010 steps/s=260.4
+mspacman episode=5340 steps=4100510 reward=2120 last100=2308.8 eps=0.010 steps/s=260.4
+mspacman episode=5350 steps=4109610 reward=1650 last100=2292.5 eps=0.010 steps/s=260.4
+mspacman episode=5360 steps=4118820 reward=2450 last100=2300.2 eps=0.010 steps/s=260.4
+mspacman episode=5370 steps=4128356 reward=4880 last100=2304.9 eps=0.010 steps/s=260.4
+mspacman episode=5380 steps=4136888 reward=2130 last100=2314.4 eps=0.010 steps/s=260.4
+mspacman episode=5390 steps=4146840 reward=2530 last100=2294.3 eps=0.010 steps/s=260.4
+mspacman episode=5400 steps=4156032 reward=2130 last100=2201.0 eps=0.010 steps/s=260.4
+Development at episode 5400: mean=2245.50, best=2466.00
+mspacman episode=5410 steps=4165012 reward=2400 last100=2267.0 eps=0.010 steps/s=259.8
+mspacman episode=5420 steps=4174734 reward=1650 last100=2301.1 eps=0.010 steps/s=259.8
+mspacman episode=5430 steps=4183144 reward=2370 last100=2261.1 eps=0.010 steps/s=259.7
+mspacman episode=5440 steps=4192918 reward=2660 last100=2273.4 eps=0.010 steps/s=259.7
+mspacman episode=5450 steps=4203408 reward=2470 last100=2328.5 eps=0.010 steps/s=259.7
+mspacman episode=5460 steps=4212130 reward=2680 last100=2302.2 eps=0.010 steps/s=259.7
+mspacman episode=5470 steps=4221266 reward=2680 last100=2277.2 eps=0.010 steps/s=259.7
+mspacman episode=5480 steps=4229996 reward=1580 last100=2261.3 eps=0.010 steps/s=259.7
+mspacman episode=5490 steps=4238992 reward=2190 last100=2244.0 eps=0.010 steps/s=259.7
+mspacman episode=5500 steps=4248716 reward=1710 last100=2254.2 eps=0.010 steps/s=259.7
+Development at episode 5500: mean=2398.00, best=2466.00
+mspacman episode=5510 steps=4259556 reward=1770 last100=2249.8 eps=0.010 steps/s=259.0
+mspacman episode=5520 steps=4270398 reward=4440 last100=2285.2 eps=0.010 steps/s=259.0
+mspacman episode=5530 steps=4279714 reward=1610 last100=2320.5 eps=0.010 steps/s=258.9
+mspacman episode=5540 steps=4288384 reward=2280 last100=2309.4 eps=0.010 steps/s=258.9
+mspacman episode=5550 steps=4297968 reward=2350 last100=2294.6 eps=0.010 steps/s=258.9
+mspacman episode=5560 steps=4308320 reward=2280 last100=2332.6 eps=0.010 steps/s=258.9
+mspacman episode=5570 steps=4318058 reward=1820 last100=2340.7 eps=0.010 steps/s=258.9
+mspacman episode=5580 steps=4327850 reward=2880 last100=2356.4 eps=0.010 steps/s=258.9
+mspacman episode=5590 steps=4337454 reward=2240 last100=2398.0 eps=0.010 steps/s=258.9
+mspacman episode=5600 steps=4346888 reward=2070 last100=2454.0 eps=0.010 steps/s=258.9
+Development at episode 5600: mean=2736.50, best=2736.50
+mspacman episode=5610 steps=4357320 reward=2250 last100=2447.1 eps=0.010 steps/s=258.3
+mspacman episode=5620 steps=4366810 reward=2160 last100=2393.0 eps=0.010 steps/s=258.3
+mspacman episode=5630 steps=4376852 reward=2500 last100=2405.2 eps=0.010 steps/s=258.3
+mspacman episode=5640 steps=4386816 reward=2280 last100=2414.5 eps=0.010 steps/s=258.3
+mspacman episode=5650 steps=4396708 reward=2390 last100=2387.5 eps=0.010 steps/s=258.3
+mspacman episode=5660 steps=4405562 reward=2390 last100=2372.1 eps=0.010 steps/s=258.3
+mspacman episode=5670 steps=4413996 reward=1950 last100=2346.4 eps=0.010 steps/s=258.3
+mspacman episode=5680 steps=4424584 reward=3210 last100=2349.4 eps=0.010 steps/s=258.3
+mspacman episode=5690 steps=4434522 reward=1460 last100=2301.0 eps=0.010 steps/s=258.3
+mspacman episode=5700 steps=4444758 reward=2330 last100=2274.0 eps=0.010 steps/s=258.3
+Development at episode 5700: mean=2364.00, best=2736.50
+mspacman episode=5710 steps=4456524 reward=2350 last100=2337.9 eps=0.010 steps/s=257.8
+mspacman episode=5720 steps=4465892 reward=2490 last100=2349.8 eps=0.010 steps/s=257.8
+mspacman episode=5730 steps=4475294 reward=2010 last100=2353.1 eps=0.010 steps/s=257.8
+mspacman episode=5740 steps=4483844 reward=1440 last100=2334.3 eps=0.010 steps/s=257.8
+mspacman episode=5750 steps=4493108 reward=2280 last100=2378.3 eps=0.010 steps/s=257.7
+mspacman episode=5760 steps=4502922 reward=1820 last100=2397.1 eps=0.010 steps/s=257.7
+mspacman episode=5770 steps=4512356 reward=2080 last100=2411.8 eps=0.010 steps/s=257.6
+mspacman episode=5780 steps=4522012 reward=2590 last100=2385.1 eps=0.010 steps/s=257.6
+mspacman episode=5790 steps=4531202 reward=2180 last100=2385.7 eps=0.010 steps/s=257.6
+mspacman episode=5800 steps=4541030 reward=2760 last100=2387.8 eps=0.010 steps/s=257.6
+Development at episode 5800: mean=2344.50, best=2736.50
+mspacman episode=5810 steps=4551890 reward=2570 last100=2346.4 eps=0.010 steps/s=257.1
+mspacman episode=5820 steps=4562224 reward=6010 last100=2402.9 eps=0.010 steps/s=257.1
+mspacman episode=5830 steps=4572404 reward=2460 last100=2389.6 eps=0.010 steps/s=257.0
+mspacman episode=5840 steps=4581042 reward=2150 last100=2386.1 eps=0.010 steps/s=257.0
+mspacman episode=5850 steps=4590520 reward=1770 last100=2337.4 eps=0.010 steps/s=257.0
+mspacman episode=5860 steps=4600074 reward=970 last100=2321.4 eps=0.010 steps/s=257.0
+mspacman episode=5870 steps=4609442 reward=2050 last100=2316.6 eps=0.010 steps/s=256.9
+mspacman episode=5880 steps=4619262 reward=3010 last100=2341.9 eps=0.010 steps/s=256.9
+mspacman episode=5890 steps=4628994 reward=2240 last100=2336.1 eps=0.010 steps/s=256.9
+mspacman episode=5900 steps=4638760 reward=1790 last100=2338.0 eps=0.010 steps/s=256.9
+Development at episode 5900: mean=2377.00, best=2736.50
+mspacman episode=5910 steps=4648564 reward=1600 last100=2316.6 eps=0.010 steps/s=256.4
+mspacman episode=5920 steps=4658972 reward=2010 last100=2285.0 eps=0.010 steps/s=256.4
+mspacman episode=5930 steps=4667836 reward=1820 last100=2268.6 eps=0.010 steps/s=256.3
+mspacman episode=5940 steps=4678280 reward=2000 last100=2312.3 eps=0.010 steps/s=256.3
+mspacman episode=5950 steps=4687936 reward=1790 last100=2323.5 eps=0.010 steps/s=256.3
+mspacman episode=5960 steps=4697220 reward=1740 last100=2307.1 eps=0.010 steps/s=256.2
+mspacman episode=5970 steps=4707310 reward=1810 last100=2331.8 eps=0.010 steps/s=256.2
+mspacman episode=5980 steps=4717606 reward=2130 last100=2367.1 eps=0.010 steps/s=256.2
+mspacman episode=5990 steps=4728120 reward=2290 last100=2424.8 eps=0.010 steps/s=256.2
+mspacman episode=6000 steps=4737156 reward=2680 last100=2415.0 eps=0.010 steps/s=256.2
+Development at episode 6000: mean=2668.50, best=2736.50
+Evaluation 50/500: mean=2635.80
+Evaluation 100/500: mean=2548.50
+Evaluation 150/500: mean=2581.00
+Evaluation 200/500: mean=2602.60
+Evaluation 250/500: mean=2589.04
+Evaluation 300/500: mean=2570.40
+Evaluation 350/500: mean=2596.37
+Evaluation 400/500: mean=2594.55
+Evaluation 450/500: mean=2576.51
+Evaluation 500/500: mean=2589.44
 {
-  "training_episodes": 2000,
-  "environment_steps": 1303878,
-  "optimizer_steps": 323470,
+  "training_episodes": 6000,
+  "environment_steps": 4737156,
+  "optimizer_steps": 1179290,
   "selected_checkpoint": {
-    "episode": 1500,
-    "steps": 943908,
-    "optimizer_steps": 233478,
-    "development_mean": 1835.0,
+    "episode": 5600,
+    "steps": 4346888,
+    "optimizer_steps": 1081723,
+    "development_mean": 2736.5,
     "development_seed": 40000
   },
   "evaluation": {
     "n": 500,
-    "mean": 1420.52,
-    "std": 511.6942364177716,
-    "median": 1275.0,
-    "min": 610.0,
-    "max": 3370.0,
-    "mean_length": 717.764,
+    "mean": 2589.44,
+    "std": 593.0540553990425,
+    "median": 2460.0,
+    "min": 510.0,
+    "max": 5830.0,
+    "mean_length": 986.576,
     "terminated_episodes": 500,
     "truncated_episodes": 0
   },
-  "wall_seconds": 5159.850245822221
-}
-A.L.E: Arcade Learning Environment (version 0.12.1+8a8fafb)
-[Powered by Stella]
-{
-  "task": "mspacman",
-  "sampling": {
-    "episodes_per_condition": 50,
-    "first_seed": 80000,
-    "final_epsilon": 0.0,
-    "initial_epsilon": 0.0,
-    "random_epsilon": 1.0,
-    "checkpoint": "policy.pt",
-    "initial_checkpoint": "initial.pt",
-    "note": "Held-out seed comparison; separate from the required 500-episode evaluation."
-  },
-  "final_policy": {
-    "episodes": 50,
-    "mean_reward": 1234.0,
-    "std_reward": 382.4518110234308,
-    "min_reward": 780.0,
-    "max_reward": 2150.0,
-    "mean_length": 687.32,
-    "length_500_fraction": 0.0,
-    "terminated_count": 50,
-    "truncated_count": 0,
-    "unterminated_count": 0,
-    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
-  },
-  "initial_policy": {
-    "episodes": 50,
-    "mean_reward": 60.0,
-    "std_reward": 0.0,
-    "min_reward": 60.0,
-    "max_reward": 60.0,
-    "mean_length": 483.0,
-    "length_500_fraction": 0.0,
-    "terminated_count": 50,
-    "truncated_count": 0,
-    "unterminated_count": 0,
-    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
-  },
-  "random_policy": {
-    "episodes": 50,
-    "mean_reward": 279.8,
-    "std_reward": 147.93117539268465,
-    "min_reward": 90.0,
-    "max_reward": 1080.0,
-    "mean_length": 516.76,
-    "length_500_fraction": 0.0,
-    "terminated_count": 50,
-    "truncated_count": 0,
-    "unterminated_count": 0,
-    "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
-  },
-  "comparison": {
-    "final_vs_random": {
-      "n_pairs": 50,
-      "reference_mean": 279.8,
-      "candidate_mean": 1234.0,
-      "mean_difference": 954.2,
-      "ci95_low": 841.0,
-      "ci95_high": 1084.6299999999997,
-      "positive_difference_supported": true,
-      "bootstrap_samples": 2000,
-      "bootstrap_seed": 191,
-      "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
-    },
-    "final_vs_initial": {
-      "n_pairs": 50,
-      "reference_mean": 60.0,
-      "candidate_mean": 1234.0,
-      "mean_difference": 1174.0,
-      "ci95_low": 1073.7649999999999,
-      "ci95_high": 1287.8049999999998,
-      "positive_difference_supported": true,
-      "bootstrap_samples": 2000,
-      "bootstrap_seed": 191,
-      "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
-    },
-    "expectation": "A learned frozen policy should outperform untrained and random policies under fixed exploration settings."
-  },
-  "perturbation": {
-    "experiment": "Normal observations versus all-zero image input with matched reset seeds.",
-    "expectation": "A visually informed policy may outperform its blackout version; the measured difference decides.",
-    "blackout_policy": {
-      "episodes": 50,
-      "mean_reward": 60.0,
-      "std_reward": 0.0,
-      "min_reward": 60.0,
-      "max_reward": 60.0,
-      "mean_length": 483.0,
-      "length_500_fraction": 0.0,
-      "terminated_count": 50,
-      "truncated_count": 0,
-      "unterminated_count": 0,
-      "std_convention": "Sample standard deviation (ddof=1); reported as 0 for one episode, where uncertainty is not estimable."
-    },
-    "normal_minus_blackout": {
-      "n_pairs": 50,
-      "reference_mean": 60.0,
-      "candidate_mean": 1234.0,
-      "mean_difference": 1174.0,
-      "ci95_low": 1073.7649999999999,
-      "ci95_high": 1287.8049999999998,
-      "positive_difference_supported": true,
-      "bootstrap_samples": 2000,
-      "bootstrap_seed": 191,
-      "inference_note": "Percentile interval over paired evaluation seeds; it does not measure variability across independent training runs."
-    },
-    "interpretation": "Only network inputs change; environment dynamics and raw game scoring stay unchanged. Paired seeds do not force identical trajectories after actions diverge.",
-    "nonstandard_plot_data": "validation_final.csv and validation_blackout.csv"
-  },
-  "target_audit": {
-    "transitions_checked": 10,
-    "all_checked_targets_match": true,
-    "terminal_status": "not_observed",
-    "truncation_status": "not_observed",
-    "nonterminal_status": "passed",
-    "expected_rule": "Reward only at true termination; bootstrap across time truncation.",
-    "scope": "Checks only recorded transitions, not every replay-buffer update."
-  },
-  "boundaries": {
-    "observed_terminated": 50,
-    "observed_truncated": 0,
-    "all_episodes_report_an_end": true,
-    "time_limit_rule": "Time truncation ends rollout, but does not zero the Bellman bootstrap.",
-    "life_loss_note": "Validation does not impose life-loss endings; scores are full-environment episode rewards."
-  },
-  "limitations": [
-    "One selected training seed cannot establish robustness across training seeds.",
-    "Confidence intervals quantify seed variation within this evaluation protocol only.",
-    "Perturbation performance is not a replacement for standard-environment evaluation."
-  ]
+  "wall_seconds": 19333.2779841125
 }
