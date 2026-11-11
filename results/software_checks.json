@@ -1,5 +1,5 @@
 {
-  "recorded_utc": "2026-11-11T03:38:41.835416+00:00",
+  "recorded_utc": "2026-11-11T05:27:32.880532+00:00",
   "tests_passed": 86,
   "coverage_percent": 92.12271973466004,
   "coverage_by_module": {
@@ -10,7 +10,7 @@
     "train.py": 90.26548672566372,
     "validate.py": 87.5
   },
-  "test_command": "python -m pytest -q --cov=dqn --cov=train --cov=validate --cov=scientific_validation --cov=compare_runs --cov=build_report --cov-report=term-missing --cov-report=json:work/coverage-final.json --junitxml=work/test-results-final.xml",
+  "test_command": "python -m pytest -q --cov=dqn --cov=train --cov=validate --cov=scientific_validation --cov=compare_runs --cov=build_report --cov-report=json:work/coverage-report-clean.json --junitxml=work/tests-report-clean.xml",
   "dependency_audit_known_vulnerabilities": 0,
   "audit_command": "python -m pip_audit",
   "audit_records": {
@@ -23,6 +23,6 @@
     "validate.py": "4aad1a0311334d8a41cc32689f8671e2ddfe1003ed7a168a003c6f01587c11c9",
     "scientific_validation.py": "568be8ff16909901f892c08b7b02b308f17622302be7930ebc90b040512f28ad",
     "compare_runs.py": "324cb254cf6f954fdf9cf1c5811979b4218527d7762f03452276cb88f2f700ac",
-    "build_report.py": "bc589693bf0ec144289b8b2f06345d0577b3d41fca48c832575a18d0dafbdbe5"
+    "build_report.py": "0a7501716fea6cee52d44d23792ae38c435e8f6777587ab76ecd2eb48c6deb97"
   }
 }

@@ -553,7 +553,7 @@ def reproducibility(cart, pac):
               "Checkpoints omit replay and random-generator state; reproduction starts a fresh run.")]
 
 
-def future_and_references():
+def future_experiments():
     return [heading("Given an additional three months"),
             p("<b>Month 1:</b> Repeat each setup with at least 10 training seeds and equal interaction "
               "budgets. Report confidence intervals across training runs, not only evaluation episodes. "
@@ -565,19 +565,7 @@ def future_and_references():
             p("<b>Month 3:</b> Expand CartPole's initial-state grid and test changes in mass, pole length "
               "and observation noise. Test MsPacman occlusion, delayed frames and sticky-action rates. "
               "Inspect failures and confirm improvements on untouched test seeds; retain standard "
-              "environments as the main benchmark."),
-            heading("References"),
-            p("MLDS 490 Assignment 2, Week 6 DQN lecture and Lab Week 6. "
-              '<link href="https://docs.pytorch.org/tutorials/intermediate/reinforcement_q_learning.html" '
-              'color="black">PyTorch DQN tutorial</link>; '
-              '<link href="https://ale.farama.org/environments/" color="black">ALE environments</link>; '
-              '<link href="https://gymnasium.farama.org/tutorials/gymnasium_basics/handling_time_limits/" '
-              'color="black">Gymnasium time limits</link>.', True),
-            p('Peer comparisons: <link href="https://github.com/Dorrie-ge/mlds-diego-hw2-dqn" '
-              'color="black">Dorrie-ge/mlds-diego-hw2-dqn</link> and '
-              '<link href="https://github.com/Graf-J/MLDS-Q4-490-Advanced-Algorithms-HW2" '
-              'color="black">Graf-J/MLDS-Q4-490-Advanced-Algorithms-HW2</link> informed '
-              'training-budget and validation ideas. Code was implemented independently.', True)]
+              "environments as the main benchmark.")]
 
 
 def build_report(results_dir, output, repo_url):
@@ -593,7 +581,7 @@ def build_report(results_dir, output, repo_url):
         pages += [training_page(run, paths), evaluation_page(run, paths)]
     if any(supplemental.values()):
         pages += [supplemental_page(supplemental)]
-    pages += [reproducibility(cart, pac) + future_and_references()]
+    pages += [reproducibility(cart, pac) + future_experiments()]
     story = []
     for index, page in enumerate(pages):
         story.extend(([PageBreak()] if index else []) + page)
